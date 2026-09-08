@@ -18,6 +18,7 @@ from .metrics import metrics
 def build_buffer():
     from .train import arrays
     rows,x,y,m,splits=arrays();selected={}
+    sources={r['id']:r for r in map(json.loads,Path('artifacts/data-manifest.jsonl').read_text().splitlines())}
     for split in ['train','dev']:
         chosen=[]
         for family in sorted(set(rows[i]['family'] for i in splits[split])):
@@ -25,7 +26,7 @@ def build_buffer():
             chosen.extend(ids[::max(1,len(ids)//12)][:12])
         selected[split]=np.array(chosen)
     np.savez_compressed('artifacts/replay-buffer.npz',**{f'{key}_{split}':np.asarray(value[selected[split]]) for split in selected for key,value in [('x',x),('y',y),('mask',m)]})
-    atomic_json('artifacts/replay-buffer.json',{'sha256':sha('artifacts/replay-buffer.npz'),'source':'Representative original train rows and independent development rows','rows':{k:len(v) for k,v in selected.items()},'families':{k:sorted(set(rows[i]['family'] for i in v)) for k,v in selected.items()},'preprocessVersion':'rgba-diff-rle-letterbox-v1'})
+    atomic_json('artifacts/replay-buffer.json',{'sha256':sha('artifacts/replay-buffer.npz'),'source':'Representative original train rows and independent development rows','rows':{k:len(v) for k,v in selected.items()},'families':{k:sorted(set(rows[i]['family'] for i in v)) for k,v in selected.items()},'preprocessVersion':'rgba-diff-rle-letterbox-v1','devInputHashes':sorted({sources[rows[i]['pageId']][side+'Sha256'] for i in selected['dev'] for side in ['before','after']})})
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--feedback');parser.add_argument('--output');parser.add_argument('--build-buffer',action='store_true');args=parser.parse_args()
@@ -38,10 +39,14 @@ def main():
         if not pairs:raise ValueError('No explicit corrected observations are available.')
         root=Path(__file__).resolve().parents[1];buffer_path=root/'artifacts/replay-buffer.npz';weights=root/'artifacts/model.safetensors'
         if not buffer_path.exists() or not weights.exists():raise ValueError('Install the versioned training assets before a feedback update.')
+        buffer_meta=json.loads((root/'artifacts/replay-buffer.json').read_text());parent_manifest=json.loads((root/'web/public/models/manifest.json').read_text())
+        if sha(buffer_path)!=buffer_meta['sha256']:raise ValueError('Retained data buffer hash mismatch.')
+        if sha(weights)!=parent_manifest['weightsSha256']:raise ValueError('Safe model weight hash mismatch.')
         old=np.load(buffer_path,allow_pickle=False);new_x=[];new_y=[];new_m=[]
         for position,pair in enumerate(pairs):
             progress('prepare_feedback',position,len(pairs));prefix=out/f'pair-{position}'
             for side in ['before','after']:
+                if pair.get('inputHashes',{}).get(side) in buffer_meta['devInputHashes']:raise ValueError('Feedback overlaps the independent retained development examples.')
                 encoded=pair['images'][side].split(',',1)[-1];blob=base64.b64decode(encoded,validate=True)
                 if len(blob)>20*1024*1024 or not blob.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('Feedback image is not a supported PNG.')
                 if pair.get('inputHashes',{}).get(side) and hashlib.sha256(blob).hexdigest()!=pair['inputHashes'][side]:raise ValueError('Feedback image hash mismatch.')

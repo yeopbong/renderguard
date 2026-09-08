@@ -18,14 +18,16 @@ for(const family of selected){
   const viewport={width:variant%3===2?390:900,height:760};
   const context=await browser.newContext({viewport,deviceScaleFactor:1,locale:'en-US',timezoneId:'UTC',colorScheme:'light'});const page=await context.newPage();
   const html=pageHTML(family,variant);await page.setContent(html);await page.evaluate(()=>document.fonts.ready);
-  const beforeInspect=await inspect(page);const beforeBuf=await page.screenshot({clip:{x:0,y:0,width:viewport.width,height:await page.evaluate(()=>Math.max(document.documentElement.scrollHeight,innerHeight))},animations:'disabled',scale:'css'});const beforePng=PNG.sync.read(beforeBuf);
+  const beforeInspect=await inspect(page);const beforeBuf=await page.screenshot({fullPage:true,clip:{x:0,y:0,width:viewport.width,height:await page.evaluate(()=>Math.max(document.documentElement.scrollHeight,innerHeight))},animations:'disabled',scale:'css'});const beforePng=PNG.sync.read(beforeBuf);
+  if(beforePng.height<await page.evaluate(()=>document.documentElement.scrollHeight))throw new Error('Full-page screenshot height was truncated');
   const beforePath=`${family.id}-${variant}-before.png`;await fs.writeFile(path.join(out,beforePath),beforeBuf);
   for(const op of operations){
    const id=`${family.id}-${variant}-${op}`;await page.setContent(html);await page.evaluate(()=>document.fonts.ready);const provenance=mutationScript(op,variant);await mutate(page,provenance);
-   const afterInspect=await inspect(page);const afterBuf=await page.screenshot({clip:{x:0,y:0,width:viewport.width,height:await page.evaluate(()=>Math.max(document.documentElement.scrollHeight,innerHeight))},animations:'disabled',scale:'css'});const afterPng=PNG.sync.read(afterBuf);let changedPixels=0;
+   const afterInspect=await inspect(page);const afterBuf=await page.screenshot({fullPage:true,clip:{x:0,y:0,width:viewport.width,height:await page.evaluate(()=>Math.max(document.documentElement.scrollHeight,innerHeight))},animations:'disabled',scale:'css'});const afterPng=PNG.sync.read(afterBuf);let changedPixels=0;
    for(let y=0;y<Math.max(beforePng.height,afterPng.height);y++)for(let x=0;x<beforePng.width;x++){
     const i=(y*beforePng.width+x)*4;let d=0;for(let c=0;c<3;c++)d+=Math.abs((beforePng.data[i+c]??255)-(afterPng.data[i+c]??255));if(d>12)changedPixels++;
    }
+   if(afterPng.height<await page.evaluate(()=>document.documentElement.scrollHeight))throw new Error('Full-page screenshot height was truncated');
    const afterPath=`${id}-after.png`;await fs.writeFile(path.join(out,afterPath),afterBuf);
    const observations=establish(beforeInspect,afterInspect,{changedPixels});
    records.push({id,family:family.id,source:family.source,split:family.split,variant,provenance,before:`data/${beforePath}`,after:`data/${afterPath}`,beforeSha256:hash(beforeBuf),afterSha256:hash(afterBuf),htmlSha256:hash(html),observations,changedPixels,intent:op==='intentional_move'?'intentional':null,capture:{viewport,dpr:1,scale:'css',browser:browser.version(),locale:'en-US',timezone:'UTC',colorScheme:'light',fontsReady:true,fixedContent:true,pageDimensions:{before:{width:beforePng.width,height:beforePng.height},after:{width:afterPng.width,height:afterPng.height}},masks:[]}});
