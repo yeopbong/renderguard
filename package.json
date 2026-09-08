@@ -14,21 +14,22 @@
     "prepare:web": "node scripts/prepare-web.mjs"
   },
   "dependencies": {
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "fast-png": "6.4.0",
     "onnxruntime-web": "1.22.0",
-    "pngjs": "7.0.0"
+    "pngjs": "7.0.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "devDependencies": {
     "@types/node": "22.18.0",
+    "@types/pngjs": "6.0.5",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
-    "@types/pngjs": "6.0.5",
-    "typescript": "5.9.2",
-    "tsx": "4.20.5",
-    "vite": "7.1.4",
     "@vitejs/plugin-react": "5.0.2",
-    "playwright": "1.55.0"
+    "playwright": "1.55.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "vite": "7.1.4"
   },
   "packageManager": "pnpm@11.19.0"
 }
