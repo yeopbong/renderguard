@@ -8,7 +8,7 @@ export type Rect = { x: number; y: number; width: number; height: number };
 export type Raster = { width: number; height: number; data: Uint8Array | Uint8ClampedArray };
 export type Mask = Rect & { source: string };
 export type Candidate = { id: string; box: Rect; changedPixels: number; stats: number[]; masks?: Mask[] };
-export type Analysis = { candidates: Candidate[]; width: number; height: number; heightDelta: number; changedPixels: number; mode: 'regions' | 'tiles'; version: string; masks: Mask[]; validRegions: { before: Rect; after: Rect }; excludedPixels: number; rawDifference: { changedPixels: number; maxChannelDifference: number; threshold: number }; limits: typeof LIMITS };
+export type Analysis = { candidates: Candidate[]; associations: CandidateAssociation[]; width: number; height: number; heightDelta: number; changedPixels: number; mode: 'regions' | 'tiles'; version: string; masks: Mask[]; validRegions: { before: Rect; after: Rect }; excludedPixels: number; rawDifference: { changedPixels: number; maxChannelDifference: number; threshold: number }; limits: typeof LIMITS };
 export class InputError extends Error { constructor(message: string) { super(message); this.name = 'InputError'; } }
 export function validateRaster(raster: Raster): void {
   const { width, height, data } = raster;
@@ -142,7 +142,7 @@ export function analyzePair(before: Raster, after: Raster, suppliedMasks: Mask[]
     const boxArea = area(r.box);
     return { id: `region-${index + 1}`, ...r, stats: [r.changedPixels / boxArea, sum / boxArea / 255, max / 255, area(intersection(r.box, validRegions.before)) / boxArea, area(intersection(r.box, validRegions.after)) / boxArea, excluded / boxArea], masks };
   });
-  return { candidates, width: e.width, height: e.height, heightDelta: after.height - before.height, changedPixels: e.total, mode, version: VERSION, masks, validRegions, excludedPixels: e.excludedCount, rawDifference: { changedPixels: e.total, maxChannelDifference: e.max, threshold: 0 }, limits: LIMITS };
+  return { candidates, associations: associateCandidates(before, after, candidates), width: e.width, height: e.height, heightDelta: after.height - before.height, changedPixels: e.total, mode, version: VERSION, masks, validRegions, excludedPixels: e.excludedCount, rawDifference: { changedPixels: e.total, maxChannelDifference: e.max, threshold: 0 }, limits: LIMITS };
 }
 function expanded(box: Rect, padding: number): Rect { return { x: Math.floor(box.x - padding), y: Math.floor(box.y - padding), width: Math.ceil(box.width + padding * 2), height: Math.ceil(box.height + padding * 2) }; }
 function masked(x: number, y: number, masks: Mask[]): boolean { return masks.some(m => x >= Math.floor(m.x) && x < Math.ceil(m.x + m.width) && y >= Math.floor(m.y) && y < Math.ceil(m.y + m.height)); }
@@ -169,4 +169,36 @@ export function tensorsForCandidate(before: Raster, after: Raster, candidate: Ca
   const local = expanded(box, Math.max(8, largest * 0.08)), context = expanded(box, Math.max(40, largest * 0.65)), masks = candidate.masks ?? [], stats = candidate.stats;
   const geometry = new Float32Array([box.x / width, box.y / height, box.width / width, box.height / height, stats[0], stats[1], stats[2], stats[3], stats[4], (after.height - before.height) / height, Math.min(8, box.width / box.height) / 8, stats[5]]);
   return { localBefore: tensorForCrop(before, local, masks), localAfter: tensorForCrop(after, local, masks), contextBefore: tensorForCrop(before, context, masks), contextAfter: tensorForCrop(after, context, masks), geometry };
+}
+
+export type CandidateAssociation = { kind: 'possible_translation'; fromCandidateId: string; toCandidateId: string; meanColorError: number; scope: string };
+/** Link separated, similarly sized changes by bidirectional pixel appearance; never used as model input. */
+export function associateCandidates(before: Raster, after: Raster, candidates: Candidate[]): CandidateAssociation[] {
+  const matches: { a: number; b: number; error: number }[] = [], grid = 8;
+  const comparison = (first: Raster, a: Rect, second: Raster, b: Rect, masks: Mask[]) => {
+    let sum = 0, samples = 0;
+    for (let y = 0; y < grid; y++) for (let x = 0; x < grid; x++) {
+      const ax = Math.floor(a.x + (x + .5) * a.width / grid), ay = Math.floor(a.y + (y + .5) * a.height / grid), bx = Math.floor(b.x + (x + .5) * b.width / grid), by = Math.floor(b.y + (y + .5) * b.height / grid);
+      if (ay >= first.height || by >= second.height || masked(ax, ay, masks) || masked(bx, by, masks)) continue;
+      for (let c = 0; c < 3; c++) { sum += Math.abs(channel(first, ax, ay, c) - channel(second, bx, by, c)); samples++; }
+    }
+    return samples >= grid * grid ? sum / samples / 255 : 1;
+  };
+  for (let a = 0; a < candidates.length; a++) for (let b = a + 1; b < candidates.length; b++) {
+    const first = candidates[a], second = candidates[b], boxA = first.box, boxB = second.box;
+    if (area(intersection(boxA, boxB)) > 0 || gap(boxA, boxB) > 640 || Math.min(boxA.width, boxA.height, boxB.width, boxB.height) < 8) continue;
+    const widthRatio = boxA.width / boxB.width, heightRatio = boxA.height / boxB.height;
+    if (widthRatio < .8 || widthRatio > 1.25 || heightRatio < .8 || heightRatio > 1.25) continue;
+    const masks = first.masks ?? [], changeA = comparison(before, boxA, after, boxA, masks), changeB = comparison(before, boxB, after, boxB, masks);
+    if (Math.min(changeA, changeB) < .045) continue;
+    const error = (comparison(before, boxA, after, boxB, masks) + comparison(before, boxB, after, boxA, masks)) / 2;
+    if (error < .055 && error < Math.min(changeA, changeB) * .3) matches.push({ a, b, error });
+  }
+  const paired = new Set<number>(), result: CandidateAssociation[] = [];
+  for (const match of matches.sort((a, b) => a.error - b.error || a.a - b.a || a.b - b.b)) {
+    if (paired.has(match.a) || paired.has(match.b)) continue;
+    paired.add(match.a); paired.add(match.b);
+    result.push({ kind: 'possible_translation', fromCandidateId: candidates[match.a].id, toCandidateId: candidates[match.b].id, meanColorError: match.error, scope: 'Bidirectional image similarity heuristic; neither movement direction nor causal explanation is established.' });
+  }
+  return result;
 }

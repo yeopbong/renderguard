@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { analyzePair, tensorsForCandidate, tensorForCrop, differenceRaster, LIMITS, VERSION, type Raster, type Mask } from '../core/index.ts';
+import { analyzePair, associateCandidates, tensorsForCandidate, tensorForCrop, differenceRaster, LIMITS, VERSION, type Raster, type Mask } from '../core/index.ts';
 import { decodePng, writePng, readPng } from '../capture/png.ts';
 import { evaluateGeometry, type Measurement } from '../capture/contracts.ts';
 import { assertAllowedTarget, normalizedOrigin } from '../capture/security.ts';
@@ -76,4 +76,14 @@ test('development target policy restricts redirects, credentials, hostnames and 
   for (const value of ['file:///etc/passwd', 'http://example.com', 'http://127.1:4000', 'http://localhost:5000', 'http://user:secret@localhost:4000']) assert.throws(() => assertAllowedTarget(value, policy));
   assert.throws(() => assertAllowedTarget('http://localhost:8765/api/session', { allowedTargets: ['http://localhost:8765'] }), /workbench/);
   assert.equal(normalizedOrigin('http://[::1]:4000/path'), 'http://[::1]:4000');
+});
+
+test('separated translated regions gain heuristic associations without changing tensors or candidates', () => {
+  const before = raster(480, 180), after = raster(480, 180); paint(before, 20, 30, 90, 70, 20); paint(after, 310, 30, 90, 70, 20);
+  const analysis = analyzePair(before, after), original = JSON.parse(JSON.stringify(analysis.candidates));
+  assert.equal(analysis.candidates.length, 2); assert.equal(analysis.associations.length, 1); assert.match(analysis.associations[0].scope, /heuristic/);
+  const tensors = analysis.candidates.map(candidate => tensorsForCandidate(before, after, candidate));
+  assert.deepEqual(associateCandidates(before, after, analysis.candidates), analysis.associations); assert.deepEqual(analysis.candidates, original);
+  assert.deepEqual(analysis.candidates.map(candidate => tensorsForCandidate(before, after, candidate)), tensors);
+  const unrelated = raster(480, 180); paint(unrelated, 310, 30, 90, 70, 170); assert.equal(analyzePair(before, unrelated).associations.length, 0);
 });

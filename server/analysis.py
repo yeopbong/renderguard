@@ -29,12 +29,14 @@ class Cancelled(Exception):
 def decode_png(value, target):
     if not value.startswith('data:image/png;base64,'):
         raise ValueError('Only base64-encoded PNG images are accepted')
-    if len(value) > 24 * 1024 * 1024:
+    if len(value) > 24 * 1024 * 1024 + 100:
         raise ValueError('PNG file exceeds the 18 MiB limit')
     try:
         data = base64.b64decode(value.split(',', 1)[1], validate=True)
     except (ValueError, binascii.Error) as e:
         raise ValueError('Invalid PNG encoding') from e
+    if len(data) > 18 * 1024 * 1024:
+        raise ValueError('PNG file exceeds the 18 MiB limit')
     if not data.startswith(b'\x89PNG\r\n\x1a\n'):
         raise ValueError('Invalid PNG signature')
     with Image.open(io.BytesIO(data)) as im:
@@ -53,10 +55,11 @@ def node_command(script):
     return [executable, '--import', 'tsx', str(ROOT / script)]
 
 
-def command(args, cwd, cancel, timeout=180, stage_callback=None):
+def command(args, cwd, cancel, timeout=180, stage_callback=None, log_progress=None):
     start = time.monotonic()
     out = cwd / ('process-' + uid() + '.log')
     with out.open('w+') as stream:
+        last_position = 0
         proc = subprocess.Popen(args, cwd=ROOT, stdout=stream, stderr=stream, env=os.environ.copy())
         try:
             while proc.poll() is None:
@@ -68,6 +71,17 @@ def command(args, cwd, cancel, timeout=180, stage_callback=None):
                     raise TimeoutError('The current processing stage exceeded its time limit')
                 if stage_callback:
                     stage_callback()
+                if log_progress:
+                    with out.open() as reader:
+                        reader.seek(last_position)
+                        for line in reader:
+                            try:
+                                item = json.loads(line)
+                                if all(k in item for k in ('stage', 'completed', 'total')):
+                                    log_progress(item)
+                            except (ValueError, TypeError):
+                                pass
+                        last_position = reader.tell()
                 time.sleep(0.1)
             if proc.returncode:
                 stream.seek(0)
@@ -92,9 +106,15 @@ def model_assets(store):
     actual = digest(model)
     if expected != actual:
         raise ValueError('Model checksum does not match its manifest')
-    calibration = json.loads((folder / 'calibration.json').read_text())
+    calibration_file = folder / 'calibration.json'
+    if manifest.get('calibrationSha256') and digest(calibration_file) != manifest['calibrationSha256']:
+        raise ValueError('Calibration checksum does not match the model manifest')
+    calibration = json.loads(calibration_file.read_text())
     if calibration.get('modelSha256') != actual or calibration.get('preprocessVersion') != manifest.get('preprocessVersion'):
         raise ValueError('Calibration is invalid for this model or preprocessing version')
+    classes = calibration.get('classes', [])
+    if len(classes) != len(LABELS) or any(c.get('label') != label or c.get('status') not in ('calibrated', 'uncalibrated') or not np.isfinite(c.get('temperature', 0)) or c.get('temperature', 0) <= 0 or not np.isfinite(c.get('bias', float('nan'))) for c, label in zip(classes, LABELS)):
+        raise ValueError('Invalid observation calibration definitions')
     return folder, manifest, calibration
 
 
@@ -104,7 +124,7 @@ def run_analysis(store, job, config, cancel):
     folder = store.root / 'runs' / run_id
     folder.mkdir(parents=True)
     started = time.monotonic()
-    evidence = {'schemaVersion': '1.0', 'id': run_id, 'projectId': job['projectId'], 'createdAt': now(), 'execution': 'error', 'environment': 'unverified', 'analysis': {'candidates': []}, 'predictions': [], 'contracts': [], 'masks': config.get('masks', []), 'model': {}, 'beforeUrl': f'/api/runs/{run_id}/images/before', 'afterUrl': f'/api/runs/{run_id}/images/after'}
+    evidence = {'schemaVersion': '1.0', 'name': config.get('name') or 'Screenshot comparison', 'id': run_id, 'projectId': job['projectId'], 'createdAt': now(), 'execution': 'error', 'environment': 'unverified', 'analysis': {'candidates': []}, 'predictions': [], 'contracts': [], 'masks': config.get('masks', []), 'model': {}, 'beforeUrl': f'/api/runs/{run_id}/images/before', 'afterUrl': f'/api/runs/{run_id}/images/after'}
     phase = 'inputs'
     try:
         store.update_job(job_id, status='running', stage=phase, total=2, completed=0)
@@ -119,7 +139,7 @@ def run_analysis(store, job, config, cancel):
             capture_config['deniedOrigins'] = ['http://localhost:8765', 'http://127.0.0.1:8765', 'http://[::1]:8765']
             capture_config['deniedPorts'] = [int(os.environ.get('RENDERGUARD_SERVICE_PORT', '8765'))]
             write_json(folder / 'capture-config.json', capture_config)
-            command(node_command('capture/cli.ts') + [str(folder / 'capture-config.json')], folder, cancel, timeout=150)
+            command(node_command('capture/cli.ts') + [str(folder / 'capture-config.json')], folder, cancel, timeout=150, log_progress=lambda value: store.update_job(job_id, **{k: value[k] for k in ('stage', 'completed', 'total')}))
             captured = json.loads((folder / 'manifest.json').read_text())
             evidence['capture'] = captured
             evidence['contracts'] = captured.get('contracts', [])

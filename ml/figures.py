@@ -1,6 +1,8 @@
 """Render publication figures directly from the saved numerical experiment records."""
 import json
 from pathlib import Path
+import os
+os.environ.setdefault('MPLCONFIGDIR',str(Path('data/matplotlib-cache').resolve()))
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt

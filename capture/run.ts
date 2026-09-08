@@ -12,6 +12,7 @@ const sha256 = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest(
 async function settle(page: Page, readySelector: string | undefined, timeout: number): Promise<void> {
   if (readySelector) await page.locator(readySelector).waitFor({ state: 'visible', timeout });
   await page.evaluate(async maximum => {
+    for (const image of Array.from(document.images)) if (image.loading === 'lazy') image.loading = 'eager';
     let timeoutId: ReturnType<typeof setTimeout>;
     const timeout = new Promise<never>((_, reject) => { timeoutId = setTimeout(() => reject(new Error('Fonts or visible images did not become ready.')), maximum); });
     try {
@@ -69,7 +70,7 @@ export async function capturePair(config: CaptureConfig, progress: (event: Captu
         const repeated = await page.screenshot({ fullPage: true, type: 'png', animations: 'disabled', caret: 'hide', scale: 'css', timeout });
         const raster = decodePng(bytes), stableUnderMasks = analyzePair(raster, decodePng(repeated), masks).changedPixels === 0, path = join(config.outputDir, `${side}.png`);
         await atomicWrite(path, bytes); await writePng(join(config.outputDir, `analysis-${side}.png`), maskedRaster(raster, masks));
-        results.push({ side, url: page.url(), screenshot: `${side}.png`, sha256: sha256(bytes), repeatedSha256: sha256(repeated), stable: sha256(bytes) === sha256(repeated), stableUnderMasks, viewport: config.viewport, deviceScaleFactor: dpr, actualDevicePixelRatio: dimensions.devicePixelRatio, screenshotScale: 'css', cssToImageScale: 1, browser: browser.version(), locale, timezoneId, colorScheme, fontsReady: dimensions.fontsStatus === 'loaded', pageSize: { width: dimensions.width, height: dimensions.height }, imageSize: { width: raster.width, height: raster.height }, masks, state: { readySelector: config.readySelector ?? null, fixedTime: config.state?.fixedTime ?? null, randomSeed: config.state?.randomSeed ?? null, animationPolicy: 'CSS animation and transition disabled; JavaScript timers are not universally frozen.' }, blockedRequests, contracts });
+        results.push({ side, url: page.url(), screenshot: `${side}.png`, sha256: sha256(bytes), repeatedSha256: sha256(repeated), stable: sha256(bytes) === sha256(repeated), stableUnderMasks, viewport: config.viewport, deviceScaleFactor: dpr, actualDevicePixelRatio: dimensions.devicePixelRatio, screenshotScale: 'css', cssToImageScale: 1, browser: browser.version(), locale, timezoneId, colorScheme, fontsReady: dimensions.fontsStatus === 'loaded', pageSize: { width: dimensions.width, height: dimensions.height }, imageSize: { width: raster.width, height: raster.height }, masks, state: { readySelector: config.readySelector ?? null, fixedTime: config.state?.fixedTime ?? null, randomSeed: config.state?.randomSeed ?? null, animationPolicy: 'CSS animation and transition disabled; JavaScript timers are not universally frozen.', imagePolicy: 'Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition.' }, blockedRequests, contracts });
         progress({ stage: `${side}:saved`, completed: results.length, total: 2 });
       } finally { await context.close(); }
     }

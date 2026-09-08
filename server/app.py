@@ -13,7 +13,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Response
 from pydantic import BaseModel, ConfigDict, Field
 
-from .analysis import ROOT, LABELS, Cancelled, command, model_assets, run_analysis
+from .analysis import ROOT, LABELS, Cancelled, command, decode_png, model_assets, run_analysis
 from .reports import report_html, report_json
 from .store import Store, digest, uid, write_json
 
@@ -31,6 +31,7 @@ class ImportInput(StrictModel):
     name: str = Field(default='', max_length=120)
 
 class CaptureInput(StrictModel):
+    name: str = Field(default='', max_length=120)
     beforeUrl: str = Field(max_length=2048)
     afterUrl: str = Field(max_length=2048)
     viewport: dict = Field(default_factory=lambda: {'width': 1280, 'height': 800})
@@ -49,6 +50,14 @@ class ReviewInput(StrictModel):
 class BaselineInput(StrictModel):
     runId: str
     side: str = 'after'
+
+class BaselineImageInput(StrictModel):
+    before: str
+
+class CompareInput(StrictModel):
+    name: str = Field(default='', max_length=120)
+    after: str
+    masks: list[dict] = Field(default_factory=list, max_length=64)
 
 class TrainInput(StrictModel):
     projectId: str
@@ -203,6 +212,36 @@ def create_app(workspace: Path | None = None):
             raise ValueError('Side must be before or after')
         return store.baseline(project, body.runId, body.side)
 
+    def baseline_file(project):
+        baseline = store.project(project)['baseline']
+        if not baseline:
+            raise ValueError('Save a baseline image first')
+        if baseline.get('imageId'):
+            file = store.root / 'baselines' / (baseline['imageId'] + '.png')
+        else:
+            file = store.root / 'runs' / baseline['runId'] / (baseline['side'] + '.png')
+        if not file.is_file() or digest(file) != baseline['sha256']:
+            raise ValueError('Baseline evidence is missing or its checksum changed')
+        return file
+
+    @app.post('/api/projects/{project}/baseline/import')
+    def import_baseline(project: str, body: BaselineImageInput):
+        store.project(project)
+        image_id = uid()
+        file = store.root / 'baselines' / (image_id + '.png')
+        decode_png(body.before, file)
+        return store.save_baseline_image(project, image_id, digest(file))
+
+    @app.get('/api/projects/{project}/baseline/image')
+    def baseline_image(project: str):
+        return FileResponse(baseline_file(project), media_type='image/png')
+
+    @app.post('/api/projects/{project}/compare')
+    def compare_baseline(project: str, body: CompareInput):
+        import base64
+        before = 'data:image/png;base64,' + base64.b64encode(baseline_file(project).read_bytes()).decode()
+        return submit(project, 'import', {'before': before, 'after': body.after, 'masks': body.masks})
+
     @app.post('/api/projects/{project}/baseline/undo')
     def undo_baseline(project: str):
         return store.baseline(project, undo=True)
@@ -233,6 +272,8 @@ def create_app(workspace: Path | None = None):
 
     @app.post('/api/train')
     def train(body: TrainInput):
+        if sum(1 for event in cancels.values() if not event.is_set()) >= 4:
+            raise HTTPException(429, 'At most four jobs may be queued')
         data = feedback(body.projectId)
         if not data['pagePairs']:
             raise ValueError('Correct at least one observation before explicit retraining')
@@ -245,7 +286,15 @@ def create_app(workspace: Path | None = None):
         def execute():
             try:
                 store.update_job(job['id'], status='running', stage='training', completed=0, total=1)
-                command([sys.executable, '-m', 'ml.feedback', '--feedback', str(folder / 'feedback.json'), '--output', str(folder / 'candidate')], folder, cancel, timeout=3600)
+                def progress():
+                    progress_file = folder / 'candidate' / 'progress.json'
+                    if progress_file.is_file():
+                        try:
+                            current = json.loads(progress_file.read_text())
+                            store.update_job(job['id'], **{k: current[k] for k in ('stage', 'completed', 'total') if k in current})
+                        except (ValueError, OSError):
+                            pass
+                command([sys.executable, '-m', 'ml.feedback', '--feedback', str(folder / 'feedback.json'), '--output', str(folder / 'candidate')], folder, cancel, timeout=3600, stage_callback=progress)
                 candidate = folder / 'candidate'
                 manifest = json.loads((candidate / 'manifest.json').read_text())
                 version = manifest['version']
@@ -272,14 +321,20 @@ def create_app(workspace: Path | None = None):
         for folder in [ROOT / 'web/public/models', *sorted((store.root / 'models').glob('*'))]:
             if (folder / 'manifest.json').is_file():
                 value = json.loads((folder / 'manifest.json').read_text())
+                if (folder / 'evaluation.json').is_file():
+                    value['evaluation'] = json.loads((folder / 'evaluation.json').read_text())
+                    value['metrics'] = value['evaluation']
                 entries.append(value)
         return {'active': store.setting('activeModel') or (entries[0]['version'] if entries else None), 'models': entries}
 
     @app.post('/api/models/activate')
     def activate(body: ActivateInput):
         available = models()['models']
-        if not any(v['version'] == body.version for v in available):
+        selected = next((v for v in available if v['version'] == body.version), None)
+        if not selected:
             raise ValueError('Unknown model version')
+        if selected.get('evaluationPassed') is False:
+            raise ValueError('Candidate failed independent retained-development evaluation and cannot be activated')
         previous = store.setting('activeModel')
         shipped = json.loads((ROOT / 'web/public/models/manifest.json').read_text())['version']
         store.set_setting('activeModel', None if shipped == body.version else body.version)
@@ -303,10 +358,12 @@ def create_app(workspace: Path | None = None):
         if not file.is_relative_to(dist):
             raise HTTPException(404, 'File not found')
         if file.is_file():
+            if file.name == 'index.html':
+                return HTMLResponse(file.read_text().replace('<head>', '<head><meta name="renderguard-mode" content="local">', 1))
             return FileResponse(file)
         if relative == '' or '.' not in Path(relative).name:
             if (dist / 'index.html').is_file():
-                return FileResponse(dist / 'index.html')
+                return HTMLResponse((dist / 'index.html').read_text().replace('<head>', '<head><meta name="renderguard-mode" content="local">', 1))
         raise HTTPException(404, 'Build the frontend before starting the service')
 
     return app

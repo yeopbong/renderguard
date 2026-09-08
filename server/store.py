@@ -202,6 +202,17 @@ class Store:
             db.execute('INSERT INTO events(id,project,run,kind,payload,created) VALUES(?,?,?,?,?,?)', (uid(), project, run_id, 'baseline', json.dumps(payload), now()))
         return self.project(project)
 
+    def save_baseline_image(self, project, image_id, sha256):
+        with self.connect() as db:
+            db.execute('BEGIN IMMEDIATE')
+            if not db.execute('SELECT id FROM projects WHERE id=?', (project,)).fetchone():
+                raise KeyError('Project not found')
+            events = [e for e in self.events(db, project=project) if e['kind'] == 'baseline']
+            old = events[-1]['new'] if events else None
+            payload = {'old': old, 'new': {'imageId': image_id, 'sha256': sha256, 'environment': 'unverified', 'side': 'before'}}
+            db.execute('INSERT INTO events(id,project,run,kind,payload,created) VALUES(?,?,?,?,?,?)', (uid(), project, None, 'baseline', json.dumps(payload), now()))
+        return self.project(project)
+
     def setting(self, key, default=None):
         with self.connect() as db:
             row = db.execute('SELECT value FROM settings WHERE key=?', (key,)).fetchone()

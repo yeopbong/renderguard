@@ -13,7 +13,7 @@ from safetensors.torch import load_file, save_file
 from scipy.special import expit
 from .model import ObservationModel, LABELS, masked_bce
 from .train import STRIDE, inputs, export, atomic_json, sha
-from .metrics import metrics
+from .metrics import metrics, apply_calibration, thresholds
 
 def build_buffer():
     from .train import arrays
@@ -70,16 +70,17 @@ def main():
         features=torch.cat(train_features);y=torch.tensor(y,dtype=torch.float32);mask=torch.tensor(mask,dtype=torch.float32)
         cut=json.loads((root/'web/public/models/manifest.json').read_text()).get('thresholds',[.5]*5)
         from .train import predict
-        dev=old['x_dev'];before=predict(model,dev,np.arange(len(dev)),'cpu');before_metric=metrics(old['y_dev'],expit(before),old['mask_dev'],cut)
+        dev=old['x_dev'];before=predict(model,dev,np.arange(len(dev)),'cpu');parent_calibration=json.loads((root/'web/public/models/calibration.json').read_text())
+        before_metric=metrics(old['y_dev'],apply_calibration(before,parent_calibration['classes']),old['mask_dev'],cut)
         original={k:v.clone() for k,v in model.encoder.state_dict().items()};optimizer=torch.optim.AdamW(model.head.parameters(),lr=.0004);curve=[];torch.manual_seed(61)
         for epoch in range(5):
             progress('train_head',epoch,5);model.train();optimizer.zero_grad();logits=model.head(features);loss=masked_bce(logits,y,mask);loss.backward();optimizer.step();curve.append(float(loss.detach()))
         assert all(torch.equal(original[k],v) for k,v in model.encoder.state_dict().items());model.eval()
-        after=predict(model,dev,np.arange(len(dev)),'cpu');after_metric=metrics(old['y_dev'],expit(after),old['mask_dev'],cut)
+        after=predict(model,dev,np.arange(len(dev)),'cpu');new_cut=thresholds(old['y_dev'],expit(after),old['mask_dev']);after_metric=metrics(old['y_dev'],expit(after),old['mask_dev'],new_cut)
         acceptable=after_metric['macroPrAuc']>=before_metric['macroPrAuc']-.03
         numerical=export(model,out/'model.onnx',inputs(x,np.arange(min(2,len(x))),'cpu'));save_file(model.state_dict(),str(out/'model.safetensors'));h=sha(out/'model.onnx')
         calibration={'modelSha256':h,'preprocessVersion':'rgba-diff-rle-letterbox-v1','classes':[{'label':l,'status':'uncalibrated','temperature':1.,'bias':0.,'n':0,'positive':0,'negative':0} for l in LABELS]};atomic_json(out/'calibration.json',calibration)
-        manifest=json.loads((root/'web/public/models/manifest.json').read_text());manifest.update(version=f'feedback-{int(time.time())}',sha256=h,modelSha256=h,weightsSha256=sha(out/'model.safetensors'),calibrationSha256=sha(out/'calibration.json'),parentModelSha256=manifest['sha256'],feedbackSha256=sha(args.feedback),calibration='calibration.json',evaluationPassed=acceptable)
+        manifest=json.loads((root/'web/public/models/manifest.json').read_text());manifest.update(version=f'feedback-{int(time.time())}',sha256=h,modelSha256=h,weightsSha256=sha(out/'model.safetensors'),calibrationSha256=sha(out/'calibration.json'),parentModelSha256=manifest['sha256'],feedbackSha256=sha(args.feedback),calibration='calibration.json',evaluationPassed=acceptable,thresholds=new_cut)
         atomic_json(out/'manifest.json',manifest);atomic_json(out/'evaluation.json',{'status':'eligible' if acceptable else 'rejected','rule':'Independent retained dev macro PR-AUC may decrease by at most 0.03; explicit activation required.','before':before_metric,'after':after_metric,'feedbackPages':len(pairs),'feedbackCandidates':len(new_x),'oldTrainingCandidates':len(old['x_train']),'devCandidates':len(dev),'curve':curve,'encoderUnchanged':True,'onnx':numerical,'calibration':'Invalidated because model weights changed.'});progress('complete',5,5)
         print(json.dumps({'version':manifest['version'],'evaluationPassed':acceptable,'output':out.name}))
     except Exception as error:

@@ -15,6 +15,7 @@ test.before(async () => {
     if (request.url === '/redirect') { response.writeHead(302, { Location: 'http://example.invalid/blocked' }).end(); return; }
     response.setHeader('Content-Type', 'text/html');
     if (request.url === '/external') { response.end('<!doctype html><img src="http://example.invalid/image.png">'); return; }
+    if (request.url === '/clipped') { response.end('<!doctype html><div data-ready style="position:relative;overflow:hidden;width:100px;height:100px"><button id="outside" style="position:absolute;left:150px;top:30px">Outside</button><button id="partial" style="position:absolute;left:80px;top:10px;width:100px">Partial</button></div><div id="shape" style="width:100px;height:100px;clip-path:circle(0)"></div>'); return; }
     if (request.url === '/dynamic') { response.end('<!doctype html><style>body{margin:0}#clock{width:100px;height:80px;background:red}</style><div id="clock"></div><script>let x=0;setInterval(()=>{document.querySelector("#clock").style.width=(100+(x++%100))+"px"},1)</script>'); return; }
     response.end(fixture(request.url === '/after'));
   });
@@ -51,4 +52,10 @@ test('user mask makes explicitly bounded dynamic content comparable', async () =
   const config = configuration('masked-dynamic'); config.beforeUrl = config.afterUrl = `${origin}/dynamic`; config.readySelector = '#clock'; config.contracts = []; config.masks = [{ x: 0, y: 0, width: 210, height: 90, source: 'User declared animated panel' }];
   const result = await capturePair(config) as any; assert.equal(result.execution, 'complete'); assert.equal(result.before.stableUnderMasks, true); assert.deepEqual(result.masks, config.masks);
   assert.equal(analyzePair(await readPng(join(config.outputDir, 'before.png')), await readPng(join(config.outputDir, 'after.png')), config.masks).changedPixels, 0);
+});
+
+test('required visibility accounts for ancestor clipping and marks unsupported masks inconclusive', async () => {
+  const config = configuration('clipped-visibility'); config.beforeUrl = config.afterUrl = `${origin}/clipped`; config.readySelector = '[data-ready]'; config.contracts = [{ type: 'required-visible', selector: '#outside' }, { type: 'required-visible', selector: '#partial' }, { type: 'required-visible', selector: '#shape' }];
+  const result = await capturePair(config) as any; assert.equal(result.execution, 'complete'); assert.deepEqual(result.contracts.map((c: any) => c.status), ['violated', 'satisfied', 'inconclusive']);
+  assert.equal(result.contracts[0].measurements[0].visibleBox.width, 0); assert.equal(result.contracts[1].measurements[0].visibleBox.width, 20);
 });

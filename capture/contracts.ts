@@ -1,7 +1,7 @@
 import type { Page } from 'playwright';
 import type { Rect } from '../core/index.ts';
 export type Contract = { id?: string; type: 'required-visible' | 'inside-container' | 'non-overlap'; selector: string; container?: string; other?: string; tolerance?: number; required?: boolean };
-export type Measurement = { selector: string; matches: number; box?: Rect; displayed?: boolean; inPage?: boolean; role?: string; parentTag?: string; reason?: string };
+export type Measurement = { selector: string; matches: number; box?: Rect; displayed?: boolean; inPage?: boolean; role?: string; parentTag?: string; visibleBox?: Rect; visibilityLimitations?: string[]; reason?: string };
 export type ContractResult = Contract & { status: 'satisfied' | 'violated' | 'inconclusive' | 'error'; reason: string; measurements: Measurement[]; coordinateSpace: 'document-css-pixels'; scope: string };
 export async function measureElement(page: Page, selector: string): Promise<Measurement> {
   try {
@@ -10,13 +10,23 @@ export async function measureElement(page: Page, selector: string): Promise<Meas
     return await page.locator(selector).evaluate((element, suppliedSelector) => {
       const r = element.getBoundingClientRect(), style = getComputedStyle(element);
       let displayed = r.width > 0 && r.height > 0 && element.getClientRects().length > 0;
+      let left = r.left, right = r.right, top = r.top, bottom = r.bottom;
+      const visibilityLimitations: string[] = [];
       for (let node: Element | null = element; node; node = node.parentElement) {
         const s = getComputedStyle(node);
         if (s.display === 'none' || s.visibility === 'hidden' || s.visibility === 'collapse' || Number(s.opacity) <= 0) displayed = false;
+        if (s.clipPath !== 'none' || (s.maskImage && s.maskImage !== 'none')) visibilityLimitations.push('Nonrectangular clipping or image mask cannot be measured by this contract.');
+        if (node !== element) {
+          const bounds = node.getBoundingClientRect();
+          if (['hidden', 'clip', 'scroll', 'auto'].includes(s.overflowX)) { left = Math.max(left, bounds.left + node.clientLeft); right = Math.min(right, bounds.left + node.clientLeft + node.clientWidth); }
+          if (['hidden', 'clip', 'scroll', 'auto'].includes(s.overflowY)) { top = Math.max(top, bounds.top + node.clientTop); bottom = Math.min(bottom, bounds.top + node.clientTop + node.clientHeight); }
+        }
       }
       const width = Math.max(document.documentElement.scrollWidth, document.documentElement.clientWidth), height = Math.max(document.documentElement.scrollHeight, document.documentElement.clientHeight);
       const box = { x: r.x + window.scrollX, y: r.y + window.scrollY, width: r.width, height: r.height };
-      return { selector: suppliedSelector, matches: 1, box, displayed, inPage: box.x + box.width > 0 && box.y + box.height > 0 && box.x < width && box.y < height, role: element.getAttribute('role') ?? element.tagName.toLowerCase(), parentTag: element.parentElement?.tagName.toLowerCase(), reason: style.transform !== 'none' ? 'Axis-aligned geometry includes CSS transforms.' : undefined };
+      const visibleBox = { x: left + window.scrollX, y: top + window.scrollY, width: Math.max(0, right - left), height: Math.max(0, bottom - top) };
+      displayed = displayed && visibleBox.width > 0 && visibleBox.height > 0;
+      return { selector: suppliedSelector, matches: 1, box, visibleBox, visibilityLimitations: [...new Set(visibilityLimitations)], displayed, inPage: box.x + box.width > 0 && box.y + box.height > 0 && box.x < width && box.y < height, role: element.getAttribute('role') ?? element.tagName.toLowerCase(), parentTag: element.parentElement?.tagName.toLowerCase(), reason: style.transform !== 'none' ? 'Axis-aligned geometry includes CSS transforms.' : undefined };
     }, selector);
   } catch (error) { return { selector, matches: 0, reason: error instanceof Error ? error.message.slice(0, 300) : 'Element could not be measured.' }; }
 }
@@ -27,8 +37,9 @@ export function evaluateGeometry(contract: Contract, measurements: Measurement[]
   if (measurements.some(m => m.matches !== 1 || !m.box || !Object.values(m.box).every(Number.isFinite))) return { ...base, status: 'inconclusive', reason: 'Each selector must resolve to one measurable element.' };
   const first = measurements[0];
   if (contract.type === 'required-visible') {
-    if (!first.displayed || !first.inPage) return { ...base, status: 'violated', reason: 'The element has no visible nonzero layout box within the page.' };
-    return { ...base, status: 'satisfied', reason: 'The element has a rendered layout box within the page; actual occlusion and interaction are outside this contract.' };
+    if (first.visibilityLimitations?.length) return { ...base, status: 'inconclusive', reason: first.visibilityLimitations.join(' ') };
+    if (!first.displayed || !first.inPage) return { ...base, status: 'violated', reason: 'The element has no nonzero rendered box after rectangular ancestor clipping within the page.' };
+    return { ...base, status: 'satisfied', reason: 'The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract.' };
   }
   if (measurements.length !== 2 || measurements.some(m => !m.displayed || !m.box || m.box.width <= 0 || m.box.height <= 0)) return { ...base, status: 'inconclusive', reason: 'Both elements need nonzero rendered boxes for this geometric measurement.' };
   const a = first.box!, b = measurements[1].box!;
