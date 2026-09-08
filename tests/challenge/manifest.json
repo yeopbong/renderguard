@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0",
+  "scope": "Handwritten synthetic challenge; authored independently from the main scene mutation functions. This is an internal final check, not independent external acceptance.",
+  "freezePolicy": "Fixtures and expected labels are frozen before the final model is evaluated. Subsequent model changes after challenge inspection mark this set as development-used.",
+  "labels": [
+    "clipping",
+    "overlap_or_occlusion",
+    "out_of_container",
+    "element_disappearance",
+    "layout_displacement"
+  ],
+  "annotationStatus": "Provisional authored expectations; rendering and visual inspection required before final evaluation.",
+  "cases": [
+    {
+      "id": "clipped-receipt",
+      "before": "clipped-receipt/before.html",
+      "after": "clipped-receipt/after.html",
+      "observations": [
+        1,
+        0,
+        null,
+        0,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "77b767e71ffe964822ee72bf4f85228249139a8171aa47b55775fe280dec307d",
+        "after": "13fef4d22984c7ac89a86199d010823a85dd2352bcb139cfbdf0e529ece3bd41"
+      }
+    },
+    {
+      "id": "occluded-reading",
+      "before": "occluded-reading/before.html",
+      "after": "occluded-reading/after.html",
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [
+        {
+          "type": "non-overlap",
+          "selector": ".copy",
+          "other": ".notice"
+        }
+      ],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [
+        "violated"
+      ],
+      "fixtureHashes": {
+        "before": "014c191833b145db7ea595d40d6b04766b3ae89f1eaf21c51f635e5c19bc5501",
+        "after": "c4451db7f91075189ecbcc29a5f8a196bbb6cceab6a4207675e58009c6c5fdce"
+      }
+    },
+    {
+      "id": "escaped-control",
+      "before": "escaped-control/before.html",
+      "after": "escaped-control/after.html",
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [
+        {
+          "type": "inside-container",
+          "selector": ".control",
+          "container": ".frame"
+        }
+      ],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [
+        "violated"
+      ],
+      "fixtureHashes": {
+        "before": "51083a03edf7bc6b41b738698483e1e7f54d358a8217f967c520fa9fbd544770",
+        "after": "206f05f3ec862a944099c98ea8924ca037a8e014f7c3a3b57d954b7ea1c7aec9"
+      }
+    },
+    {
+      "id": "missing-download",
+      "before": "missing-download/before.html",
+      "after": "missing-download/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [
+        {
+          "type": "required-visible",
+          "selector": ".download"
+        }
+      ],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [
+        "inconclusive"
+      ],
+      "fixtureHashes": {
+        "before": "cf8cac459ecc155faf1dd91d2e3555d8e4c2334c4203fcc220ab9645b1eec204",
+        "after": "358dadf28d5960761413680ade2e07e876fc02027fc98f18020f582cbeea1040"
+      }
+    },
+    {
+      "id": "intentional-relocation",
+      "before": "intentional-relocation/before.html",
+      "after": "intentional-relocation/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "independentDefectConclusion": false,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "9b4e4523d3d51e5b95c99576b41262e8546201ccbb65c488e1e0e3ce8830ece8",
+        "after": "e9cb51b485ae8cdee66cbc3fcf2e15eb1629029feff157e52cfa8c76beb9c750"
+      }
+    },
+    {
+      "id": "clipped-multilingual",
+      "before": "clipped-multilingual/before.html",
+      "after": "clipped-multilingual/after.html",
+      "observations": [
+        1,
+        0,
+        null,
+        0,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "667963009b7c63e77062df9cb39c7d7bcd637b19413b2ef69bc1889d9da7735e",
+        "after": "173b0e412eab09b14d0d4d935fec02e1891a6f30e86fd2e88f6c2f39740bae25"
+      }
+    },
+    {
+      "id": "ordinary-content",
+      "before": "ordinary-content/before.html",
+      "after": "ordinary-content/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "28ad854255c250a0ebb717b8a6417eeaa70ab635ee191ae5949a0e47649af4be",
+        "after": "fd2e0d9419cc6c650b5897405f0e81372282fa164543ff14053efecd74f6e2fa"
+      }
+    },
+    {
+      "id": "repeat-capture",
+      "before": "repeat-capture/before.html",
+      "after": "repeat-capture/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "014f2fdf554bd48e30b8400fe8d930e0805510acde0cfa6ff3162d4ae759e7a6",
+        "after": "014f2fdf554bd48e30b8400fe8d930e0805510acde0cfa6ff3162d4ae759e7a6"
+      }
+    },
+    {
+      "id": "masked-dynamic",
+      "before": "masked-dynamic/before.html",
+      "after": "masked-dynamic/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "contracts": [],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [],
+      "masks": [
+        {
+          "x": 45,
+          "y": 120,
+          "width": 160,
+          "height": 55,
+          "source": "Hand-declared dynamic status panel"
+        }
+      ],
+      "fixtureHashes": {
+        "before": "1e55dd7b534f9d847ed727d68dd9b6191b7723298ed7cd008e0ba70507046106",
+        "after": "1e55dd7b534f9d847ed727d68dd9b6191b7723298ed7cd008e0ba70507046106"
+      }
+    },
+    {
+      "id": "removed-long-tail",
+      "before": "removed-long-tail/before.html",
+      "after": "removed-long-tail/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "contracts": [
+        {
+          "type": "required-visible",
+          "selector": ".footer"
+        }
+      ],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [
+        "inconclusive"
+      ],
+      "fixtureHashes": {
+        "before": "cbe82088de1c9db7f2be661a67f9c71a0b6408957f56deb5d4bd31503c53b25e",
+        "after": "0224c3fe801417d19bdd81edee1e2e66fef312d41e2fc669ae27f176016f4213"
+      }
+    },
+    {
+      "id": "unmeasurable-contract",
+      "before": "unmeasurable-contract/before.html",
+      "after": "unmeasurable-contract/after.html",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": null,
+      "contracts": [
+        {
+          "type": "required-visible",
+          "selector": "#required-absent-control"
+        }
+      ],
+      "expectedExecution": "complete",
+      "expectedContractStatuses": [
+        "inconclusive"
+      ],
+      "fixtureHashes": {
+        "before": "8162eff6512d8372b73aa3367121e50cef0d0da0f62ad5ae53e9fcb34b8d1d03",
+        "after": "8162eff6512d8372b73aa3367121e50cef0d0da0f62ad5ae53e9fcb34b8d1d03"
+      }
+    },
+    {
+      "id": "incomparable-width",
+      "before": "incomparable-width/before.html",
+      "after": "incomparable-width/after.html",
+      "observations": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "independentDefectConclusion": null,
+      "contracts": [],
+      "expectedExecution": "incomparable",
+      "expectedContractStatuses": [],
+      "fixtureHashes": {
+        "before": "9f403c7fab1f7c0b0f9876c96a68f0d13c3cdb77f262a725715e2a89980721ea",
+        "after": "9c0123d73226b35d5c836026899a75d6e0da2a7d38372518279736ceb3066e15"
+      }
+    }
+  ]
+}

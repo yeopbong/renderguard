@@ -1,0 +1,227 @@
+{
+  "version": "original-24-v2",
+  "license": "CC0-1.0",
+  "createdBeforeRendering": true,
+  "families": [
+    {
+      "id": "ledger",
+      "structure": "A transaction ledger with summary footer",
+      "split": "train",
+      "source": "original-ledger",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "profile",
+      "structure": "A profile with two-column biography",
+      "split": "train",
+      "source": "original-profile",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "schedule",
+      "structure": "A time-slot timetable",
+      "split": "train",
+      "source": "original-schedule",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "kanban",
+      "structure": "A three-lane work board",
+      "split": "train",
+      "source": "original-kanban",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "invoice",
+      "structure": "A printable invoice with totals",
+      "split": "train",
+      "source": "original-invoice",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "mail",
+      "structure": "A split mailbox",
+      "split": "train",
+      "source": "original-mail",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "catalog",
+      "structure": "A product catalog grid",
+      "split": "train",
+      "source": "original-catalog",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "settings",
+      "structure": "A stacked settings form",
+      "split": "train",
+      "source": "original-settings",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "article",
+      "structure": "A long editorial article",
+      "split": "train",
+      "source": "original-article",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "checkout",
+      "structure": "A checkout with order rail",
+      "split": "train",
+      "source": "original-checkout",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "gallery",
+      "structure": "An asymmetric gallery",
+      "split": "train",
+      "source": "original-gallery",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "metrics",
+      "structure": "A metric dashboard",
+      "split": "train",
+      "source": "original-metrics",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "forum",
+      "structure": "A threaded discussion",
+      "split": "train",
+      "source": "original-forum",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "timeline",
+      "structure": "A vertical project timeline",
+      "split": "train",
+      "source": "original-timeline",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "nav",
+      "structure": "A navigation menu and article",
+      "split": "dev",
+      "source": "original-nav",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "modal",
+      "structure": "A dialog above a muted page",
+      "split": "dev",
+      "source": "original-modal",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "pricing",
+      "structure": "A pricing comparison",
+      "split": "dev",
+      "source": "original-pricing",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "directory",
+      "structure": "A contact directory",
+      "split": "dev",
+      "source": "original-directory",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "player",
+      "structure": "A media player with playlist",
+      "split": "calibration",
+      "source": "original-player",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "calendar",
+      "structure": "A month calendar",
+      "split": "calibration",
+      "source": "original-calendar",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "search",
+      "structure": "A faceted search layout",
+      "split": "calibration",
+      "source": "original-search",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "wizard",
+      "structure": "A multistep form",
+      "split": "test",
+      "source": "original-wizard",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "code",
+      "structure": "A code review split pane",
+      "split": "test",
+      "source": "original-code",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    },
+    {
+      "id": "map",
+      "structure": "A schematic map and legend",
+      "split": "test",
+      "source": "original-map",
+      "dependencies": [
+        "base-css-v2"
+      ]
+    }
+  ],
+  "sharedComponents": [
+    "base-css-v2"
+  ],
+  "note": "Original synthetic structures, not independent real websites."
+}

@@ -1,0 +1,70 @@
+import { gateFor, type Project, type Review, type Run } from './types';
+const DB_NAME = 'renderguard-workbench-v1';
+let database: Promise<IDBDatabase>;
+function db() {
+  return database ||= new Promise<IDBDatabase>((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, 1);
+    request.onupgradeneeded = () => { for (const name of ['projects', 'runs']) request.result.createObjectStore(name, { keyPath: 'id' }); };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+}
+async function read<T>(store: string, key?: string): Promise<T> {
+  const database = await db();
+  return new Promise((resolve, reject) => {
+    const transaction = database.transaction(store, 'readonly');
+    const request = key ? transaction.objectStore(store).get(key) : transaction.objectStore(store).getAll();
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(request.error);
+  });
+}
+async function write<T>(store: string, value: T) {
+  const database = await db();
+  await new Promise<void>((resolve, reject) => {
+    const tx = database.transaction(store, 'readwrite');
+    tx.objectStore(store).put(value);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error || new Error('Storage transaction aborted'));
+  });
+  return value;
+}
+export const storage = {
+  projects: () => read<Project[]>('projects'),
+  runs: async (projectId: string) => (await read<Run[]>('runs')).filter(r => r.projectId === projectId).sort((a,b) => b.createdAt.localeCompare(a.createdAt)),
+  createProject: (name: string) => write<Project>('projects', {id: crypto.randomUUID(), name, createdAt: new Date().toISOString(), baselineHistory: []}),
+  saveRun: async (run: Run) => { if (await read<Run | undefined>('runs', run.id)) throw new Error('Existing evidence cannot be replaced. Create a new analysis.'); return write('runs', structuredClone(run)); },
+  review: async (run: Run, candidateId: string, value: Review) => {
+    const current = await read<Run>('runs', run.id);
+    if (!current.analysis.candidates.some(c => c.id === candidateId)) throw new Error('Unknown candidate');
+    const oldValue = current.decisions[candidateId] || {decision: 'unreviewed' as const};
+    current.events.push({id: crypto.randomUUID(), time: new Date().toISOString(), candidateId, oldValue, newValue: value, modelVersion: current.model.version, runId: current.id, kind: 'review'});
+    current.decisions[candidateId] = structuredClone(value);
+    current.gate = gateFor(current);
+    return write('runs', current);
+  },
+  undo: async (run: Run) => {
+    const current = await read<Run>('runs', run.id);
+    const undone = new Set(current.events.map(e => e.undoes).filter(Boolean));
+    const event = [...current.events].reverse().find(e => e.kind === 'review' && !undone.has(e.id));
+    if (!event) return current;
+    current.events.push({id: crypto.randomUUID(), time: new Date().toISOString(), candidateId: event.candidateId, oldValue: current.decisions[event.candidateId], newValue: event.oldValue, modelVersion: current.model.version, runId: current.id, kind: 'undo', undoes: event.id});
+    current.decisions[event.candidateId] = event.oldValue;
+    current.gate = gateFor(current);
+    return write('runs', current);
+  },
+  baseline: async (project: Project, runId: string, side: 'before' | 'after') => {
+    const current = await read<Project>('projects', project.id);
+    current.baselineHistory.push({id: crypto.randomUUID(), runId, side, time: new Date().toISOString()});
+    current.baseline = {runId, side};
+    return write('projects', current);
+  },
+  undoBaseline: async (project: Project) => {
+    const current = await read<Project>('projects', project.id);
+    const last = [...current.baselineHistory].reverse().find(e => !e.reverted);
+    if (last) last.reverted = true;
+    const previous = [...current.baselineHistory].reverse().find(e => !e.reverted);
+    current.baseline = previous && {runId: previous.runId, side: previous.side};
+    return write('projects', current);
+  },
+};
