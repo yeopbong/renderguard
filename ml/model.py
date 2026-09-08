@@ -9,6 +9,7 @@ import timm
 from safetensors.torch import load_file
 
 UPSTREAM_REVISION = "1824797e7887cbec1990e4adbd6675960a36c589"
+UPSTREAM_SHA256 = "46d2c063b18125884c48937afa4c49e18128869e52e8db96df48bf0a4d7ff697"
 UPSTREAM_URL = f"https://huggingface.co/timm/mobilenetv3_small_100.lamb_in1k/resolve/{UPSTREAM_REVISION}/model.safetensors"
 
 def pretrained_file():
@@ -18,6 +19,8 @@ def pretrained_file():
         temporary = path.with_suffix(".tmp")
         urllib.request.urlretrieve(UPSTREAM_URL, temporary)
         temporary.replace(path)
+    if hashlib.sha256(path.read_bytes()).hexdigest() != UPSTREAM_SHA256:
+        raise ValueError("Pretrained weight hash mismatch")
     return path
 
 LABELS = ['clipping', 'overlap_or_occlusion', 'out_of_container', 'element_disappearance', 'layout_displacement']
