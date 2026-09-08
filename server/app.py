@@ -1,4 +1,3 @@
-"""Loopback-only application with explicit write authorization."""
 from __future__ import annotations
 import concurrent.futures
 import json
@@ -95,7 +94,6 @@ def create_app(workspace: Path | None = None):
             length = request.headers.get('content-length')
             if length and (not length.isdecimal() or int(length) > 50 * 1024 * 1024):
                 return JSONResponse({'detail': 'Request body exceeds 50 MiB'}, status_code=413)
-            # Count streamed bodies too; a missing Content-Length cannot bypass limits.
             chunks = []
             size = 0
             async for chunk in request.stream():
@@ -351,7 +349,6 @@ def create_app(workspace: Path | None = None):
     def frontend(path: str):
         if path.startswith('api/'):
             raise HTTPException(404, 'API endpoint not found')
-        # The same production build works under both localhost and Pages.
         relative = path.removeprefix('renderguard/')
         dist = (ROOT / 'dist').resolve()
         file = (dist / relative).resolve()

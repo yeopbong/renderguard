@@ -1,4 +1,4 @@
-/** Identical PNG byte decoding in Node and browser workers, without Canvas color conversion. */
+
 import { decode, convertIndexedToRgb } from 'fast-png';
 import { InputError, LIMITS, validateRaster, type Raster } from './index.ts';
 export function decodePNG(bytes: Uint8Array): Raster {

@@ -1,4 +1,3 @@
-"""Separate raw PyTorch arithmetic from the exported frozen Conv/BN deployment graph."""
 import copy
 import json
 from pathlib import Path

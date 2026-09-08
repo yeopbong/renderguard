@@ -1,4 +1,3 @@
-"""Shared masked metrics; all thresholds are selected using development data."""
 import numpy as np
 from sklearn.metrics import average_precision_score, precision_recall_fscore_support, roc_auc_score
 from scipy.optimize import minimize

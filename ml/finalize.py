@@ -1,4 +1,3 @@
-"""Finalize traceable configuration and a real browser parity fixture for trained weights."""
 import json
 from pathlib import Path
 import numpy as np

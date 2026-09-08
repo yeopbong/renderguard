@@ -49,7 +49,7 @@ test('transparent pixels composite white and half-pixel bilinear letterbox is de
   const b = raster(2, 1, 255); paint(b, 1, 0, 1, 1, 127);
   assert.equal(analyzePair(a, b).changedPixels, 0);
   const crop = { x: 0, y: 0, width: 2, height: 1 }, t = tensorForCrop(a, crop); assert.deepEqual(t, tensorForCrop(a, crop));
-  assert.ok(Math.abs(t[0] - (1 - 0.485) / 0.229) < 1e-6); // white letterbox
+  assert.ok(Math.abs(t[0] - (1 - 0.485) / 0.229) < 1e-6);
   const center = t[48 * 96 + 48]; assert.ok(center > -0.1 && center < 2.3);
   const result = analyzePair(raster(96, 96), raster(96, 96, 0)); const tensors = tensorsForCandidate(raster(96, 96), raster(96, 96, 0), result.candidates[0]);
   assert.equal(tensors.geometry.length, 12); assert.equal(tensors.localBefore.length, 3 * 96 * 96); assert.equal(result.version, VERSION); assert.notDeepEqual(tensors.localBefore, tensors.localAfter);

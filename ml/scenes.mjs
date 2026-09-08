@@ -1,5 +1,5 @@
 import {targetHTML,targetCSS} from './targets.mjs';
-/** Original authored fixtures. Shared presentation primitives do not imply independent websites. */
+
 export const families = [
  ['ledger','A transaction ledger with summary footer'],['profile','A profile with two-column biography'],['schedule','A time-slot timetable'],['kanban','A three-lane work board'],['invoice','A printable invoice with totals'],['mail','A split mailbox'],['catalog','A product catalog grid'],['settings','A stacked settings form'],['article','A long editorial article'],['checkout','A checkout with order rail'],['gallery','An asymmetric gallery'],['metrics','A metric dashboard'],['forum','A threaded discussion'],['timeline','A vertical project timeline'],['nav','A navigation menu and article'],['modal','A dialog above a muted page'],['pricing','A pricing comparison'],['directory','A contact directory'],['player','A media player with playlist'],['calendar','A month calendar'],['search','A faceted search layout'],['wizard','A multistep form'],['code','A code review split pane'],['map','A schematic map and legend']
 ].map(([id,structure],i)=>({id,structure,split:i<14?'train':i<18?'dev':i<21?'calibration':'test',source:`original-${id}`,dependencies:['base-css-v2']}));

@@ -1,4 +1,4 @@
-/** Re-capture frozen holdout fixtures into a separate output directory; never edit labels or evaluate a model. */
+
 import { createServer } from 'node:http';
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, join, sep } from 'node:path';

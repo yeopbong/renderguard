@@ -1,4 +1,4 @@
-/** Capture the frozen handwritten challenge without importing training generators. */
+
 import { createServer } from 'node:http';
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, join, sep } from 'node:path';

@@ -1,4 +1,3 @@
-"""Paired visual observation model; inputs contain images and image geometry only."""
 from __future__ import annotations
 import torch
 from torch import nn
@@ -45,7 +44,6 @@ class ObservationModel(nn.Module):
         return self.encoder(x).mean((2, 3))
 
     def features(self, local_before, local_after, context_before, context_after, geometry):
-        # Separate calls preserve fixed branch boundaries for dynamic batch ONNX export.
         local = self.pair(self.encode(local_before), self.encode(local_after))
         if self.context:
             context = self.pair(self.encode(context_before), self.encode(context_after))
@@ -62,7 +60,6 @@ class ObservationModel(nn.Module):
             for layer in list(self.encoder.children())[-3:]:
                 for p in layer.parameters():
                     p.requires_grad_(True)
-        # BatchNorm statistics remain those of generic pretraining in all stages.
         self.encoder.eval()
         for m in self.modules():
             if isinstance(m, nn.modules.batchnorm._BatchNorm):

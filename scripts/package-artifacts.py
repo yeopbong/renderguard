@@ -1,4 +1,3 @@
-"""Create portable experiment and generated-scene archives with deterministic entries."""
 import argparse
 import gzip
 import hashlib

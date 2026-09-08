@@ -95,3 +95,21 @@ test('missing model and cancellation are failures, never no-change results', {ti
  const context=await browser.newContext();const page=await context.newPage();await page.route('**/models/model.onnx',route=>route.fulfill({status:503,body:'Unavailable'}));await page.goto(`${origin}/renderguard/`);await page.getByRole('button',{name:/Try a real example/}).click();await page.getByRole('alert').filter({hasText:'Model download failed (503)'}).waitFor({timeout:30000});assert.equal((await storedRuns(page)).length,0);assert.equal(await page.getByRole('heading',{name:'Changes',exact:true}).count(),0);
  await page.unroute('**/models/model.onnx');await page.route('**/models/calibration.json',route=>route.fulfill({status:200,contentType:'application/json',body:'{"classes":[]}'}));await page.getByRole('button',{name:/Try a real example/}).click();await page.getByRole('alert').filter({hasText:'Calibration integrity check failed'}).waitFor({timeout:30000});assert.equal((await storedRuns(page)).length,0);await page.unroute('**/models/calibration.json');await page.route('**/models/model.onnx',async route=>{await new Promise(r=>setTimeout(r,2500));try{await route.continue();}catch{}});await page.getByRole('button',{name:/Try a real example/}).click();await page.getByText('Downloading visual model',{exact:true}).waitFor({timeout:15000});await page.getByRole('button',{name:'Cancel',exact:true}).click();await page.getByRole('alert').filter({hasText:'Analysis cancelled'}).waitFor();await page.waitForTimeout(2800);assert.equal((await storedRuns(page)).length,0);await context.close();
 });
+
+test('saved reports recompute stale gates and show incomplete evidence without crashing', {timeout:120000}, async()=>{
+ const context=await browser.newContext({acceptDownloads:true});
+ const page=await context.newPage();const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ try{
+  await startSample(page);
+  const original=(await storedRuns(page))[0];
+  async function save(value:unknown){await page.evaluate(value=>new Promise<void>((resolve,reject)=>{const request=indexedDB.open('renderguard-workbench-v1',1);request.onsuccess=()=>{const tx=request.result.transaction('runs','readwrite');tx.objectStore('runs').put(value);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);};request.onerror=()=>reject(request.error);}),value);await page.reload();}
+  const incomplete=structuredClone(original) as Partial<Run>;delete incomplete.analysis;incomplete.gate={code:0,reason:'Outdated result'};
+  await save(incomplete);await page.getByRole('heading',{name:'Analysis incomplete.',exact:true}).waitFor();
+  const downloadEvent=page.waitForEvent('download');await page.getByRole('button',{name:'Export execution evidence'}).click();
+  const download=await downloadEvent;const path=join(temp,'incomplete.json');await download.saveAs(path);assert.equal(JSON.parse(await readFile(path,'utf8')).gate.code,3);
+  const valid=structuredClone(original) as Partial<Run>;delete valid.contracts;delete valid.events;valid.gate={code:0,reason:'Outdated result'};
+  await save(valid);await waitRun(page);assert.equal(await page.locator('.failure-page').count(),0);
+  await page.getByText('Export',{exact:true}).click();const jsonEvent=page.waitForEvent('download');await page.getByRole('button',{name:'Versioned JSON evidence'}).click();const jsonDownload=await jsonEvent;const jsonPath=join(temp,'unreviewed.json');await jsonDownload.saveAs(jsonPath);assert.equal(JSON.parse(await readFile(jsonPath,'utf8')).gate.code,1);
+  assert.deepEqual(errors,[]);
+ }finally{await context.close();}
+});

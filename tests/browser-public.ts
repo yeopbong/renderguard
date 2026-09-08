@@ -1,4 +1,4 @@
-/** Verify the deployed static application with a genuine PNG upload and CPU model. */
+
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';

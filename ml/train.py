@@ -1,4 +1,3 @@
-"""Train and compare observation models with family-separated development and calibration."""
 from __future__ import annotations
 import argparse
 import copy
@@ -53,7 +52,6 @@ def train_one(x,y,mask,splits,seed,kind,device,epochs=6):
     tr=splits['train'];dev=splits['dev'];positive=(y[tr]*mask[tr]).sum(0);negative=((1-y[tr])*mask[tr]).sum(0)
     weight=torch.tensor(np.minimum(negative/np.maximum(positive,1),10),device=device,dtype=torch.float32)
     log=[];best=None;best_loss=float('inf');rng=np.random.default_rng(seed);start=time.monotonic()
-    # Warm up heads from cached generic visual features. No labels enter feature extraction.
     model.eval();features=[]
     with torch.no_grad():
         for k in range(0,len(tr),24):features.append(model.features(*inputs(x,tr[k:k+24],device)).cpu())
@@ -72,7 +70,6 @@ def train_one(x,y,mask,splits,seed,kind,device,epochs=6):
         prediction=predict(model,x,dev,device)
         valid_loss=float(masked_bce(torch.from_numpy(prediction),torch.from_numpy(y[dev]),torch.from_numpy(mask[dev])))
         entry={'epoch':epoch+1,'stage':'finetune' if fine else 'head','trainLoss':total/count,'devLoss':valid_loss,'encoderGradientNormSum':gradient,'elapsedSeconds':time.monotonic()-start};log.append(entry);print(kind,seed,json.dumps(entry),flush=True)
-        # A finetuned model must be released for finetuning experiments; warm-up remains a baseline.
         if valid_loss<best_loss and (fine or kind=='frozen'):
             best_loss=valid_loss;best={k:v.detach().cpu().clone() for k,v in model.state_dict().items()}
     model.load_state_dict(best);model.eval()
@@ -121,7 +118,6 @@ def main():
         for seed in map(int,args.seeds.split(',')):
             model,evidence=train_one(x,y,mask,splits,seed,kind,device,args.epochs)
             devlog=predict(model,x,splits['dev'],device);testlog=predict(model,x,splits['test'],device);cut=thresholds(y[splits['dev']],expit(devlog),mask[splits['dev']]);devmetric=metrics(y[splits['dev']],expit(devlog),mask[splits['dev']],cut)
-            # Selection depends only on development performance; test metrics are recorded afterwards.
             if kind=='local_context' and devmetric['macroPrAuc']>chosen_dev:chosen={k:v.detach().cpu().clone() for k,v in model.state_dict().items()};chosen_dev=devmetric['macroPrAuc'];chosen_seed=seed
             evidence.update(dev=devmetric,test=metrics(y[splits['test']],expit(testlog),mask[splits['test']],cut),thresholds=cut)
             np.savez_compressed(f'artifacts/checkpoints/{kind}-{seed}-predictions.npz',dev=devlog,test=testlog)

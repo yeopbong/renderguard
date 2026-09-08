@@ -1,6 +1,6 @@
 import {PNG} from 'pngjs';
 import {inspect} from './verify.mjs';
-/** The capture itself can settle fallback font metrics. Retake boundedly, or fail. */
+
 export async function renderSettled(page,viewport){
  await page.evaluate(()=>document.fonts.ready);
  for(let attempt=0;attempt<3;attempt++){

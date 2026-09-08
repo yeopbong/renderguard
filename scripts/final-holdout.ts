@@ -1,4 +1,4 @@
-/** Render, independently verify, and freeze new structures without model access. */
+
 import { createServer } from 'node:http';
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, join, sep } from 'node:path';
@@ -44,7 +44,7 @@ try {
     await writeTensors({ before: join(directory, 'before.png'), after: join(directory, 'after.png'), output: join(directory, 'tensors') });
     const analysis = analyzePair(await readPng(join(directory, 'before.png')), await readPng(join(directory, 'after.png')));
     const moved = Math.hypot(after.target.x - before.target.x, after.target.y - before.target.y) > 2;
-    // Labels depend only on rendered measurements and pixels; variant edit names are not consulted.
+
     const observations = after.visible ? [Number(after.labelVisibleRatio < before.labelVisibleRatio - .08), before.coveredFraction === null || after.coveredFraction === null ? null : Number(after.coveredFraction > before.coveredFraction + .15), Number(after.targetOutsideFraction > before.targetOutsideFraction + .02), 0, Number(moved)] : [null, null, null, Number(before.visible), 0];
     if (observations.some(v => v === 1) && !analysis.changedPixels) throw new Error(`${id}: proposed positive lacks pixel evidence.`);
     const boxes = [before.target, after.target];

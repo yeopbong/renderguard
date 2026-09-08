@@ -1,4 +1,4 @@
-/** Original final-holdout structures. No training generator or model is imported. */
+
 export const variants = [
   { id: 'repeat-a', edit: 'none', amount: 0 }, { id: 'repeat-b', edit: 'none', amount: 0 },
   { id: 'content-a', edit: 'content', amount: 1 }, { id: 'content-b', edit: 'content', amount: 2 },

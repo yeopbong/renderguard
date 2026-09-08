@@ -1,4 +1,3 @@
-"""One-time final page-level evaluation of the frozen handwritten challenge."""
 from __future__ import annotations
 import argparse
 import hashlib

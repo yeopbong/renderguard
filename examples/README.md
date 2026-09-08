@@ -1,5 +1,5 @@
-# Reproducible examples
+# Examples
 
-The browser examples are copied from the original synthetic **training** sources and are licensed CC0-1.0. They are demonstration material, not held-out evaluation. Their image hashes are in `index.json`; the PNG files are served from `web/public/examples/`.
+Browser examples come from the synthetic training sources and are CC0-1.0. They demonstrate the workbench; they are not held-out evaluation data. `index.json` records image hashes and `web/public/examples/` contains the PNGs.
 
-Rebuild them after rendering the corpus with `python -m ml.publish_examples`. The failed-width import case is exercised by the independent integration tests.
+After rendering the corpus, rebuild with `python -m ml.publish_examples`. See the [main README](../README.md#run-the-included-case) for local URL-capture examples.

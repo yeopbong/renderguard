@@ -1,4 +1,4 @@
-/** Renderer observations are measured without reading mutation provenance. */
+
 export async function inspect(page){
  return await page.evaluate(()=>{
   const rect=r=>({x:r.x,y:r.y,width:r.width,height:r.height});
@@ -30,7 +30,7 @@ export function establish(before,after,pixelEvidence){
   const union={x:Math.min(a.box.x,b.box.x),y:Math.min(a.box.y,b.box.y),width:Math.max(a.box.x+a.box.width,b.box.x+b.box.width)-Math.min(a.box.x,b.box.x),height:Math.max(a.box.y+a.box.height,b.box.y+b.box.height)-Math.min(a.box.y,b.box.y)};
   const moved=Math.hypot(a.box.x-b.box.x,a.box.y-b.box.y)>3;
   const labels=[a.clipped&&!b.clipped,a.coverage===null||b.coverage===null?null:a.coverage>b.coverage+.06,a.boundaryVisible?a.outside&&!b.outside:null,!a.visible&&b.visible,moved&&a.visible&&b.visible];
-  // Visible changes need actual raster evidence. Unchanged requested operations do not create labels.
+
   if(pixelEvidence.changedPixels===0)for(let j=0;j<labels.length;j++)if(labels[j]===true)labels[j]=null;
   observations.push({element:a.id,box:union,labels,evidence:{before:b,after:a,changedPixels:pixelEvidence.changedPixels}});
  }

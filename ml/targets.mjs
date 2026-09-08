@@ -1,4 +1,4 @@
-/** Changed targets have distinct semantic markup and visual structure by source family. */
+
 export function targetHTML(family,variant){
  const words=variant===4?'表示を確認してください':variant===5?'请检查详细内容':'Review the complete details';
  const content={

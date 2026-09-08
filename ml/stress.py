@@ -1,4 +1,3 @@
-"""Secondary controlled domain and symptom exclusions; never select the release model."""
 import argparse
 import json
 from pathlib import Path

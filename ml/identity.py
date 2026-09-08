@@ -1,4 +1,3 @@
-"""Bind verified completed-run records to their actual inputs without changing metrics."""
 import hashlib
 import json
 from datetime import datetime, timezone

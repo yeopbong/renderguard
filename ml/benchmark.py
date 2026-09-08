@@ -1,4 +1,3 @@
-"""Measure actual fresh-process tensor generation through CPU ONNX output."""
 import json
 import os
 from pathlib import Path

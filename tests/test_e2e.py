@@ -1,4 +1,3 @@
-"""Real Chromium -> shared tensors -> released ONNX -> transactional review evidence."""
 from __future__ import annotations
 import base64
 import hashlib
@@ -113,7 +112,6 @@ def test_real_capture_model_contract_review_export_restart(tmp_path, fixture_ori
             image = client.get(f'/api/runs/{constrained["id"]}/images/{side}')
             assert image.status_code == 200 and image.content.startswith(b'\x89PNG\r\n\x1a\n')
 
-        # Only constraints change: image inputs, candidate tensors, and true model logits stay equal.
         state, run, _ = submit_capture(client, headers, project, fixture_origin)
         assert state['status'] == 'complete', state
         assert run['gate']['code'] == 1
@@ -152,7 +150,6 @@ def test_real_capture_model_contract_review_export_restart(tmp_path, fixture_ori
         assert 'data:image/png;base64,' in html and '<script src=' not in html
         report = tmp_path / 'offline-report.html'
         report.write_text(html)
-        # A real offline browser must open the evidence snapshot without any network request.
         script = '''import {chromium} from 'playwright'; import {pathToFileURL} from 'node:url'; const browser=await chromium.launch({headless:true}); try {const page=await browser.newPage(); const network=[]; page.on('request',r=>{if(/^https?:/.test(r.url()))network.push(r.url())}); await page.goto(pathToFileURL(process.argv[1]).href); await page.locator('img').first().waitFor(); if(network.length)throw new Error('Offline report made network requests'); if(await page.locator('img').count()<2)throw new Error('Evidence images missing'); if(!await page.locator('body').innerText())throw new Error('Report body missing');} finally {await browser.close()}'''
         command = node_command('capture/cli.ts')[:3] + ['--input-type=module', '-e', script, str(report)]
         result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=45)

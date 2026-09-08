@@ -1,4 +1,3 @@
-"""Explicit, bounded head updates from corrected observations and retained examples."""
 import argparse
 import base64
 import hashlib

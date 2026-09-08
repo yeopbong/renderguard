@@ -1,63 +1,54 @@
-# Architecture and result semantics
+# Architecture
 
-RenderGuard is a local research workbench for reviewing visible changes. A difference is evidence that pixels changed. An observation is a visual symptom; a contract is a previously declared requirement; a decision is a reviewer conclusion. These are stored separately. Accepting an intentional move does not remove the displacement prediction.
+RenderGuard keeps image observations, declared layout contracts and reviewer decisions separately. Accepting an intentional change preserves its screenshot and predictions.
 
-## Modules
+## Components
 
-- `core/`: browser-safe TypeScript candidate detection, masks, image coordinates, local/context letterbox tensors and resource bounds.
-- `capture/`: pinned Playwright Chromium capture, image decoding, shared tensor generation and explicit DOM constraints.
-- `ml/`: original scene generation, independent rendered-evidence validation, grouped datasets, supervised training and evaluation.
-- `server/`: FastAPI, bounded background work, ONNX CPU inference and SQLite append-only review events.
-- `web/`: React workbench and a single-thread WebAssembly Worker for browser-local inference.
-
-The production build is served by one local Python process. TypeScript preprocessing runs as a subprocess for local inference. Python consumes its float32 tensors directly; it has no separate image-crop implementation. The browser uses the same TypeScript candidate and tensor functions.
-
-## Evidence and lifecycle
-
-Original PNG files and run predictions are immutable. The database stores run evidence once and records subsequent review actions as events containing old/new values, timestamp, model version and input hashes. Undo appends an inverse event. A new screenshot or model run creates a new analysis; approvals are never silently reused. A baseline update points to an immutable original image and retains an undoable history.
-
-SQLite transactions commit metadata and review events; file output uses an atomic replacement. On startup, queued/running jobs become interrupted and require explicit retry; completed artifacts remain. Candidate/model/inputs/configuration hashes form the cache identity. No automatic cross-run reuse currently skips computation.
-
-## Gate policy
-
-The command `python -m server.cli` returns successful analysis separately from the gate embedded in its report. `python -m server.gate report.json` exits with:
-
-| Code | Meaning |
+| Directory | Role |
 | --- | --- |
-| 3 | Missing, failed, cancelled, incomparable or incomplete required evidence |
-| 2 | A confirmed defect or a measured declared-contract violation |
-| 1 | Any visual change remains unreviewed or uncertain |
-| 0 | No blocking items under this declared policy |
+| `core/` | Shared TypeScript differences, candidates, masks, coordinates and model tensors. |
+| `capture/` | Playwright capture, PNG decoding and DOM contracts. |
+| `ml/` | Scene generation, rendered labels, training and evaluation. |
+| `server/` | FastAPI, background jobs, ONNX CPU inference and SQLite review events. |
+| `web/` | React workbench and browser-local ONNX inference in a Worker. |
 
-Precedence follows table order. Scores never automatically approve a candidate. A contract violation remains a violation even if a reviewer calls the visual change intentional; revise the contract in a new capture to evaluate a different requirement. Projects without declared contracts do not have a constraint execution error. Imported PNGs have unverified capture conditions and no invented DOM conclusions.
+One local Python process serves the built frontend and API. Local preprocessing calls the same TypeScript functions as the browser and supplies their float32 tensors to Python inference.
 
-## Coordinates and limits
+## Reports and reviews
 
-Coordinates in reports are original image pixels. Capture uses Playwright `scale: css`, so even a DPR 2 browser produces one image pixel per CSS pixel; both DPR and scale are recorded. Same-width pages of different heights retain a common origin and their own valid rectangles. Added/removed page height is explicit evidence, not white page content. Width mismatches are rejected, never stretched.
+Original PNGs and predictions are immutable. Reviews append events with previous/new values, model version and input hashes; Undo appends an inverse event. Baseline updates retain an undoable history. New captures and model runs create new analyses.
 
-The shared pipeline accepts at most 4096 px width, 32768 px height and 33,554,432 pixels per image. Input paths apply these additional bounds:
+SQLite transactions commit metadata and review events; files use atomic replacement. Jobs interrupted by a restart require an explicit retry. Model, input and configuration hashes identify the run.
 
-| Input path | PNG bytes per image | Pixels per image | Declared masks |
+`python -m server.cli` generates a report. `python -m server.gate report.json` checks it with this precedence:
+
+| Exit code | Meaning |
+| --- | --- |
+| 3 | Invalid input; failed, cancelled or incomparable execution; missing required evidence. |
+| 2 | Confirmed defect or declared-contract violation. |
+| 1 | Unreviewed or uncertain visual change. |
+| 0 | Valid, complete report with no blocking items. |
+
+Model scores never approve candidates. Marking a visual change intentional does not clear a contract violation; change the contract in a new capture to evaluate a different requirement. A report with no declared contracts needs no contract results. PNG imports have no DOM conclusions.
+
+## Images and resource limits
+
+Report coordinates are original image pixels. Capture uses Playwright `scale: css`, producing one pixel per CSS pixel even at DPR 2. Same-width pages can have different heights; each keeps its valid rectangle and a common origin. Width mismatches are rejected.
+
+All paths accept at most 4096 px width and 32768 px height, with these additional limits:
+
+| Input | PNG bytes per image | Pixels per image | Masks |
 | --- | --- | --- | --- |
 | Shared Node decoder | 40 MiB | 33,554,432 | 256 |
-| Browser PNG workbench | 24 MiB | 24,000,000 | 256 |
-| Local API PNG import | 18 MiB | 32,000,000 | 64 |
+| Browser | 24 MiB | 24,000,000 | 256 |
+| Local API | 18 MiB | 32,000,000 | 64 |
 
-The local workbench accepts at most 36 MiB of combined PNG bytes before base64 encoding. The API also enforces a 50 MiB total JSON request bound. These are rejection limits, not automatic image resizing. The interface displays the limits for its current mode.
+The local workbench also limits combined PNG bytes to 36 MiB; the API limits JSON requests to 50 MiB. Inputs over these limits are rejected. Excessive connected regions use 512 px review tiles; more than 256 candidates requires splitting the input.
 
-If connected regions become excessive, analysis switches to explicit 512 px review tiles with contextual overlap in model crops. At most 256 candidates are accepted, with an explicit partition request instead of silently dropping the remainder. Masks require a source, are visible in reports, and exclude the same pixels in differences and all model crops. Raw PNGs remain available. The difference viewer uses the shared decoder and raw-difference function in a separate Worker; gray/hatching marks excluded masks and magenta distinguishes height-only areas.
+Masks are recorded and excluded from differences and crops. The viewer marks them with gray hatching and height-only areas with magenta. PNG samples use sRGB values without separate ICC/gamma transforms. The shared decoder supports palette, gray/gray-alpha and RGB/RGBA formats, including supported 16-bit input; interlaced PNGs are rejected.
 
-## Review priority
+## Review order
 
-A priority is a triage aid, not defect probability. The workbench lets a reviewer set each observation's severity weight to Low (0.5), Normal (1), or High (2). All weights start at 1. Candidates are sorted by:
+Candidates sort by the maximum observation score multiplied by its severity weight, plus `0.05 × min(1, changed pixels / comparison canvas pixels)`. Weights are Low (0.5), Normal (1) and High (2), initially Normal. Changed-pixel count breaks ties. Uncalibrated classes use sigmoid(logit) for sorting and show their raw logit/status in the evidence panel.
 
-```text
-priority = max(observation score × severity weight)
-           + 0.05 × min(1, changed pixels / comparison canvas pixels)
-```
-
-An exact tie is resolved by changed-pixel count. Calibrated classes use the released calibrated score; uncalibrated classes use sigmoid(logit) for sorting while the evidence panel displays the raw logit and its uncalibrated status. The observation filter includes a region when the selected class's logit is at least zero. A region whose logits are all below zero remains visible as an unclassified visual change. Neither this filter nor the sorting score is a defect threshold.
-
-Priority preferences are saved for each project in the current browser and included in workbench-generated exported snapshots. Changing them does not change original predictions, observation labels, review decisions or the gate. Contract violations and incomplete required contracts remain independent blockers and are presented separately. Every unreviewed candidate remains in the gate even at a low score. Five observation outputs may co-occur. Unknown labels are masked during training. DOM geometry cannot establish user intent, reliable clickability or arbitrary true occlusion.
-
-PNG decoding uses the same `fast-png` path in Node and the browser. Encoded RGB samples are treated as sRGB channel values; embedded ICC and gamma profiles do not trigger separate color-management transforms. Palette transparency, gray/gray-alpha, RGB/RGBA and supported 16-bit inputs are converted by the documented shared decoder. Interlaced images are explicitly rejected. The golden suite verifies independent reference decoding and browser/Node equality.
+The observation filter selects logits at least zero. Other changed regions remain visible as unclassified changes. Sorting and filters leave review decisions and the gate unchanged. DOM contracts measure rectangular geometry; they do not establish clickability or arbitrary occlusion.

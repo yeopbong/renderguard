@@ -1,4 +1,3 @@
-"""Reproduce local capture, immutable evidence, explicit review, and offline demo reports."""
 from __future__ import annotations
 import hashlib
 import json

@@ -1,4 +1,4 @@
-/** Secondary domain probe: hand-authored language replacements on reserved source families. */
+
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';

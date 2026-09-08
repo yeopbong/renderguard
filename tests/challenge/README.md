@@ -1,11 +1,9 @@
-# Handwritten final challenge
+# Handwritten challenge
 
-These 12 scene pairs use independent literal HTML and CSS rather than the training generator or its mutation functions. Their fixture hashes and observation expectations were frozen before final model evaluation. The rendered pairs were visually inspected internally; the inspection reasons are in `manifest.json`. This is not independent external acceptance or a human annotation study.
+Twelve literal HTML/CSS scene pairs use fixtures separate from the training generator. Their frozen expectations and inspection notes are in `manifest.json`. The saved evaluation belongs to the historical viewport-only model.
 
-Capture with `node --import tsx scripts/challenge.ts`. This verifies fixture hashes, saves original PNGs and capture manifests, runs the official candidate/tensor pipeline, and creates a contact sheet. Capture does not evaluate a model. Run the explicit evaluation command only after model selection is final: `python tests/challenge/evaluate.py --captures artifacts/challenge --model web/public/models`.
+Capture with `node --import tsx scripts/challenge.ts`, then evaluate explicitly with `python tests/challenge/evaluate.py --captures artifacts/challenge --model web/public/models`. Capture verifies fixture hashes and writes PNGs, candidates, tensors and a contact sheet.
 
-Observation labels are page-level expectations used only for final page-level scoring. They are never copied to all candidates or supplied to model inference. Null labels are unknown and excluded. The deliberate relocation has a positive displacement observation and a negative defect conclusion. Missing selectors remain inconclusive. The changed-width pair is incomparable and excluded from visual metrics while still checked for execution semantics.
+Labels are page-level observations; null is unknown. Intentional relocation still has a positive displacement label. Missing selectors are inconclusive, and the changed-width pair is incomparable and excluded from visual metrics.
 
-The evaluator refuses to overwrite an earlier model evaluation. A deliberate rerun requires `--development-rerun` and is marked as development use, invalidating its withheld status. Because each scene contributes only one pair, statistical estimates from this small challenge are descriptive.
-
-The original evaluation uses a prespecified 0.5 cutoff. `python tests/challenge/published_thresholds.py` provides a secondary descriptive readout using the existing release manifest thresholds and saved scores, without rerunning inference or changing the primary artifact. Published thresholds were selected on development candidate scores; page-max aggregation is a separate domain.
+The evaluator refuses to overwrite a result. `--development-rerun` allows a marked development run. The original cutoff is 0.5; `python tests/challenge/published_thresholds.py` reads saved scores with the release thresholds without rerunning inference. Those thresholds were selected on candidate scores, while this small challenge uses page-max scores.

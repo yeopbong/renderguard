@@ -1,4 +1,3 @@
-"""Render publication figures directly from the saved numerical experiment records."""
 import json
 from pathlib import Path
 import os

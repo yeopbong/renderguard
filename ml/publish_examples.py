@@ -1,4 +1,3 @@
-"""Copy small, explicitly identified training examples for immediate product exploration."""
 import hashlib
 import json
 import shutil

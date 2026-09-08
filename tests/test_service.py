@@ -15,7 +15,12 @@ from server.store import Store, now
 
 
 def evidence(id='run1', project='project1'):
-    return {'schemaVersion': '1.0', 'id': id, 'projectId': project, 'createdAt': now(), 'execution': 'complete', 'model': {'version': 'v1'}, 'inputHashes': {'before': 'a', 'after': 'b'}, 'analysis': {'candidates': [{'id': 'r1', 'box': {'x': 1, 'y': 2, 'width': 3, 'height': 4}}]}, 'predictions': [{'candidateId': 'r1', 'scores': [0.1, 0.2, 0.3, 0.4, 0.9]}], 'contracts': [], 'decisions': {}}
+    run = json.loads((Path(__file__).resolve().parents[1] / 'examples/intentional/report.json').read_text())
+    run.update(id=id, projectId=project, createdAt=now(), decisions={}, events=[], contracts=[])
+    run.pop('capture')
+    run['analysis']['candidates'][0]['id'] = 'r1'
+    run['predictions'][0]['candidateId'] = 'r1'
+    return run
 
 
 def test_gate_precedence_and_low_scores():
@@ -23,9 +28,9 @@ def test_gate_precedence_and_low_scores():
     assert evaluate_gate(run)['code'] == 1
     run['decisions']['r1'] = {'decision': 'intentional_change'}
     assert evaluate_gate(run)['code'] == 0
-    run['contracts'] = [{'status': 'violated'}]
+    run['contracts'] = json.loads((Path(__file__).resolve().parents[1] / 'examples/main/report.json').read_text())['contracts']
     assert evaluate_gate(run)['code'] == 2
-    run['contracts'].append({'status': 'inconclusive'})
+    run['contracts'][0]['status'] = 'inconclusive'
     assert evaluate_gate(run)['code'] == 3
     run['execution'] = 'cancelled'
     assert evaluate_gate(run)['code'] == 3

@@ -1,4 +1,3 @@
-"""Analyze inputs and write a report; use the separate gate command for policy."""
 import argparse
 import base64
 import json

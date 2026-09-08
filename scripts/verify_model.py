@@ -1,4 +1,3 @@
-"""Validate the versioned model bundle and execute a real CPU inference."""
 import hashlib
 import json
 from pathlib import Path

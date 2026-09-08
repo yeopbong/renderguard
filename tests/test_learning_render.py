@@ -1,4 +1,3 @@
-"""Regression for complete screenshot height and capture-induced geometry settling."""
 import json
 import os
 import subprocess

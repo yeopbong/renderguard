@@ -1,4 +1,3 @@
-"""A real explicit feedback update, retained evaluation, activation and rollback."""
 import base64
 import json
 import time
@@ -31,7 +30,6 @@ def test_explicit_training_evaluation_activation_and_rollback(tmp_path):
         run = client.get('/api/runs/' + state['runId']).json()
         assert len(run['analysis']['candidates']) == 1
         candidate = run['analysis']['candidates'][0]['id']
-        # The original authored example has a visually audited opaque panel covering biography text.
         correction = {'clipping': False, 'overlap_or_occlusion': True, 'out_of_container': False, 'element_disappearance': False, 'layout_displacement': False}
         client.post(f'/api/runs/{run["id"]}/reviews', json={'candidateId': candidate, 'decision': 'uncertain', 'observation': correction}, headers=headers).raise_for_status()
         before = client.get('/api/runs/' + run['id']).json()

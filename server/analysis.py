@@ -1,4 +1,3 @@
-"""Canonical TypeScript preprocessing followed by bounded ONNX batches."""
 from __future__ import annotations
 import base64
 import binascii
@@ -85,7 +84,6 @@ def command(args, cwd, cancel, timeout=180, stage_callback=None, log_progress=No
                 time.sleep(0.1)
             if proc.returncode:
                 stream.seek(0)
-                # Error detail stays local; reports expose the failure stage and useful final line.
                 lines = stream.read().strip().splitlines()
                 raise RuntimeError(('Processing command failed: ' + (lines[-1] if lines else str(proc.returncode)))[:500])
         finally:

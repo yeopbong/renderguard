@@ -1,4 +1,3 @@
-"""Bounded offline page-label replay using only labels revealed by the selected budget."""
 import argparse
 import json
 from pathlib import Path
@@ -12,7 +11,6 @@ from .train import arrays, inputs, atomic_json
 from .metrics import metrics, thresholds
 
 class Oracle:
-    """Selection receives only features and IDs. Labels are revealed by page, after selection."""
     def __init__(self,rows,truth,mask):
         self._rows=rows;self._truth=truth;self._mask=mask;self.pages=set();self.candidates=set()
     def reveal(self,pages):
@@ -35,7 +33,6 @@ def predict(models,features):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--device',default='cpu');args=parser.parse_args();torch.set_num_threads(3)
     rows,x,y,m,splits=arrays();device=args.device;model=ObservationModel(pretrained=True).to(device).eval();features=[]
-    # Generic features are independent of the held-back task labels; no full-corpus task model is used.
     with torch.no_grad():
         for k in range(0,len(rows),24):features.append(model.features(*inputs(x,np.arange(k,min(k+24,len(rows))),device)).cpu().numpy())
     full=np.concatenate(features);rng=np.random.default_rng(812);projection=rng.normal(size=(full.shape[1],96)).astype(np.float32)/np.sqrt(96)

@@ -1,4 +1,4 @@
-/** Shared image-only candidate generation and deterministic tensor preprocessing. */
+
 export const VERSION = 'rgba-diff-rle-letterbox-v1';
 export const IMAGE_SIZE = 96;
 export const GEOMETRY_SIZE = 12;
@@ -35,7 +35,7 @@ function maskMap(width: number, height: number, masks: Mask[]): Uint8Array {
   }
   return map;
 }
-/** Composite straight-alpha RGBA onto white before differencing or interpolation. */
+
 function channel(image: Raster, x: number, y: number, c: number): number {
   if (x < 0 || y < 0 || x >= image.width || y >= image.height) return 255;
   const i = (y * image.width + x) * 4, a = image.data[i + 3];
@@ -58,7 +58,7 @@ function evidence(before: Raster, after: Raster, masks: Mask[]): Evidence {
   }
   return { changed, strength, excluded, total, excludedCount, max, width, height };
 }
-/** Raw changed pixels remain available, including changes below a display threshold. Missing page pixels are separately marked magenta. */
+
 export function differenceRaster(before: Raster, after: Raster, masks: Mask[] = []): Raster {
   const e = evidence(before, after, validateMasks(masks)), data = new Uint8ClampedArray(e.width * e.height * 4);
   for (let p = 0; p < e.changed.length; p++) {
@@ -71,7 +71,7 @@ export function differenceRaster(before: Raster, after: Raster, masks: Mask[] = 
   return { width: e.width, height: e.height, data };
 }
 type Region = { box: Rect; changedPixels: number };
-/** Eight-connected run-length components avoid a full-image integer queue. */
+
 function components(e: Evidence): Region[] | null {
   type Run = { x0: number; x1: number; id: number };
   const parent: number[] = [], regions: Region[] = [];
@@ -107,7 +107,7 @@ function mergeScales(input: Region[]): Region[] | null {
         const old = merged[k];
         if (gap(old.box, next.box) <= distance) {
           const combined = union(old.box, next.box);
-          // Prevent a chain of nearby unrelated changes from becoming a whole-page box.
+
           if (area(combined) <= (area(old.box) + area(next.box) + 64) * 4 && combined.height <= 1024 && combined.width <= 2048) {
             next = { box: combined, changedPixels: next.changedPixels + old.changedPixels }; merged.splice(k, 1);
           }
@@ -119,7 +119,7 @@ function mergeScales(input: Region[]): Region[] | null {
   }
   return regions;
 }
-/** Partition diff evidence without loss. Tensor crops add overlapping context around tile boundaries. */
+
 function tileRegions(e: Evidence): Region[] {
   const size = 512, regions: Region[] = [];
   for (let y0 = 0; y0 < e.height; y0 += size) for (let x0 = 0; x0 < e.width; x0 += size) {
@@ -146,7 +146,7 @@ export function analyzePair(before: Raster, after: Raster, suppliedMasks: Mask[]
 }
 function expanded(box: Rect, padding: number): Rect { return { x: Math.floor(box.x - padding), y: Math.floor(box.y - padding), width: Math.ceil(box.width + padding * 2), height: Math.ceil(box.height + padding * 2) }; }
 function masked(x: number, y: number, masks: Mask[]): boolean { return masks.some(m => x >= Math.floor(m.x) && x < Math.ceil(m.x + m.width) && y >= Math.floor(m.y) && y < Math.ceil(m.y + m.height)); }
-/** NCHW RGB. Integer white alpha composite, bilinear half-pixel sampling, then ImageNet normalization. */
+
 export function tensorForCrop(image: Raster, crop: Rect, masks: Mask[] = []): Float32Array {
   const size = IMAGE_SIZE, means = [0.485, 0.456, 0.406], stds = [0.229, 0.224, 0.225];
   const scale = Math.min(size / crop.width, size / crop.height), targetW = Math.max(1, Math.round(crop.width * scale)), targetH = Math.max(1, Math.round(crop.height * scale));
@@ -172,7 +172,7 @@ export function tensorsForCandidate(before: Raster, after: Raster, candidate: Ca
 }
 
 export type CandidateAssociation = { kind: 'possible_translation'; fromCandidateId: string; toCandidateId: string; meanColorError: number; scope: string };
-/** Link separated, similarly sized changes by bidirectional pixel appearance; never used as model input. */
+
 export function associateCandidates(before: Raster, after: Raster, candidates: Candidate[]): CandidateAssociation[] {
   const matches: { a: number; b: number; error: number }[] = [], grid = 8;
   const comparison = (first: Raster, a: Rect, second: Raster, b: Rect, masks: Mask[]) => {

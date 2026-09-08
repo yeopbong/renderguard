@@ -1,4 +1,3 @@
-"""Map independently observed regions to official candidates and cache formal tensors."""
 import argparse
 import hashlib
 import json

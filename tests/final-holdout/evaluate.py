@@ -1,4 +1,3 @@
-"""Evaluate the frozen new-family holdout once, with no model selection or updates."""
 from __future__ import annotations
 import argparse
 import hashlib
@@ -23,7 +22,6 @@ def metrics(rows, labels, cutoffs):
         pred = scores >= cutoffs[k]
         tp, fp, fn = int((pred & y).sum()), int((pred & ~y).sum()), int((~pred & y).sum())
         order = np.argsort(-scores, kind='stable')
-        # Average precision, with equal-score groups included together.
         positives = int(y.sum()); average_precision = None
         if positives and (~y).any():
             total, found, previous_recall, average_precision = 0, 0, 0., 0.

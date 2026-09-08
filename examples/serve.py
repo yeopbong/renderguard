@@ -1,4 +1,3 @@
-"""Serve original reproducible demonstration pages on loopback."""
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path

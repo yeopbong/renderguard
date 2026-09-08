@@ -1,4 +1,3 @@
-"""Derive a secondary challenge readout from saved scores; never run inference."""
 from __future__ import annotations
 import argparse
 import hashlib
