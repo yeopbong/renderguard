@@ -16,30 +16,33 @@
   "headBatchSize": 64,
   "fineTuneBatchSize": 24,
   "positiveWeight": [
-    4.101449489593506,
-    3.6917808055877686,
-    1.814814805984497,
-    7.0,
-    1.034682035446167
+    3.861445665359497,
+    3.7602739334106445,
+    1.8740458488464355,
+    7.40625,
+    1.0961039066314697
   ],
   "trainingPositive": [
-    138.0,
+    166.0,
     146.0,
-    243.0,
-    88.0,
-    346.0
+    262.0,
+    96.0,
+    385.0
   ],
   "trainingNegative": [
-    566.0,
-    539.0,
-    441.0,
-    616.0,
-    358.0
+    641.0,
+    549.0,
+    491.0,
+    711.0,
+    422.0
   ],
+  "trainingCandidates": 807,
+  "allCandidates": 1559,
   "frozenBatchNormStatistics": true,
   "fineTuneEncoderStages": 3,
   "gradientClipNorm": 5,
   "dropout": 0.15,
   "preprocessVersion": "rgba-diff-rle-letterbox-v1",
-  "trainingSourceSha": "863a839dadf4316b0ad1da1c9bb53c40ee366c9a"
+  "trainingSourceSha": "fb3136c62f0d902835ac12b5292e043dcaf7fc83",
+  "dataSha256": "ff8d902e87f28cdc6daa26d6aface7e78f79cf7a719ece15330c2c1598877942"
 }

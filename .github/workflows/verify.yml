@@ -1,0 +1,64 @@
+name: Verify and publish preview
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.19.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install locked dependencies
+        run: |
+          pnpm install --frozen-lockfile
+          python -m venv .venv
+          .venv/bin/python -m pip install --no-cache-dir -r requirements.lock
+          pnpm exec playwright install --with-deps chromium --only-shell
+      - name: Type checking and production build
+        run: |
+          pnpm prepare:web
+          pnpm build
+      - name: Shared math and real browser capture
+        run: node --import tsx --test tests/core*.test.ts
+      - name: Local state and real model integration
+        run: |
+          .venv/bin/python -m compileall -q server ml
+          .venv/bin/python scripts/verify_model.py
+          .venv/bin/python -m pytest -q
+      - name: Browser workbench end to end
+        run: node --import tsx --test tests/browser*.test.ts
+      - name: Upload Pages site
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy preview
+        id: deployment
+        uses: actions/deploy-pages@v4

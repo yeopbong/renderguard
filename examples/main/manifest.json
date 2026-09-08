@@ -1,0 +1,780 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:9030/main/before.html",
+    "screenshot": "before.png",
+    "sha256": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+    "repeatedSha256": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 1694
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 1694
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      },
+      {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      },
+      {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The declared border boxes do not overlap beyond tolerance."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:9030/main/after.html",
+    "screenshot": "after.png",
+    "sha256": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2",
+    "repeatedSha256": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 1694
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 1694
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      },
+      {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box."
+      },
+      {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "required-visible",
+      "selector": ".move",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "satisfied",
+      "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract.",
+      "id": "contract-1",
+      "before": {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      },
+      "after": {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      }
+    },
+    {
+      "type": "inside-container",
+      "selector": ".move",
+      "container": ".frame",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        },
+        {
+          "selector": ".frame",
+          "matches": 1,
+          "box": {
+            "x": 24,
+            "y": 24,
+            "width": 376,
+            "height": 276
+          },
+          "visibleBox": {
+            "x": 24,
+            "y": 24,
+            "width": 376,
+            "height": 276
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "section",
+          "parentTag": "body"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The element border box exceeds the declared container border box.",
+      "id": "contract-2",
+      "before": {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      },
+      "after": {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box."
+      }
+    },
+    {
+      "type": "non-overlap",
+      "selector": ".move",
+      "other": ".neighbor",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        },
+        {
+          "selector": ".neighbor",
+          "matches": 1,
+          "box": {
+            "x": 317,
+            "y": 137,
+            "width": 38,
+            "height": 55
+          },
+          "visibleBox": {
+            "x": 317,
+            "y": 137,
+            "width": 38,
+            "height": 55
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "div",
+          "parentTag": "section"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion.",
+      "id": "contract-3",
+      "before": {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The declared border boxes do not overlap beyond tolerance."
+      },
+      "after": {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

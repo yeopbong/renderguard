@@ -1,0 +1,26 @@
+{
+  "beforeUrl": "http://127.0.0.1:9030/intentional/before.html",
+  "afterUrl": "http://127.0.0.1:9030/intentional/after.html",
+  "viewport": {
+    "width": 720,
+    "height": 760
+  },
+  "deviceScaleFactor": 1,
+  "readySelector": "[data-ready]",
+  "contracts": [
+    {
+      "type": "inside-container",
+      "selector": "#action",
+      "container": "main"
+    }
+  ],
+  "masks": [],
+  "state": {
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fixedTime": 1700000000000,
+    "randomSeed": 7
+  },
+  "outputDir": "workspace/intentional-capture"
+}

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:9030/failure/before.html",
+    "screenshot": "before.png",
+    "sha256": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996",
+    "repeatedSha256": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": "#missing-action",
+        "measurements": [
+          {
+            "selector": "#missing-action",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:9030/failure/after.html",
+    "screenshot": "after.png",
+    "sha256": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996",
+    "repeatedSha256": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": "#missing-action",
+        "measurements": [
+          {
+            "selector": "#missing-action",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "required-visible",
+      "selector": "#missing-action",
+      "measurements": [
+        {
+          "selector": "#missing-action",
+          "matches": 0,
+          "reason": "Element was not found."
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "inconclusive",
+      "reason": "Each selector must resolve to one measurable element.",
+      "id": "contract-1",
+      "before": {
+        "type": "required-visible",
+        "selector": "#missing-action",
+        "measurements": [
+          {
+            "selector": "#missing-action",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      },
+      "after": {
+        "type": "required-visible",
+        "selector": "#missing-action",
+        "measurements": [
+          {
+            "selector": "#missing-action",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

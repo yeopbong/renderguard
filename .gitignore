@@ -13,6 +13,7 @@ test-results/
 .DS_Store
 data/
 artifacts/checkpoints/
+artifacts/final-holdout/
 artifacts/preflight.onnx
 artifacts/pilot-*
 web/public/runtime/

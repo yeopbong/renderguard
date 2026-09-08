@@ -1,0 +1,1436 @@
+{
+  "schemaVersion": "1.0",
+  "name": "Screenshot comparison",
+  "id": "6478f042d76b46f1a1d3eb7afeb46cde",
+  "projectId": "fc5eee3a14734a48a92e3ebe148ff375",
+  "createdAt": "2026-09-08T14:35:37.648354+00:00",
+  "execution": "complete",
+  "environment": "verified",
+  "analysis": {
+    "candidates": [
+      {
+        "id": "region-1",
+        "box": {
+          "x": 47,
+          "y": 127,
+          "width": 168,
+          "height": 45
+        },
+        "changedPixels": 6067,
+        "stats": [
+          0.8025132275132275,
+          0.6630106857557838,
+          0.9333333333333333,
+          1,
+          1,
+          0
+        ],
+        "masks": []
+      },
+      {
+        "id": "region-2",
+        "box": {
+          "x": 287,
+          "y": 127,
+          "width": 130,
+          "height": 45
+        },
+        "changedPixels": 4463,
+        "stats": [
+          0.7629059829059829,
+          0.6463663482487012,
+          0.9098039215686274,
+          1,
+          1,
+          0
+        ],
+        "masks": []
+      },
+      {
+        "id": "region-3",
+        "box": {
+          "x": 48,
+          "y": 225,
+          "width": 139,
+          "height": 14
+        },
+        "changedPixels": 978,
+        "stats": [
+          0.5025693730729702,
+          0.28169800294218406,
+          0.8,
+          1,
+          1,
+          0
+        ],
+        "masks": []
+      }
+    ],
+    "associations": [],
+    "width": 720,
+    "height": 1694,
+    "heightDelta": 0,
+    "changedPixels": 11508,
+    "mode": "regions",
+    "version": "rgba-diff-rle-letterbox-v1",
+    "masks": [],
+    "validRegions": {
+      "before": {
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 1694
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 720,
+        "height": 1694
+      }
+    },
+    "excludedPixels": 0,
+    "rawDifference": {
+      "changedPixels": 11508,
+      "maxChannelDifference": 238,
+      "threshold": 0
+    },
+    "limits": {
+      "maxWidth": 4096,
+      "maxHeight": 32768,
+      "maxPixels": 33554432,
+      "maxCandidates": 256,
+      "maxBatchCandidates": 16,
+      "maxMasks": 256,
+      "maxPngBytes": 41943040
+    }
+  },
+  "predictions": [
+    {
+      "candidateId": "region-1",
+      "logits": [
+        -5.276163101196289,
+        -3.5532360076904297,
+        -6.88847541809082,
+        -6.534804821014404,
+        -5.755995273590088
+      ],
+      "scores": [
+        0.039892964885310286,
+        0.06660494333232826,
+        0.0059491568762571586,
+        0.008880783713247528,
+        0.06951299093025776
+      ]
+    },
+    {
+      "candidateId": "region-2",
+      "logits": [
+        -5.384812831878662,
+        -2.986105442047119,
+        -7.7860002517700195,
+        -11.691437721252441,
+        -5.301992416381836
+      ],
+      "scores": [
+        0.03790580368754996,
+        0.09511661784814317,
+        0.0035445598007372817,
+        8.187889948878745e-05,
+        0.07882830291301626
+      ]
+    },
+    {
+      "candidateId": "region-3",
+      "logits": [
+        -8.22330093383789,
+        -4.0652618408203125,
+        -8.787796974182129,
+        1.9571459293365479,
+        -6.391934871673584
+      ],
+      "scores": [
+        0.00972861602476393,
+        0.04789059377710164,
+        0.001986319814377296,
+        0.9533445693687017,
+        0.058170657646219724
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "type": "required-visible",
+      "selector": ".move",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "satisfied",
+      "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract.",
+      "id": "contract-1",
+      "before": {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      },
+      "after": {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+      }
+    },
+    {
+      "type": "inside-container",
+      "selector": ".move",
+      "container": ".frame",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        },
+        {
+          "selector": ".frame",
+          "matches": 1,
+          "box": {
+            "x": 24,
+            "y": 24,
+            "width": 376,
+            "height": 276
+          },
+          "visibleBox": {
+            "x": 24,
+            "y": 24,
+            "width": 376,
+            "height": 276
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "section",
+          "parentTag": "body"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The element border box exceeds the declared container border box.",
+      "id": "contract-2",
+      "before": {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      },
+      "after": {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box."
+      }
+    },
+    {
+      "type": "non-overlap",
+      "selector": ".move",
+      "other": ".neighbor",
+      "measurements": [
+        {
+          "selector": ".move",
+          "matches": 1,
+          "box": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibleBox": {
+            "x": 287,
+            "y": 127,
+            "width": 130,
+            "height": 45
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        },
+        {
+          "selector": ".neighbor",
+          "matches": 1,
+          "box": {
+            "x": 317,
+            "y": 137,
+            "width": 38,
+            "height": 55
+          },
+          "visibleBox": {
+            "x": 317,
+            "y": 137,
+            "width": 38,
+            "height": 55
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "div",
+          "parentTag": "section"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion.",
+      "id": "contract-3",
+      "before": {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 47,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The declared border boxes do not overlap beyond tolerance."
+      },
+      "after": {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+      }
+    }
+  ],
+  "masks": [],
+  "model": {
+    "version": "0.1.0-rc.1",
+    "sha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1"
+  },
+  "beforeUrl": "/api/runs/6478f042d76b46f1a1d3eb7afeb46cde/images/before",
+  "afterUrl": "/api/runs/6478f042d76b46f1a1d3eb7afeb46cde/images/after",
+  "capture": {
+    "schemaVersion": "1.0",
+    "execution": "complete",
+    "environment": "verified",
+    "before": {
+      "side": "before",
+      "url": "http://127.0.0.1:9030/main/before.html",
+      "screenshot": "before.png",
+      "sha256": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+      "repeatedSha256": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+      "stable": true,
+      "stableUnderMasks": true,
+      "viewport": {
+        "width": 720,
+        "height": 760
+      },
+      "deviceScaleFactor": 1,
+      "actualDevicePixelRatio": 1,
+      "screenshotScale": "css",
+      "cssToImageScale": 1,
+      "browser": "140.0.7339.16",
+      "locale": "en-US",
+      "timezoneId": "UTC",
+      "colorScheme": "light",
+      "fontsReady": true,
+      "pageSize": {
+        "width": 720,
+        "height": 1694
+      },
+      "imageSize": {
+        "width": 720,
+        "height": 1694
+      },
+      "masks": [],
+      "state": {
+        "readySelector": "[data-ready]",
+        "fixedTime": 1700000000000,
+        "randomSeed": 7,
+        "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+        "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+      },
+      "blockedRequests": [],
+      "contracts": [
+        {
+          "type": "required-visible",
+          "selector": ".move",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+        },
+        {
+          "type": "inside-container",
+          "selector": ".move",
+          "container": ".frame",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".frame",
+              "matches": 1,
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibleBox": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "section",
+              "parentTag": "body"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element border box is inside the container border box within tolerance."
+        },
+        {
+          "type": "non-overlap",
+          "selector": ".move",
+          "other": ".neighbor",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".neighbor",
+              "matches": 1,
+              "box": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibleBox": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "div",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The declared border boxes do not overlap beyond tolerance."
+        }
+      ]
+    },
+    "after": {
+      "side": "after",
+      "url": "http://127.0.0.1:9030/main/after.html",
+      "screenshot": "after.png",
+      "sha256": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2",
+      "repeatedSha256": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2",
+      "stable": true,
+      "stableUnderMasks": true,
+      "viewport": {
+        "width": 720,
+        "height": 760
+      },
+      "deviceScaleFactor": 1,
+      "actualDevicePixelRatio": 1,
+      "screenshotScale": "css",
+      "cssToImageScale": 1,
+      "browser": "140.0.7339.16",
+      "locale": "en-US",
+      "timezoneId": "UTC",
+      "colorScheme": "light",
+      "fontsReady": true,
+      "pageSize": {
+        "width": 720,
+        "height": 1694
+      },
+      "imageSize": {
+        "width": 720,
+        "height": 1694
+      },
+      "masks": [],
+      "state": {
+        "readySelector": "[data-ready]",
+        "fixedTime": 1700000000000,
+        "randomSeed": 7,
+        "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+        "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+      },
+      "blockedRequests": [],
+      "contracts": [
+        {
+          "type": "required-visible",
+          "selector": ".move",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+        },
+        {
+          "type": "inside-container",
+          "selector": ".move",
+          "container": ".frame",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".frame",
+              "matches": 1,
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibleBox": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "section",
+              "parentTag": "body"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "violated",
+          "reason": "The element border box exceeds the declared container border box."
+        },
+        {
+          "type": "non-overlap",
+          "selector": ".move",
+          "other": ".neighbor",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".neighbor",
+              "matches": 1,
+              "box": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibleBox": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "div",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "violated",
+          "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+        }
+      ]
+    },
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": ".move",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract.",
+        "id": "contract-1",
+        "before": {
+          "type": "required-visible",
+          "selector": ".move",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+        },
+        "after": {
+          "type": "required-visible",
+          "selector": ".move",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element has a nonzero rendered box after rectangular ancestor clipping; actual occlusion and interaction are outside this contract."
+        }
+      },
+      {
+        "type": "inside-container",
+        "selector": ".move",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibleBox": {
+              "x": 24,
+              "y": 24,
+              "width": 376,
+              "height": 276
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box.",
+        "id": "contract-2",
+        "before": {
+          "type": "inside-container",
+          "selector": ".move",
+          "container": ".frame",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".frame",
+              "matches": 1,
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibleBox": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "section",
+              "parentTag": "body"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The element border box is inside the container border box within tolerance."
+        },
+        "after": {
+          "type": "inside-container",
+          "selector": ".move",
+          "container": ".frame",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".frame",
+              "matches": 1,
+              "box": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibleBox": {
+                "x": 24,
+                "y": 24,
+                "width": 376,
+                "height": 276
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "section",
+              "parentTag": "body"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "violated",
+          "reason": "The element border box exceeds the declared container border box."
+        }
+      },
+      {
+        "type": "non-overlap",
+        "selector": ".move",
+        "other": ".neighbor",
+        "measurements": [
+          {
+            "selector": ".move",
+            "matches": 1,
+            "box": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibleBox": {
+              "x": 287,
+              "y": 127,
+              "width": 130,
+              "height": 45
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".neighbor",
+            "matches": 1,
+            "box": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibleBox": {
+              "x": 317,
+              "y": 137,
+              "width": 38,
+              "height": 55
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "div",
+            "parentTag": "section"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion.",
+        "id": "contract-3",
+        "before": {
+          "type": "non-overlap",
+          "selector": ".move",
+          "other": ".neighbor",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 47,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".neighbor",
+              "matches": 1,
+              "box": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibleBox": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "div",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "satisfied",
+          "reason": "The declared border boxes do not overlap beyond tolerance."
+        },
+        "after": {
+          "type": "non-overlap",
+          "selector": ".move",
+          "other": ".neighbor",
+          "measurements": [
+            {
+              "selector": ".move",
+              "matches": 1,
+              "box": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibleBox": {
+                "x": 287,
+                "y": 127,
+                "width": 130,
+                "height": 45
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "button",
+              "parentTag": "section"
+            },
+            {
+              "selector": ".neighbor",
+              "matches": 1,
+              "box": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibleBox": {
+                "x": 317,
+                "y": 137,
+                "width": 38,
+                "height": 55
+              },
+              "visibilityLimitations": [],
+              "displayed": true,
+              "inPage": true,
+              "role": "div",
+              "parentTag": "section"
+            }
+          ],
+          "coordinateSpace": "document-css-pixels",
+          "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+          "status": "violated",
+          "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+        }
+      }
+    ],
+    "masks": [],
+    "warnings": [],
+    "manifestPath": "manifest.json"
+  },
+  "inputHashes": {
+    "before": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+    "after": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2"
+  },
+  "calibration": {
+    "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+    "target": "candidate visual observation frequency on original synthetic calibration families",
+    "classes": [
+      {
+        "label": "clipping",
+        "n": 230,
+        "positive": 35,
+        "negative": 195,
+        "status": "calibrated",
+        "temperature": 2.0436961851070765,
+        "bias": -0.5991679473331118
+      },
+      {
+        "label": "overlap_or_occlusion",
+        "n": 216,
+        "positive": 34,
+        "negative": 182,
+        "status": "calibrated",
+        "temperature": 1.4641394977535342,
+        "bias": -0.21320720524871206
+      },
+      {
+        "label": "out_of_container",
+        "n": 230,
+        "positive": 69,
+        "negative": 161,
+        "status": "calibrated",
+        "temperature": 1.7251745849659852,
+        "bias": -1.1256238820103444
+      },
+      {
+        "label": "element_disappearance",
+        "n": 230,
+        "positive": 24,
+        "negative": 206,
+        "status": "calibrated",
+        "temperature": 1.0982676778716132,
+        "bias": 1.2351570871753215
+      },
+      {
+        "label": "layout_displacement",
+        "n": 230,
+        "positive": 93,
+        "negative": 137,
+        "status": "calibrated",
+        "temperature": 3.3426774198008458,
+        "bias": -0.8722229529048837
+      }
+    ]
+  },
+  "cacheKey": "1a6f8c23a246e2fee6d11fed821a271d0b16375ec3bf215eec55fee358f37b41",
+  "timing": {
+    "totalSeconds": 2.5444790001492947,
+    "includesCandidatesAndModelLoad": true
+  },
+  "events": [],
+  "decisions": {},
+  "gate": {
+    "code": 2,
+    "reason": "Confirmed defect or declared contract violation"
+  },
+  "images": {
+    "before": "data:image/png;base64,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mX5nXla+7pJzrrn4rHV+tGplMg7bb4/nHry53IupANAwNPpy+KjK9LDmxttXJx6/s19lVjNu3LhB733w0iuvf/b5F506LLBgxwUWWrDjJDOiYe5/Rh6lHh98+NErr7/53vsftmvbugxLdO7UYZJfYDqxaT7zL74c9v7gIYOHfPThkI9btWpZjli2bdemdePG/6VDd7OrPutuVZ3of8NlFWDWJDiAhk5wwGzgv/FTKgDADCY4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIC4hhUcHX61RYWZbfC5V1UAYLoywgEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQ17gys633851b9+hT/VehAfv8iy9POLVvzdMfb7pT+U+24o83rwDAlMz84GCWcOPt9yy1+kYnn3leBQC+uwZ0S+Wai8/a5uI/V2iQrrnxjmFfDa8953cH7fXpZ5/PPdecFWa4e/eZ0cOBa/318QrA99CAguNHq65UubjCTNdl6R+WxwXatd1q0w0P3GuXJk2a7Pvb4+++/6Hq0p9stdvaa6xyyD6733jb3QNffaNL507rrbV6ddHQTz676F/XPPTok48++Wz3bl1WCi4PVwAAEABJREFUW2n5g/febf755q0uLTt59Y23fvzDVVZafpmzL7isrFa23XqzjX6z2/aNGxtpA5jNedModVVHMoZ99c7/nNb38y++/MPvDnjy2RdqhjceeeKZhRbsWCaefeHlp5578eOhn1bnlzV/vvPez74wsPq0TJR/V95w683/+vsi3buVOWUnL7782gsDX63ZVXl69J9Ob9Wyxe47blUBYLbmN0vquunyv1145p+q09fdcmd5PODXu/TquXB1zknHHLrN5j+deKs9DzqqWhtLL9G7rLPyCsuU6ZIj+x3+h7Fjx9asVmrjB32WLbfPjjhgz+qc62+9uwLA7E5wUNcqKy632KI9F+/Vs0y/P3hIefz5z9bvvUiP6tIyGrH2Gj+os8lXw0fcfs8DZaLrQgv2v+HSss6t/c5fbqnFy5wBjz/90iuv11651Myaq6188N67d+rQvjwd/OFHFQBmd4KDurou86Mf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ABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECdkpfGCAAAQAElEQVQ4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADi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",
+    "after": "data:image/png;base64,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AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBCE5hRcAABAASURBVAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAfKW4K8AAALM0lEQVQAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgTHABAnOAAAOIEBwAQJzgAgDjBAQDECQ4AIE5wAABxggMAiBMcAECc4AAA4gQHABAnOACAOMEBAMQJDgAgTnAAAHGCAwCIExwAQJzgAADiBAcAECc4AIA4wQEAxAkOACBOcAAAcYIDAIgT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"
+  },
+  "snapshotNotice": "Evidence snapshot. It cannot update a project or retrain a model."
+}

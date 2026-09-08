@@ -1,0 +1,35 @@
+{
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "before": "examples/profile-0-cover-before.png",
+  "after": "examples/profile-0-cover-after.png",
+  "candidates": [
+    {
+      "id": "region-1",
+      "box": {
+        "x": 443,
+        "y": 394,
+        "width": 345,
+        "height": 61
+      }
+    }
+  ],
+  "predictions": [
+    {
+      "candidateId": "region-1",
+      "logits": [
+        -7.123524188995361,
+        4.792688369750977,
+        -13.127769470214844,
+        -6.450891971588135,
+        -8.951233863830566
+      ],
+      "scores": [
+        0.016548441722989082,
+        0.9552197456359863,
+        0.00016080534260254353,
+        0.009579157456755638,
+        0.027920225635170937
+      ]
+    }
+  ]
+}

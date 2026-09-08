@@ -1,0 +1,30 @@
+{
+  "id": "failure",
+  "execution": "complete",
+  "gate": {
+    "code": 3,
+    "reason": "A declared requirement could not be checked"
+  },
+  "model": {
+    "version": "0.1.0-rc.1",
+    "sha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1"
+  },
+  "inputHashes": {
+    "before": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996",
+    "after": "1e8b03a3cb6ee267c984df3a2bd6e49ee2561e0aa00dbd4d3b35f4ce02afa996"
+  },
+  "configSha256": "252c512ca68b8b0d3e69adbe3d6fd6c3118fe233f11bdc407d62780cc75b1080",
+  "sourceHashes": {
+    "before": "bf5d0dbc1381e94426637aa90b449057b463762c4ccb35b14f185fe51624e7b5",
+    "after": "bf5d0dbc1381e94426637aa90b449057b463762c4ccb35b14f185fe51624e7b5"
+  },
+  "rawReportSha256": "c0e906474aad93be09d5bcdd3b19f49501e131e84f120b9da5a5f9fad77c3537",
+  "reviewedReportSha256": "38f84547931d8c0e071861e6690c295e86abfb6c0cc8211d82d85d3277aa7656",
+  "htmlReportSha256": "28883e35ea5291384acb597741e9d2a6ed4c6c711743e4e88747f3190868bf27",
+  "candidateCount": 0,
+  "rawPredictionsPreserved": true,
+  "baselineHistory": [],
+  "reproduce": "python examples/reproduce.py",
+  "reviewProvenance": "Scripted explicit example decisions based on authored scenario intent; no model threshold automatically approves changes."
+}

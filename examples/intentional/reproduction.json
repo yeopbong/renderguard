@@ -1,0 +1,68 @@
+{
+  "id": "intentional",
+  "execution": "complete",
+  "gate": {
+    "code": 0,
+    "reason": "No blocking items under the declared review policy; this is not a production safety guarantee"
+  },
+  "model": {
+    "version": "0.1.0-rc.1",
+    "sha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1"
+  },
+  "inputHashes": {
+    "before": "ff9ba16d4a15a108a9ee8cea90f976aeee4bf5eb46216d7c442b3c42958d7404",
+    "after": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2"
+  },
+  "configSha256": "4d4bade5019cb34d948309c8b0fca25cbc0439c1ca6b91e1ae89526352a0a10a",
+  "sourceHashes": {
+    "before": "f59bce25f3f3d157345e6a63478a7f343e0426b954bf2c4f6a99354b5382e8a1",
+    "after": "4f8617475947c74443d032549fddcddaacb25d3cee785839dfdcd89fe9b87b55"
+  },
+  "rawReportSha256": "3718251f03948467b35c05697067925bac95ea0f2626e6867667674b77f9e904",
+  "reviewedReportSha256": "dfb2adbd3040b94035e84358debd0f1540b1fa9412a59cb67e543303339b95e4",
+  "htmlReportSha256": "ba69729265a0fa9a9c7cfd523bfbb6abe771f6cef20433c0167764012bd16c82",
+  "candidateCount": 1,
+  "rawPredictionsPreserved": true,
+  "baselineHistory": [
+    {
+      "id": "cc1c051f8cde45c19ac8343ac326c37e",
+      "sequence": 2,
+      "kind": "baseline",
+      "createdAt": "2026-09-08T14:35:41.885748+00:00",
+      "old": null,
+      "new": {
+        "runId": "386ee60abcb845a8b568ddccf3d41581",
+        "side": "after",
+        "sha256": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2"
+      }
+    },
+    {
+      "id": "6acee7e88af74898afca8a9100aded34",
+      "sequence": 3,
+      "kind": "baseline",
+      "createdAt": "2026-09-08T14:35:41.887507+00:00",
+      "old": {
+        "runId": "386ee60abcb845a8b568ddccf3d41581",
+        "side": "after",
+        "sha256": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2"
+      },
+      "new": null,
+      "undoOf": "cc1c051f8cde45c19ac8343ac326c37e"
+    },
+    {
+      "id": "64b74c9749a04c0388d79d05de7ed64d",
+      "sequence": 4,
+      "kind": "baseline",
+      "createdAt": "2026-09-08T14:35:41.889481+00:00",
+      "old": null,
+      "new": {
+        "runId": "386ee60abcb845a8b568ddccf3d41581",
+        "side": "after",
+        "sha256": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2"
+      }
+    }
+  ],
+  "reproduce": "python examples/reproduce.py",
+  "reviewProvenance": "Scripted explicit example decisions based on authored scenario intent; no model threshold automatically approves changes."
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fast-png",
+    "version": "6.4.0",
+    "license": "MIT",
+    "file": "fast-png.txt"
+  },
+  {
+    "name": "iobuffer",
+    "version": "5.4.0",
+    "license": "MIT",
+    "file": "iobuffer.txt"
+  },
+  {
+    "name": "pako",
+    "version": "2.2.0",
+    "license": "(MIT AND Zlib)",
+    "file": "pako.txt"
+  },
+  {
+    "name": "react",
+    "version": "19.1.1",
+    "license": "MIT",
+    "file": "react.txt"
+  },
+  {
+    "name": "react-dom",
+    "version": "19.1.1",
+    "license": "MIT",
+    "file": "react-dom.txt"
+  },
+  {
+    "name": "scheduler",
+    "version": "0.26.0",
+    "license": "MIT",
+    "file": "scheduler.txt"
+  }
+]

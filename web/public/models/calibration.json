@@ -1,0 +1,52 @@
+{
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "target": "candidate visual observation frequency on original synthetic calibration families",
+  "classes": [
+    {
+      "label": "clipping",
+      "n": 230,
+      "positive": 35,
+      "negative": 195,
+      "status": "calibrated",
+      "temperature": 2.0436961851070765,
+      "bias": -0.5991679473331118
+    },
+    {
+      "label": "overlap_or_occlusion",
+      "n": 216,
+      "positive": 34,
+      "negative": 182,
+      "status": "calibrated",
+      "temperature": 1.4641394977535342,
+      "bias": -0.21320720524871206
+    },
+    {
+      "label": "out_of_container",
+      "n": 230,
+      "positive": 69,
+      "negative": 161,
+      "status": "calibrated",
+      "temperature": 1.7251745849659852,
+      "bias": -1.1256238820103444
+    },
+    {
+      "label": "element_disappearance",
+      "n": 230,
+      "positive": 24,
+      "negative": 206,
+      "status": "calibrated",
+      "temperature": 1.0982676778716132,
+      "bias": 1.2351570871753215
+    },
+    {
+      "label": "layout_displacement",
+      "n": 230,
+      "positive": 93,
+      "negative": 137,
+      "status": "calibrated",
+      "temperature": 3.3426774198008458,
+      "bias": -0.8722229529048837
+    }
+  ]
+}

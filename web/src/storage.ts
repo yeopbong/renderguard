@@ -1,4 +1,4 @@
-import { gateFor, type Project, type Review, type Run } from './types';
+import { gateFor, type Baseline, type Project, type Review, type Run } from './types';
 const DB_NAME = 'renderguard-workbench-v1';
 let database: Promise<IDBDatabase>;
 function db() {
@@ -55,16 +55,25 @@ export const storage = {
   },
   baseline: async (project: Project, runId: string, side: 'before' | 'after') => {
     const current = await read<Project>('projects', project.id);
-    current.baselineHistory.push({id: crypto.randomUUID(), runId, side, time: new Date().toISOString()});
+    current.baselineHistory.push({id: crypto.randomUUID(), runId, side, time: new Date().toISOString(), baseline: {runId, side}, old: current.baseline || null, new: {runId, side}});
     current.baseline = {runId, side};
+    return write('projects', current);
+  },
+  importBaseline: async (project: Project, imageUrl: string, sha256: string) => {
+    const current = await read<Project>('projects', project.id);
+    const baseline: Baseline = {imageId: crypto.randomUUID(), imageUrl, sha256, side: 'before', environment: 'unverified'};
+    current.baselineHistory.push({id: crypto.randomUUID(), time: new Date().toISOString(), baseline, old: current.baseline || null, new: baseline});
+    current.baseline = baseline;
     return write('projects', current);
   },
   undoBaseline: async (project: Project) => {
     const current = await read<Project>('projects', project.id);
-    const last = [...current.baselineHistory].reverse().find(e => !e.reverted);
-    if (last) last.reverted = true;
-    const previous = [...current.baselineHistory].reverse().find(e => !e.reverted);
-    current.baseline = previous && {runId: previous.runId, side: previous.side};
+    const undone = new Set(current.baselineHistory.map(e => e.undoOf).filter(Boolean));
+    const last = [...current.baselineHistory].reverse().find(e => !e.undoOf && !e.reverted && !undone.has(e.id));
+    if (!last) return current;
+    const previous = last.old || undefined;
+    current.baselineHistory.push({id: crypto.randomUUID(), time: new Date().toISOString(), old: current.baseline || null, new: previous || null, undoOf: last.id});
+    current.baseline = previous;
     return write('projects', current);
   },
 };

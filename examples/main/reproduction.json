@@ -1,0 +1,30 @@
+{
+  "id": "main",
+  "execution": "complete",
+  "gate": {
+    "code": 2,
+    "reason": "Confirmed defect or declared contract violation"
+  },
+  "model": {
+    "version": "0.1.0-rc.1",
+    "sha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1"
+  },
+  "inputHashes": {
+    "before": "4e5240119020a5038469db983b6dad4f368b6fbee3b2042d5f33abab5a3d4786",
+    "after": "5b72cc578d838c4ea57ead7ec3dcad2dd7bdae619e3631173011ec85cd2b57f2"
+  },
+  "configSha256": "7f11478ae075d0fb54f747a31d8b14d643b05a791e80207d40f703e2d7572dab",
+  "sourceHashes": {
+    "before": "9da6139ed54ff2a1fb84b5a8a3228411c67c4bc2523a3db160a4b8525782c5d7",
+    "after": "b3023bf4b669fecc65cb6c63fd4e9b50370709b56a06785b38266110adbf4330"
+  },
+  "rawReportSha256": "6752abbef3fc9057383a28e0e2a271e651acbf92fbf25afaec60666848bb7bfa",
+  "reviewedReportSha256": "77e7ee5c6cac6621abda4a729955059851eca25f8ccedba1a1206c74cebc1baf",
+  "htmlReportSha256": "c764ddf93166c77dd67c6fbb703b7709109dfe149092cb5ff6cd4f82d94c1a12",
+  "candidateCount": 3,
+  "rawPredictionsPreserved": true,
+  "baselineHistory": [],
+  "reproduce": "python examples/reproduce.py",
+  "reviewProvenance": "Scripted explicit example decisions based on authored scenario intent; no model threshold automatically approves changes."
+}

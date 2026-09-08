@@ -1,0 +1,18 @@
+{
+  "os": "26.5.2",
+  "architecture": "arm64",
+  "cpu": "Apple M2",
+  "memoryBytes": 17179869184,
+  "logicalCpuCount": 8,
+  "python": "3.12.14",
+  "torch": "2.8.0",
+  "mpsAvailable": true,
+  "node": "24.19.0",
+  "validatedPlatforms": [
+    "macOS arm64"
+  ],
+  "notValidated": [
+    "Windows local installation",
+    "Linux full local desktop installation"
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:9030/intentional/before.html",
+    "screenshot": "before.png",
+    "sha256": "ff9ba16d4a15a108a9ee8cea90f976aeee4bf5eb46216d7c442b3c42958d7404",
+    "repeatedSha256": "ff9ba16d4a15a108a9ee8cea90f976aeee4bf5eb46216d7c442b3c42958d7404",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "inside-container",
+        "selector": "#action",
+        "container": "main",
+        "measurements": [
+          {
+            "selector": "#action",
+            "matches": 1,
+            "box": {
+              "x": 66,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibleBox": {
+              "x": 66,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "main"
+          },
+          {
+            "selector": "main",
+            "matches": 1,
+            "box": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibleBox": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "main",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:9030/intentional/after.html",
+    "screenshot": "after.png",
+    "sha256": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2",
+    "repeatedSha256": "4188d704883f0524a46bdd0b065e9913eac33bb5475e242ce6f388931a7b50b2",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 720,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "imageSize": {
+      "width": 720,
+      "height": 760
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 7,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen.",
+      "imagePolicy": "Native lazy images are requested eagerly; custom lazy loaders require an explicit readiness condition."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "inside-container",
+        "selector": "#action",
+        "container": "main",
+        "measurements": [
+          {
+            "selector": "#action",
+            "matches": 1,
+            "box": {
+              "x": 182,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibleBox": {
+              "x": 182,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "main"
+          },
+          {
+            "selector": "main",
+            "matches": 1,
+            "box": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibleBox": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "main",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "inside-container",
+      "selector": "#action",
+      "container": "main",
+      "measurements": [
+        {
+          "selector": "#action",
+          "matches": 1,
+          "box": {
+            "x": 182,
+            "y": 212,
+            "width": 116.0625,
+            "height": 52
+          },
+          "visibleBox": {
+            "x": 182,
+            "y": 212,
+            "width": 116.0625,
+            "height": 52
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "main"
+        },
+        {
+          "selector": "main",
+          "matches": 1,
+          "box": {
+            "x": 40,
+            "y": 40,
+            "width": 494,
+            "height": 304
+          },
+          "visibleBox": {
+            "x": 40,
+            "y": 40,
+            "width": 494,
+            "height": 304
+          },
+          "visibilityLimitations": [],
+          "displayed": true,
+          "inPage": true,
+          "role": "main",
+          "parentTag": "body"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "satisfied",
+      "reason": "The element border box is inside the container border box within tolerance.",
+      "id": "contract-1",
+      "before": {
+        "type": "inside-container",
+        "selector": "#action",
+        "container": "main",
+        "measurements": [
+          {
+            "selector": "#action",
+            "matches": 1,
+            "box": {
+              "x": 66,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibleBox": {
+              "x": 66,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "main"
+          },
+          {
+            "selector": "main",
+            "matches": 1,
+            "box": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibleBox": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "main",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      },
+      "after": {
+        "type": "inside-container",
+        "selector": "#action",
+        "container": "main",
+        "measurements": [
+          {
+            "selector": "#action",
+            "matches": 1,
+            "box": {
+              "x": 182,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibleBox": {
+              "x": 182,
+              "y": 212,
+              "width": 116.0625,
+              "height": 52
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "main"
+          },
+          {
+            "selector": "main",
+            "matches": 1,
+            "box": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibleBox": {
+              "x": 40,
+              "y": 40,
+              "width": 494,
+              "height": 304
+            },
+            "visibilityLimitations": [],
+            "displayed": true,
+            "inPage": true,
+            "role": "main",
+            "parentTag": "body"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

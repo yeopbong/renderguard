@@ -1,0 +1,79 @@
+[
+  {
+    "id": "profile-0-cover",
+    "title": "A covered biography",
+    "description": "A new panel covers part of the profile text.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "profile-0-cover-before.png",
+    "beforeSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+    "after": "profile-0-cover-after.png",
+    "afterSha256": "a2c975a7cc2c602e816632d7dd267d4c08a26ecef387acc3bd2c29a5b851ecaa"
+  },
+  {
+    "id": "ledger-1-intentional_move",
+    "title": "An intentional move",
+    "description": "The layout displacement remains visible after choosing Intentional change.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "ledger-1-intentional_move-before.png",
+    "beforeSha256": "b2e56ff60a331729e33dd88fd671ac850527d90441f65bbd1ac4b7a399954cea",
+    "after": "ledger-1-intentional_move-after.png",
+    "afterSha256": "13b0e72c1281c8bade8a6a9e6f7bbadcb0d3d404d63422f5aa3af90a87c6de74"
+  },
+  {
+    "id": "settings-0-clip",
+    "title": "A clipped control",
+    "description": "Inspect the control boundary and its visible text.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "settings-0-clip-before.png",
+    "beforeSha256": "328977271eef30ce2ca054782bdd1fb0a926dbbc03853d096d6ee39ec6df42e8",
+    "after": "settings-0-clip-after.png",
+    "afterSha256": "12b53954c54b9e0d5c5cbc98d4aff0a18e573a9ae8162c5e5503dba830bc4c3d"
+  },
+  {
+    "id": "kanban-1-overflow",
+    "title": "A card outside its lane",
+    "description": "A task card crosses a visible lane boundary.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "kanban-1-overflow-before.png",
+    "beforeSha256": "b5b18013729986dba00257892fba0cca85969088320af7bf4570de84e6368e3b",
+    "after": "kanban-1-overflow-after.png",
+    "afterSha256": "0580c72104a720a9dc28ec6b07217bfd18b729b2b66d59e1090f2df33acd9fc4"
+  },
+  {
+    "id": "invoice-0-hide",
+    "title": "A missing total",
+    "description": "The amount due disappears from the invoice.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "invoice-0-hide-before.png",
+    "beforeSha256": "3a51d81353d42345dda37eb5dd1eed3ac282d46c4950e7b2aeb57a30cfbef1c4",
+    "after": "invoice-0-hide-after.png",
+    "afterSha256": "fee29e38999b2a83e2176ac2f17d471cb511af90ea2c1190cf62ad870a5ae04e"
+  },
+  {
+    "id": "article-0-repeat",
+    "title": "A stable long page",
+    "description": "Repeated capture has no pixel changes.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "article-0-repeat-before.png",
+    "beforeSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+    "after": "article-0-repeat-after.png",
+    "afterSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3"
+  },
+  {
+    "id": "catalog-1-content",
+    "title": "An ordinary content update",
+    "description": "Changed product content still requires an explicit review decision.",
+    "source": "original synthetic training family",
+    "license": "CC0-1.0",
+    "before": "catalog-1-content-before.png",
+    "beforeSha256": "708672868c65d85eb6127cf373af6703f25a10c78f43e74c06df13f93a24f401",
+    "after": "catalog-1-content-after.png",
+    "afterSha256": "5b24ca18c4e4fabd7e75aefb936819d1a781e753ba19cf5318a5bca455e17ae0"
+  }
+]
