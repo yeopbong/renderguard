@@ -11,6 +11,11 @@ manifest = json.loads((folder / 'manifest.json').read_text())
 model = folder / 'model.onnx'
 actual = hashlib.sha256(model.read_bytes()).hexdigest()
 assert actual == manifest['modelSha256'], 'Model checksum mismatch'
+assert hashlib.sha256((folder / 'calibration.json').read_bytes()).hexdigest() == manifest['calibrationSha256'], 'Calibration checksum mismatch'
+assert hashlib.sha256((root / 'artifacts/model.safetensors').read_bytes()).hexdigest() == manifest['weightsSha256'], 'Safe weights checksum mismatch'
+assert hashlib.sha256((root / 'artifacts/training-config.json').read_bytes()).hexdigest() == manifest['configurationSha256'], 'Training configuration checksum mismatch'
+buffer = json.loads((root / 'artifacts/replay-buffer.json').read_text())
+assert hashlib.sha256((root / 'artifacts/replay-buffer.npz').read_bytes()).hexdigest() == buffer['sha256'], 'Retained data checksum mismatch'
 calibration = json.loads((folder / 'calibration.json').read_text())
 assert calibration['modelSha256'] == actual
 assert calibration['preprocessVersion'] == manifest['preprocessVersion']
