@@ -1,0 +1,33 @@
+{
+  "pairs": 1728,
+  "seconds": 139.874012208,
+  "pngBytes": 118302050,
+  "bySplit": {
+    "train": 1008,
+    "dev": 288,
+    "calibration": 216,
+    "test": 216
+  },
+  "observations": {
+    "clipping": {
+      "positive": 288,
+      "known": 3456
+    },
+    "overlap_or_occlusion": {
+      "positive": 262,
+      "known": 3088
+    },
+    "out_of_container": {
+      "positive": 394,
+      "known": 3168
+    },
+    "element_disappearance": {
+      "positive": 144,
+      "known": 3456
+    },
+    "layout_displacement": {
+      "positive": 613,
+      "known": 3456
+    }
+  }
+}

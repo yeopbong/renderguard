@@ -1,0 +1,747 @@
+{
+  "schemaVersion": "1.0",
+  "manifestSha256": "b7a8381522d2ea1f7ef1ee52550f703cdf025677ea04bff6470faccfce38cbe6",
+  "modelSha256": "dcedb2b5413d71f4cae4a89b7ebb0ffc0d5df41c23be2698e535f9ba8f50d4e9",
+  "modelVersion": "0.1.0-rc.1",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "withheldAtEvaluation": true,
+  "externalAcceptance": false,
+  "thresholdSelectedOnChallenge": false,
+  "metrics": {
+    "clipping": {
+      "validPages": 11,
+      "positivePages": 2,
+      "precisionAtFixedHalf": null,
+      "recallAtFixedHalf": 0.0,
+      "f1AtFixedHalf": 0.0,
+      "note": "Descriptive max-candidate page observation score; fixed 0.5 threshold, not a defect probability or acceptance gate."
+    },
+    "overlap_or_occlusion": {
+      "validPages": 11,
+      "positivePages": 1,
+      "precisionAtFixedHalf": null,
+      "recallAtFixedHalf": 0.0,
+      "f1AtFixedHalf": 0.0,
+      "note": "Descriptive max-candidate page observation score; fixed 0.5 threshold, not a defect probability or acceptance gate."
+    },
+    "out_of_container": {
+      "validPages": 9,
+      "positivePages": 1,
+      "precisionAtFixedHalf": 0.0,
+      "recallAtFixedHalf": 0.0,
+      "f1AtFixedHalf": 0.0,
+      "note": "Descriptive max-candidate page observation score; fixed 0.5 threshold, not a defect probability or acceptance gate."
+    },
+    "element_disappearance": {
+      "validPages": 11,
+      "positivePages": 2,
+      "precisionAtFixedHalf": 0.6666666666666666,
+      "recallAtFixedHalf": 1.0,
+      "f1AtFixedHalf": 0.8,
+      "note": "Descriptive max-candidate page observation score; fixed 0.5 threshold, not a defect probability or acceptance gate."
+    },
+    "layout_displacement": {
+      "validPages": 11,
+      "positivePages": 3,
+      "precisionAtFixedHalf": 0.6666666666666666,
+      "recallAtFixedHalf": 0.6666666666666666,
+      "f1AtFixedHalf": 0.6666666666666666,
+      "note": "Descriptive max-candidate page observation score; fixed 0.5 threshold, not a defect probability or acceptance gate."
+    }
+  },
+  "cases": [
+    {
+      "id": "clipped-receipt",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        1,
+        0,
+        null,
+        0,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 1,
+      "changedPixels": 2069,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 244,
+            "y": 77,
+            "width": 141,
+            "height": 22
+          },
+          "changedPixels": 2069,
+          "stats": [
+            0.6669890393294649,
+            0.49739447036067813,
+            0.9098039215686274,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -6.15393590927124,
+          -5.6745285987854,
+          -0.69477379322052,
+          -6.143996715545654,
+          -0.5279112458229065
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.02331043779850006,
+          0.025104640051722527,
+          0.2084641307592392,
+          0.005799602717161179,
+          0.4313153028488159
+        ]
+      ],
+      "pageObservationScores": [
+        0.02331043779850006,
+        0.025104640051722527,
+        0.2084641307592392,
+        0.005799602717161179,
+        0.4313153028488159
+      ]
+    },
+    {
+      "id": "occluded-reading",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [
+        "violated"
+      ],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 2,
+      "changedPixels": 42109,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 45,
+            "y": 117,
+            "width": 380,
+            "height": 56
+          },
+          "changedPixels": 21122,
+          "stats": [
+            0.9925751879699248,
+            0.8276601430045702,
+            0.9137254901960784,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 45,
+            "y": 265,
+            "width": 380,
+            "height": 56
+          },
+          "changedPixels": 20987,
+          "stats": [
+            0.9862312030075188,
+            0.8789329942503317,
+            0.9137254901960784,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -0.8462967276573181,
+          -4.1791157722473145,
+          0.7133004665374756,
+          -6.404717922210693,
+          1.6496326923370361
+        ],
+        [
+          -3.3105902671813965,
+          -4.56071138381958,
+          -2.390775442123413,
+          2.709001064300537,
+          -2.6261837482452393
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.2832624316215515,
+          0.0551028773188591,
+          0.4028843343257904,
+          0.004680960439145565,
+          0.8394779562950134
+        ],
+        [
+          0.09695097804069519,
+          0.0451977476477623,
+          0.07818101346492767,
+          0.897550642490387,
+          0.10554922372102737
+        ]
+      ],
+      "pageObservationScores": [
+        0.2832624316215515,
+        0.0551028773188591,
+        0.4028843343257904,
+        0.897550642490387,
+        0.8394779562950134
+      ]
+    },
+    {
+      "id": "escaped-control",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [
+        "violated"
+      ],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 1,
+      "changedPixels": 11741,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 128,
+            "y": 128,
+            "width": 285,
+            "height": 46
+          },
+          "changedPixels": 11741,
+          "stats": [
+            0.8955758962623951,
+            0.8003646370829034,
+            0.9686274509803922,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -2.927522659301758,
+          -6.964405536651611,
+          0.8057152628898621,
+          -9.669878005981445,
+          3.731616973876953
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.11619291454553604,
+          0.012563291937112808,
+          0.41782262921333313,
+          0.00031668890733271837,
+          0.9707005620002747
+        ]
+      ],
+      "pageObservationScores": [
+        0.11619291454553604,
+        0.012563291937112808,
+        0.41782262921333313,
+        0.00031668890733271837,
+        0.9707005620002747
+      ]
+    },
+    {
+      "id": "missing-download",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 1,
+      "changedPixels": 17011,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 55,
+            "y": 124,
+            "width": 300,
+            "height": 58
+          },
+          "changedPixels": 17011,
+          "stats": [
+            0.9776436781609196,
+            0.852085418075276,
+            0.9098039215686274,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -5.0417585372924805,
+          -4.962490558624268,
+          -7.328272819519043,
+          2.5908188819885254,
+          -5.005242824554443
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.04120587930083275,
+          0.03661227226257324,
+          0.0031221434473991394,
+          0.8882170915603638,
+          0.014111516997218132
+        ]
+      ],
+      "pageObservationScores": [
+        0.04120587930083275,
+        0.03661227226257324,
+        0.0031221434473991394,
+        0.8882170915603638,
+        0.014111516997218132
+      ]
+    },
+    {
+      "id": "intentional-relocation",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "independentDefectConclusion": false,
+      "candidateCount": 2,
+      "changedPixels": 32000,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 49,
+            "y": 79,
+            "width": 160,
+            "height": 100
+          },
+          "changedPixels": 16000,
+          "stats": [
+            1,
+            0.1921877450980392,
+            0.8196078431372549,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 264,
+            "y": 79,
+            "width": 160,
+            "height": 100
+          },
+          "changedPixels": 16000,
+          "stats": [
+            1,
+            0.1921877450980392,
+            0.8196078431372549,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -4.922098636627197,
+          -6.21498441696167,
+          -3.384384870529175,
+          -2.7336997985839844,
+          -2.0476744174957275
+        ],
+        [
+          -5.59379768371582,
+          -5.678605079650879,
+          -4.9342427253723145,
+          -6.517931938171387,
+          -2.7664132118225098
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.0437798947095871,
+          0.0188041552901268,
+          0.04184000939130783,
+          0.08895008265972137,
+          0.16464486718177795
+        ],
+        [
+          0.031097397208213806,
+          0.02505016326904297,
+          0.015267621725797653,
+          0.004264746326953173,
+          0.09437283128499985
+        ]
+      ],
+      "pageObservationScores": [
+        0.0437798947095871,
+        0.02505016326904297,
+        0.04184000939130783,
+        0.08895008265972137,
+        0.16464486718177795
+      ]
+    },
+    {
+      "id": "clipped-multilingual",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        1,
+        0,
+        null,
+        0,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 1,
+      "changedPixels": 1660,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 54,
+            "y": 119,
+            "width": 207,
+            "height": 20
+          },
+          "changedPixels": 1660,
+          "stats": [
+            0.40096618357487923,
+            0.2599895803732121,
+            0.9098039215686274,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -3.2133471965789795,
+          -4.2478251457214355,
+          -2.416494369506836,
+          -3.4111881256103516,
+          -1.2697192430496216
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.1015477403998375,
+          0.05317976698279381,
+          0.07695159316062927,
+          0.05283642187714577,
+          0.28206318616867065
+        ]
+      ],
+      "pageObservationScores": [
+        0.1015477403998375,
+        0.05317976698279381,
+        0.07695159316062927,
+        0.05283642187714577,
+        0.28206318616867065
+      ]
+    },
+    {
+      "id": "ordinary-content",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "candidateCount": 1,
+      "changedPixels": 76777,
+      "heightDelta": 0,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 24,
+            "y": 24,
+            "width": 420,
+            "height": 189
+          },
+          "changedPixels": 76777,
+          "stats": [
+            0.9672083648274125,
+            0.05501143667343481,
+            0.8,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -4.735137939453125,
+          -6.979465961456299,
+          4.3286824226379395,
+          -13.958091735839844,
+          4.780059814453125
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.048110898584127426,
+          0.012461578473448753,
+          0.8830885291099548,
+          9.163753929897211e-06,
+          0.9882270693778992
+        ]
+      ],
+      "pageObservationScores": [
+        0.048110898584127426,
+        0.012461578473448753,
+        0.8830885291099548,
+        9.163753929897211e-06,
+        0.9882270693778992
+      ]
+    },
+    {
+      "id": "repeat-capture",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "heightDelta": 0,
+      "candidates": [],
+      "candidateLogits": [],
+      "candidateScores": [],
+      "pageObservationScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "masked-dynamic",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "heightDelta": 0,
+      "candidates": [],
+      "candidateLogits": [],
+      "candidateScores": [],
+      "pageObservationScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "removed-long-tail",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "independentDefectConclusion": true,
+      "candidateCount": 1,
+      "changedPixels": 90058,
+      "heightDelta": -150,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 0,
+            "y": 2007,
+            "width": 480,
+            "height": 195
+          },
+          "changedPixels": 90058,
+          "stats": [
+            0.9621581196581197,
+            0.9266704374057315,
+            1,
+            1,
+            0.23076923076923078,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "candidateLogits": [
+        [
+          -0.9410135746002197,
+          -3.0427660942077637,
+          -3.3287501335144043,
+          1.4604601860046387,
+          -2.8846967220306396
+        ]
+      ],
+      "candidateScores": [
+        [
+          0.2732040584087372,
+          0.09790365397930145,
+          0.043355777859687805,
+          0.7574485540390015,
+          0.0857822448015213
+        ]
+      ],
+      "pageObservationScores": [
+        0.2732040584087372,
+        0.09790365397930145,
+        0.043355777859687805,
+        0.7574485540390015,
+        0.0857822448015213
+      ]
+    },
+    {
+      "id": "unmeasurable-contract",
+      "execution": "complete",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "independentDefectConclusion": null,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "heightDelta": 0,
+      "candidates": [],
+      "candidateLogits": [],
+      "candidateScores": [],
+      "pageObservationScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "incomparable-width",
+      "execution": "incomparable",
+      "executionMatchesExpectation": true,
+      "contractStatuses": [],
+      "contractsMatchExpectation": true,
+      "expectedObservations": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "independentDefectConclusion": null
+    }
+  ],
+  "limitations": [
+    "Twelve authored synthetic page pairs; no production accuracy claim.",
+    "Observation labels score page-level signs, not defect intent.",
+    "A zero-candidate positive remains a missed page-level observation.",
+    "No model selection or calibration is permitted from this evaluation while retaining withheld status."
+  ]
+}

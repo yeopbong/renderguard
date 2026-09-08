@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/occluded-reading/before.html",
+    "screenshot": "before.png",
+    "sha256": "4e17fba45abe0c2de8fdc37b174058f8ee6ef46432e00fec2a2713bd511da4b8",
+    "repeatedSha256": "4e17fba45abe0c2de8fdc37b174058f8ee6ef46432e00fec2a2713bd511da4b8",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "non-overlap",
+        "selector": ".copy",
+        "other": ".notice",
+        "measurements": [
+          {
+            "selector": ".copy",
+            "matches": 1,
+            "box": {
+              "x": 51,
+              "y": 88,
+              "width": 366,
+              "height": 99
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "p",
+            "parentTag": "article"
+          },
+          {
+            "selector": ".notice",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 265,
+              "width": 380,
+              "height": 56
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "aside",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The declared border boxes do not overlap beyond tolerance."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/occluded-reading/after.html",
+    "screenshot": "after.png",
+    "sha256": "7d7a58b5e61411db20fd13cbb4c889922da61409430d5ab723de29167f213456",
+    "repeatedSha256": "7d7a58b5e61411db20fd13cbb4c889922da61409430d5ab723de29167f213456",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "non-overlap",
+        "selector": ".copy",
+        "other": ".notice",
+        "measurements": [
+          {
+            "selector": ".copy",
+            "matches": 1,
+            "box": {
+              "x": 51,
+              "y": 88,
+              "width": 366,
+              "height": 99
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "p",
+            "parentTag": "article"
+          },
+          {
+            "selector": ".notice",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 117,
+              "width": 380,
+              "height": 56
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "aside",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "non-overlap",
+      "selector": ".copy",
+      "other": ".notice",
+      "measurements": [
+        {
+          "selector": ".copy",
+          "matches": 1,
+          "box": {
+            "x": 51,
+            "y": 88,
+            "width": 366,
+            "height": 99
+          },
+          "displayed": true,
+          "inPage": true,
+          "role": "p",
+          "parentTag": "article"
+        },
+        {
+          "selector": ".notice",
+          "matches": 1,
+          "box": {
+            "x": 45,
+            "y": 117,
+            "width": 380,
+            "height": 56
+          },
+          "displayed": true,
+          "inPage": true,
+          "role": "aside",
+          "parentTag": "article"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion.",
+      "id": "contract-1",
+      "before": {
+        "type": "non-overlap",
+        "selector": ".copy",
+        "other": ".notice",
+        "measurements": [
+          {
+            "selector": ".copy",
+            "matches": 1,
+            "box": {
+              "x": 51,
+              "y": 88,
+              "width": 366,
+              "height": 99
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "p",
+            "parentTag": "article"
+          },
+          {
+            "selector": ".notice",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 265,
+              "width": 380,
+              "height": 56
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "aside",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The declared border boxes do not overlap beyond tolerance."
+      },
+      "after": {
+        "type": "non-overlap",
+        "selector": ".copy",
+        "other": ".notice",
+        "measurements": [
+          {
+            "selector": ".copy",
+            "matches": 1,
+            "box": {
+              "x": 51,
+              "y": 88,
+              "width": 366,
+              "height": 99
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "p",
+            "parentTag": "article"
+          },
+          {
+            "selector": ".notice",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 117,
+              "width": 380,
+              "height": 56
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "aside",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The declared border boxes overlap beyond tolerance; this is geometric overlap, not proof of occlusion."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

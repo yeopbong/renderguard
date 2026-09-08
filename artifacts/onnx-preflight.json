@@ -1,0 +1,7 @@
+{
+  "maxAbsoluteError": 1.296401023864746e-06,
+  "batch": 1,
+  "tolerance": 0.0001,
+  "opset": 17,
+  "bytes": 6184503
+}

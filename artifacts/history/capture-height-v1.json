@@ -1,0 +1,9 @@
+{
+  "archive": "renderguard-first-training.tar.gz",
+  "sha256": "c83ed8420f99a2a3d36fdcb08a248503b01bdd34b21ba1d4278af23db44bc710",
+  "modelSha256": "dcedb2b5413d71f4cae4a89b7ebb0ffc0d5df41c23be2698e535f9ba8f50d4e9",
+  "trainingSourceSha": "863a839dadf4316b0ad1da1c9bb53c40ee366c9a",
+  "dataSha256": "531898428c7999f4ac8720314cc30bb439792deb382aa653332504910a7cdf3a",
+  "reason": "Training screenshot generation clipped some long pages to viewport height; retained as a superseded experiment, not the released model.",
+  "challengeExposure": "The first handwritten challenge was evaluated before the rendering-height bug was corrected. Subsequent evaluation of those same cases is development regression, not a blind test."
+}

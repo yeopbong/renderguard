@@ -1,0 +1,2041 @@
+{
+  "baselines": {
+    "difference_statistics": {
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.75,
+            "recall": 0.875,
+            "f1": 0.8076923076923077,
+            "prAuc": 0.8745447297421631,
+            "brier": 0.0948421061038971
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 0.5789473684210527,
+            "recall": 0.7021276595744681,
+            "f1": 0.6346153846153846,
+            "prAuc": 0.5282593482415949,
+            "brier": 0.1752287745475769
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.654320987654321,
+            "recall": 0.9137931034482759,
+            "f1": 0.762589928057554,
+            "prAuc": 0.8043257233752307,
+            "brier": 0.1513092964887619
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.3939393939393939,
+            "recall": 0.5416666666666666,
+            "f1": 0.45614035087719296,
+            "prAuc": 0.5175157819748315,
+            "brier": 0.20227044820785522
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.7936507936507936,
+            "recall": 0.8928571428571429,
+            "f1": 0.8403361344537815,
+            "prAuc": 0.8892074903492665,
+            "brier": 0.1383388489484787
+          }
+        ],
+        "macroF1": 0.7002748211392442,
+        "macroPrAuc": 0.7227706147366173
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.92,
+            "recall": 0.6388888888888888,
+            "f1": 0.7540983606557377,
+            "prAuc": 0.8015772624589065,
+            "brier": 0.059842661023139954
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.4411764705882353,
+            "recall": 0.8333333333333334,
+            "f1": 0.5769230769230769,
+            "prAuc": 0.5147383835804634,
+            "brier": 0.13538004457950592
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.3375796178343949,
+            "recall": 0.8412698412698413,
+            "f1": 0.4818181818181818,
+            "prAuc": 0.3111451873385636,
+            "brier": 0.26479431986808777
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.1927710843373494,
+            "recall": 0.8888888888888888,
+            "f1": 0.31683168316831684,
+            "prAuc": 0.2795564772942657,
+            "brier": 0.2548591196537018
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.5,
+            "recall": 0.8690476190476191,
+            "f1": 0.6347826086956522,
+            "prAuc": 0.5142233689130725,
+            "brier": 0.22088102996349335
+          }
+        ],
+        "macroF1": 0.552890782252193,
+        "macroPrAuc": 0.48424813591705435
+      },
+      "thresholds": [
+        0.6000000000000002,
+        0.6000000000000002,
+        0.5000000000000001,
+        0.6000000000000002,
+        0.5000000000000001
+      ]
+    },
+    "pixel_difference": {
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.25663716814159293,
+            "recall": 0.6041666666666666,
+            "f1": 0.36024844720496896,
+            "prAuc": 0.19139987749807189,
+            "brier": 0.4134829342365265
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 0.37894736842105264,
+            "recall": 0.7659574468085106,
+            "f1": 0.5070422535211268,
+            "prAuc": 0.4091416492485572,
+            "brier": 0.31321585178375244
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.34523809523809523,
+            "recall": 1.0,
+            "f1": 0.5132743362831859,
+            "prAuc": 0.2645795436065766,
+            "brier": 0.39946696162223816
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.33962264150943394,
+            "recall": 0.75,
+            "f1": 0.4675324675324675,
+            "prAuc": 0.3264345642983171,
+            "brier": 0.35296663641929626
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.4890829694323144,
+            "recall": 1.0,
+            "f1": 0.656891495601173,
+            "prAuc": 0.36649862566080527,
+            "brier": 0.4235851764678955
+          }
+        ],
+        "macroF1": 0.5009978000285844,
+        "macroPrAuc": 0.3116108520624656
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.17117117117117117,
+            "recall": 0.5277777777777778,
+            "f1": 0.2585034013605442,
+            "prAuc": 0.14138210373690652,
+            "brier": 0.3670995533466339
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.23423423423423423,
+            "recall": 0.7222222222222222,
+            "f1": 0.35374149659863946,
+            "prAuc": 0.38644664267269624,
+            "brier": 0.31903600692749023
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.2696078431372549,
+            "recall": 0.873015873015873,
+            "f1": 0.41198501872659177,
+            "prAuc": 0.2176118711494906,
+            "brier": 0.3725963532924652
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.22784810126582278,
+            "recall": 1.0,
+            "f1": 0.3711340206185567,
+            "prAuc": 0.31186104654021024,
+            "brier": 0.327982634305954
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.28668941979522183,
+            "recall": 1.0,
+            "f1": 0.44562334217506633,
+            "prAuc": 0.2786457703308959,
+            "brier": 0.3766546845436096
+          }
+        ],
+        "macroF1": 0.3681974558958797,
+        "macroPrAuc": 0.2671894868860399
+      },
+      "thresholds": [
+        0.5500000000000002,
+        0.5500000000000002,
+        0.30000000000000004,
+        0.9000000000000002,
+        0.1
+      ]
+    },
+    "uninformed_prior": {
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "prAuc": 0.12286689419795221,
+            "brier": 0.11463196575641632
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "prAuc": 0.12286689419795221,
+            "brier": 0.1153753399848938
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "prAuc": 0.2150170648464164,
+            "brier": 0.1864536553621292
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "prAuc": 0.06143344709897611,
+            "brier": 0.06096857413649559
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "prAuc": 0.28668941979522183,
+            "brier": 0.24074546992778778
+          }
+        ],
+        "macroF1": 0.0,
+        "macroPrAuc": 0.16177474402730377
+      }
+    }
+  },
+  "models": [
+    {
+      "kind": "frozen",
+      "seed": 17,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.798077680881434,
+          "devLoss": 0.41182318329811096,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.4535844589117914
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5092441473234689,
+          "devLoss": 0.2623705267906189,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.8433254999108613
+        },
+        {
+          "epoch": 3,
+          "stage": "head",
+          "trainLoss": 0.4366933576384146,
+          "devLoss": 0.29038405418395996,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 3.1571824999991804
+        },
+        {
+          "epoch": 4,
+          "stage": "head",
+          "trainLoss": 0.314769110715079,
+          "devLoss": 0.2869684398174286,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 3.4171800420153886
+        },
+        {
+          "epoch": 5,
+          "stage": "head",
+          "trainLoss": 0.2606128500555232,
+          "devLoss": 0.3697417080402374,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 3.6789012500084937
+        },
+        {
+          "epoch": 6,
+          "stage": "head",
+          "trainLoss": 0.2537202698627517,
+          "devLoss": 0.2587892413139343,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 3.9512145000044256
+        }
+      ],
+      "encoderMaxWeightChange": 0.0,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 4.523249916965142,
+      "weightsSha256": "27e074a1135d47c2008db6d6b0a7f61572b1f7b11a09bdb73eb008a2141ab699",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.734375,
+            "recall": 0.9791666666666666,
+            "f1": 0.8392857142857143,
+            "prAuc": 0.8675624835556143,
+            "brier": 0.08753218501806259
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 0.9512195121951219,
+            "recall": 0.8297872340425532,
+            "f1": 0.8863636363636364,
+            "prAuc": 0.8951829167395068,
+            "brier": 0.065229132771492
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.8983050847457628,
+            "recall": 0.9137931034482759,
+            "f1": 0.905982905982906,
+            "prAuc": 0.9489052225755228,
+            "brier": 0.06986261159181595
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.88,
+            "recall": 0.9166666666666666,
+            "f1": 0.8979591836734694,
+            "prAuc": 0.9453327051644453,
+            "brier": 0.028100179508328438
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.7753623188405797,
+            "recall": 0.9553571428571429,
+            "f1": 0.856,
+            "prAuc": 0.9465966541840903,
+            "brier": 0.1204153522849083
+          }
+        ],
+        "macroF1": 0.8771182880611452,
+        "macroPrAuc": 0.920715996443836
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.6111111111111112,
+            "f1": 0.7586206896551724,
+            "prAuc": 0.8213546818000581,
+            "brier": 0.04459712281823158
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.9666666666666667,
+            "recall": 0.8055555555555556,
+            "f1": 0.8787878787878788,
+            "prAuc": 0.9736381332786463,
+            "brier": 0.018148262053728104
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.3684210526315789,
+            "recall": 1.0,
+            "f1": 0.5384615384615384,
+            "prAuc": 0.7851852452453154,
+            "brier": 0.17826144397258759
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353,
+            "prAuc": 0.9227871939736345,
+            "brier": 0.02226344868540764
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.43956043956043955,
+            "recall": 0.9523809523809523,
+            "f1": 0.6015037593984962,
+            "prAuc": 0.8958347236110935,
+            "brier": 0.10701724141836166
+          }
+        ],
+        "macroF1": 0.7437100673782642,
+        "macroPrAuc": 0.8797599955817497
+      },
+      "thresholds": [
+        0.6500000000000001,
+        0.6500000000000001,
+        0.25000000000000006,
+        0.6500000000000001,
+        0.1
+      ]
+    },
+    {
+      "kind": "frozen",
+      "seed": 29,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.8587678957458175,
+          "devLoss": 0.3898453712463379,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.1092705829069018
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5211103124246278,
+          "devLoss": 0.30757054686546326,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.3930767918936908
+        },
+        {
+          "epoch": 3,
+          "stage": "head",
+          "trainLoss": 0.38004311368958804,
+          "devLoss": 0.2924635410308838,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.6921098330058157
+        },
+        {
+          "epoch": 4,
+          "stage": "head",
+          "trainLoss": 0.33004570317534265,
+          "devLoss": 0.2968928813934326,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.9849630419630557
+        },
+        {
+          "epoch": 5,
+          "stage": "head",
+          "trainLoss": 0.26974110340392576,
+          "devLoss": 0.2361411601305008,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.2403148328885436
+        },
+        {
+          "epoch": 6,
+          "stage": "head",
+          "trainLoss": 0.24044490311077832,
+          "devLoss": 0.24811917543411255,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.5342776249162853
+        }
+      ],
+      "encoderMaxWeightChange": 0.0,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 2.8263060830067843,
+      "weightsSha256": "2acb811636aa724e825f872fe6495df9e8886232e4592fda6b98fd20a2cefb5a",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.71875,
+            "recall": 0.9583333333333334,
+            "f1": 0.8214285714285714,
+            "prAuc": 0.8369792556789896,
+            "brier": 0.06560743600130081
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 0.926829268292683,
+            "recall": 0.8085106382978723,
+            "f1": 0.8636363636363636,
+            "prAuc": 0.8937589784735167,
+            "brier": 0.06375288963317871
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.8125,
+            "recall": 0.896551724137931,
+            "f1": 0.8524590163934426,
+            "prAuc": 0.9392837624839592,
+            "brier": 0.07712586224079132
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.7058823529411765,
+            "recall": 1.0,
+            "f1": 0.8275862068965517,
+            "prAuc": 0.8718058533979085,
+            "brier": 0.037749018520116806
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.7906976744186046,
+            "recall": 0.9107142857142857,
+            "f1": 0.8464730290456431,
+            "prAuc": 0.9386824998534689,
+            "brier": 0.10520371794700623
+          }
+        ],
+        "macroF1": 0.8423166374801145,
+        "macroPrAuc": 0.8961020699775686
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.8125,
+            "recall": 0.7222222222222222,
+            "f1": 0.7647058823529411,
+            "prAuc": 0.8081325550491784,
+            "brier": 0.04979300871491432
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.967741935483871,
+            "recall": 0.8333333333333334,
+            "f1": 0.8955223880597015,
+            "prAuc": 0.9800329654055424,
+            "brier": 0.018201950937509537
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.34054054054054056,
+            "recall": 1.0,
+            "f1": 0.5080645161290323,
+            "prAuc": 0.7983368330314987,
+            "brier": 0.15447482466697693
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.4,
+            "recall": 0.8888888888888888,
+            "f1": 0.5517241379310345,
+            "prAuc": 0.9288888888888889,
+            "brier": 0.029217293485999107
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.46511627906976744,
+            "recall": 0.9523809523809523,
+            "f1": 0.625,
+            "prAuc": 0.8640341514907841,
+            "brier": 0.20373177528381348
+          }
+        ],
+        "macroF1": 0.6690033848945418,
+        "macroPrAuc": 0.8758850787731784
+      },
+      "thresholds": [
+        0.25000000000000006,
+        0.6500000000000001,
+        0.15000000000000002,
+        0.3500000000000001,
+        0.40000000000000013
+      ]
+    },
+    {
+      "kind": "frozen",
+      "seed": 43,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.9041483974663593,
+          "devLoss": 0.41024249792099,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.050673124846071
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5793783918410872,
+          "devLoss": 0.32665982842445374,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.3416281249374151
+        },
+        {
+          "epoch": 3,
+          "stage": "head",
+          "trainLoss": 0.4078158812304264,
+          "devLoss": 0.22744642198085785,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.632511500036344
+        },
+        {
+          "epoch": 4,
+          "stage": "head",
+          "trainLoss": 0.33649382002587064,
+          "devLoss": 0.26054245233535767,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.9241607920266688
+        },
+        {
+          "epoch": 5,
+          "stage": "head",
+          "trainLoss": 0.26115035421712396,
+          "devLoss": 0.23040133714675903,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.1696367498952895
+        },
+        {
+          "epoch": 6,
+          "stage": "head",
+          "trainLoss": 0.24000929030122367,
+          "devLoss": 0.24927178025245667,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 2.4126125839538872
+        }
+      ],
+      "encoderMaxWeightChange": 0.0,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 2.7071360419504344,
+      "weightsSha256": "62cd78d88e9908edf7ef5945d07a2e45c9127f8da0d88f10697f65f1f0c54bb2",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.7258064516129032,
+            "recall": 0.9375,
+            "f1": 0.8181818181818182,
+            "prAuc": 0.827442819209237,
+            "brier": 0.06758616119623184
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 0.9487179487179487,
+            "recall": 0.7872340425531915,
+            "f1": 0.8604651162790697,
+            "prAuc": 0.8857377434790695,
+            "brier": 0.06382526457309723
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.9361702127659575,
+            "recall": 0.7586206896551724,
+            "f1": 0.8380952380952381,
+            "prAuc": 0.9336979121632711,
+            "brier": 0.07797735929489136
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.9,
+            "recall": 0.75,
+            "f1": 0.8181818181818182,
+            "prAuc": 0.9110287692411103,
+            "brier": 0.029090896248817444
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.7925925925925926,
+            "recall": 0.9553571428571429,
+            "f1": 0.8663967611336032,
+            "prAuc": 0.9464708702541768,
+            "brier": 0.0985523909330368
+          }
+        ],
+        "macroF1": 0.8402641503743095,
+        "macroPrAuc": 0.9008756228693728
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1": 0.6666666666666666,
+            "prAuc": 0.754015287592461,
+            "brier": 0.056477081030607224
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.967741935483871,
+            "recall": 0.8333333333333334,
+            "f1": 0.8955223880597015,
+            "prAuc": 0.9737286069789535,
+            "brier": 0.023848479613661766
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.835820895522388,
+            "recall": 0.8888888888888888,
+            "f1": 0.8615384615384616,
+            "prAuc": 0.8114640997517979,
+            "brier": 0.11269277334213257
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.875,
+            "recall": 0.7777777777777778,
+            "f1": 0.8235294117647058,
+            "prAuc": 0.8606322569709297,
+            "brier": 0.02778223529458046
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.46060606060606063,
+            "recall": 0.9047619047619048,
+            "f1": 0.6104417670682731,
+            "prAuc": 0.9098134430455995,
+            "brier": 0.11796468496322632
+          }
+        ],
+        "macroF1": 0.7715397390195616,
+        "macroPrAuc": 0.8619307388679485
+      },
+      "thresholds": [
+        0.30000000000000004,
+        0.5500000000000002,
+        0.5500000000000002,
+        0.5500000000000002,
+        0.3500000000000001
+      ]
+    },
+    {
+      "kind": "local_only",
+      "seed": 17,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.8089571416451881,
+          "devLoss": 0.4251033365726471,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.7500791670754552
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5140714691178654,
+          "devLoss": 0.2992802858352661,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.9515187090728432
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.44470712952454294,
+          "devLoss": 0.31275713443756104,
+          "encoderGradientNormSum": 4726.455403896049,
+          "elapsedSeconds": 4.14779462502338
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.24446824569684422,
+          "devLoss": 0.1898626685142517,
+          "encoderGradientNormSum": 3139.1826645936817,
+          "elapsedSeconds": 6.487301291897893
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.21102305293969506,
+          "devLoss": 0.1340763419866562,
+          "encoderGradientNormSum": 3312.973147028126,
+          "elapsedSeconds": 8.837483250070363
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.18415121230050976,
+          "devLoss": 0.21896906197071075,
+          "encoderGradientNormSum": 4227.771319540683,
+          "elapsedSeconds": 11.15454029198736
+        }
+      ],
+      "encoderMaxWeightChange": 0.007038432639092207,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 11.545652084052563,
+      "weightsSha256": "097fb0887e9b378e5be76600b13415622a2baa4628e7781b229de7e76842df9c",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.7924528301886793,
+            "recall": 0.875,
+            "f1": 0.8316831683168316,
+            "prAuc": 0.9244703194183279,
+            "brier": 0.052593447268009186
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.8723404255319149,
+            "f1": 0.9318181818181818,
+            "prAuc": 0.9069185472605124,
+            "brier": 0.03938594087958336
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.8529411764705882,
+            "recall": 1.0,
+            "f1": 0.9206349206349206,
+            "prAuc": 0.9797989519928229,
+            "brier": 0.04813024401664734
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "prAuc": 0.9999999999999999,
+            "brier": 0.0011716883163899183
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.9166666666666666,
+            "recall": 0.9821428571428571,
+            "f1": 0.9482758620689655,
+            "prAuc": 0.9898737879062595,
+            "brier": 0.03903994336724281
+          }
+        ],
+        "macroF1": 0.9264824265677799,
+        "macroPrAuc": 0.9602123213155845
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.7222222222222222,
+            "f1": 0.8387096774193549,
+            "prAuc": 0.9079640957101172,
+            "brier": 0.034682776778936386
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.8372093023255814,
+            "recall": 1.0,
+            "f1": 0.9113924050632911,
+            "prAuc": 0.9977664067576348,
+            "brier": 0.014427588321268559
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.4315068493150685,
+            "recall": 1.0,
+            "f1": 0.6028708133971292,
+            "prAuc": 0.9542046825306345,
+            "brier": 0.1940089464187622
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353,
+            "prAuc": 0.9477124183006536,
+            "brier": 0.00854275282472372
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.5194805194805194,
+            "recall": 0.9523809523809523,
+            "f1": 0.6722689075630253,
+            "prAuc": 0.9425669933370415,
+            "brier": 0.17689451575279236
+          }
+        ],
+        "macroF1": 0.7932836548062072,
+        "macroPrAuc": 0.9500429193272163
+      },
+      "thresholds": [
+        0.40000000000000013,
+        0.5000000000000001,
+        0.40000000000000013,
+        0.5000000000000001,
+        0.40000000000000013
+      ]
+    },
+    {
+      "kind": "local_only",
+      "seed": 29,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.8697309864054825,
+          "devLoss": 0.44318145513534546,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.5825524579267949
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.544464590898086,
+          "devLoss": 0.3280782401561737,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.7306789581198245
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.4106565686185121,
+          "devLoss": 0.2199680209159851,
+          "encoderGradientNormSum": 3745.9882830698043,
+          "elapsedSeconds": 3.0425137910060585
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.2717848231801313,
+          "devLoss": 0.2796551585197449,
+          "encoderGradientNormSum": 3525.52250119159,
+          "elapsedSeconds": 5.421486291103065
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.20804713890787394,
+          "devLoss": 0.15773876011371613,
+          "encoderGradientNormSum": 2821.858836284373,
+          "elapsedSeconds": 7.760191207984462
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.16373846865498,
+          "devLoss": 0.16528351604938507,
+          "encoderGradientNormSum": 3119.7097280931193,
+          "elapsedSeconds": 10.112823040923104
+        }
+      ],
+      "encoderMaxWeightChange": 0.006085791625082493,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 10.405504666035995,
+      "weightsSha256": "51a30adf708e5ef98f2120b61297f06b67d5c38a89c6a9e62a5c1387e88e6c98",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.8478260869565217,
+            "recall": 0.8125,
+            "f1": 0.8297872340425532,
+            "prAuc": 0.912443435848759,
+            "brier": 0.05517566576600075
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.851063829787234,
+            "f1": 0.9195402298850575,
+            "prAuc": 0.9102848197278535,
+            "brier": 0.03802426904439926
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.8923076923076924,
+            "recall": 1.0,
+            "f1": 0.943089430894309,
+            "prAuc": 0.9755212326251486,
+            "brier": 0.0411091186106205
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "prAuc": 0.9999999999999999,
+            "brier": 0.001136742066591978
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.8991596638655462,
+            "recall": 0.9553571428571429,
+            "f1": 0.9264069264069265,
+            "prAuc": 0.976068051997653,
+            "brier": 0.058719657361507416
+          }
+        ],
+        "macroF1": 0.9237647642457691,
+        "macroPrAuc": 0.9548635080398828
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.4166666666666667,
+            "f1": 0.5882352941176471,
+            "prAuc": 0.8442050502396291,
+            "brier": 0.0576145239174366
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.9696969696969697,
+            "recall": 0.8888888888888888,
+            "f1": 0.927536231884058,
+            "prAuc": 0.991748458415125,
+            "brier": 0.0094448858872056
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.42567567567567566,
+            "recall": 1.0,
+            "f1": 0.5971563981042654,
+            "prAuc": 0.8131127133513183,
+            "brier": 0.2306029051542282
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "prAuc": 1.0,
+            "brier": 0.0005450554890558124
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.50625,
+            "recall": 0.9642857142857143,
+            "f1": 0.6639344262295082,
+            "prAuc": 0.9213886009704706,
+            "brier": 0.15827850997447968
+          }
+        ],
+        "macroF1": 0.7553724700670956,
+        "macroPrAuc": 0.9140909645953087
+      },
+      "thresholds": [
+        0.5500000000000002,
+        0.6000000000000002,
+        0.5000000000000001,
+        0.30000000000000004,
+        0.25000000000000006
+      ]
+    },
+    {
+      "kind": "local_only",
+      "seed": 43,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.8371414233465325,
+          "devLoss": 0.44284817576408386,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.6094364169985056
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5633715400760797,
+          "devLoss": 0.3222211003303528,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.7672958332113922
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.4158462826093333,
+          "devLoss": 0.21553874015808105,
+          "encoderGradientNormSum": 3800.427768504247,
+          "elapsedSeconds": 3.0854788331780583
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.28168516696108764,
+          "devLoss": 0.2073172926902771,
+          "encoderGradientNormSum": 2877.2287602005526,
+          "elapsedSeconds": 5.575951333157718
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.23081611600950305,
+          "devLoss": 0.1901582032442093,
+          "encoderGradientNormSum": 3223.829288375564,
+          "elapsedSeconds": 7.991782917175442
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.1565526290121575,
+          "devLoss": 0.1904783546924591,
+          "encoderGradientNormSum": 2417.3616090132855,
+          "elapsedSeconds": 10.359615000197664
+        }
+      ],
+      "encoderMaxWeightChange": 0.005897529423236847,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 10.626155167119578,
+      "weightsSha256": "b24c9df6a0e11461cfa52e17593afd47ca8119b4b1e9fa973966f36399828c0f",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.8113207547169812,
+            "recall": 0.8958333333333334,
+            "f1": 0.8514851485148515,
+            "prAuc": 0.9209883428001445,
+            "brier": 0.08797997981309891
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.8085106382978723,
+            "f1": 0.8941176470588236,
+            "prAuc": 0.9105525591407551,
+            "brier": 0.055282365530729294
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.9433962264150944,
+            "recall": 0.8620689655172413,
+            "f1": 0.9009009009009009,
+            "prAuc": 0.9594323069267541,
+            "brier": 0.050966352224349976
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "prAuc": 0.9999999999999999,
+            "brier": 0.004916065838187933
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.9541284403669725,
+            "recall": 0.9285714285714286,
+            "f1": 0.9411764705882353,
+            "prAuc": 0.9722949649130401,
+            "brier": 0.05886828899383545
+          }
+        ],
+        "macroF1": 0.9175360334125623,
+        "macroPrAuc": 0.9526536347561387
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "prAuc": 0.8312895806015698,
+            "brier": 0.050300054252147675
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1": 0.9565217391304348,
+            "prAuc": 0.9985380116959064,
+            "brier": 0.0183677040040493
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.4701492537313433,
+            "recall": 1.0,
+            "f1": 0.6395939086294417,
+            "prAuc": 0.9231331512673236,
+            "brier": 0.15968824923038483
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1": 0.9411764705882353,
+            "prAuc": 0.9116161616161615,
+            "brier": 0.011810577474534512
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.5539568345323741,
+            "recall": 0.9166666666666666,
+            "f1": 0.6905829596412556,
+            "prAuc": 0.9410799919849925,
+            "brier": 0.10726871341466904
+          }
+        ],
+        "macroF1": 0.8055750155978734,
+        "macroPrAuc": 0.9211313794331908
+      },
+      "thresholds": [
+        0.8000000000000003,
+        0.8500000000000003,
+        0.4500000000000001,
+        0.6500000000000001,
+        0.4500000000000001
+      ]
+    },
+    {
+      "kind": "local_context",
+      "seed": 17,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.798077680881434,
+          "devLoss": 0.41182318329811096,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 0.9421276249922812
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5092441473234689,
+          "devLoss": 0.2623705267906189,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.1780353339854628
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.3787711020074369,
+          "devLoss": 0.2808033227920532,
+          "encoderGradientNormSum": 4291.325143860653,
+          "elapsedSeconds": 4.808530709007755
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.23857987525294705,
+          "devLoss": 0.21067675948143005,
+          "encoderGradientNormSum": 2728.6694711637683,
+          "elapsedSeconds": 8.510961208958179
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.20283127155113398,
+          "devLoss": 0.185115784406662,
+          "encoderGradientNormSum": 3321.707091764314,
+          "elapsedSeconds": 12.204150459030643
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.16075599254507114,
+          "devLoss": 0.19565583765506744,
+          "encoderGradientNormSum": 2610.5695017843973,
+          "elapsedSeconds": 15.92020433396101
+        }
+      ],
+      "encoderMaxWeightChange": 0.006368208676576614,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 16.224622167181224,
+      "weightsSha256": "eacbcefc8a2a86505e7cd236f5f49d2286e5db77e7623265f2d9cbb9704019f3",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.7540983606557377,
+            "recall": 0.9583333333333334,
+            "f1": 0.8440366972477065,
+            "prAuc": 0.9170568943869778,
+            "brier": 0.060253582894802094
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.8936170212765957,
+            "f1": 0.9438202247191011,
+            "prAuc": 0.9207764455074675,
+            "brier": 0.04967492073774338
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.9322033898305084,
+            "recall": 0.9482758620689655,
+            "f1": 0.9401709401709402,
+            "prAuc": 0.9475435245709528,
+            "brier": 0.0401245541870594
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "prAuc": 0.9999999999999999,
+            "brier": 0.019534798339009285
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.8818897637795275,
+            "recall": 1.0,
+            "f1": 0.9372384937238494,
+            "prAuc": 0.9268528496844596,
+            "brier": 0.05667611211538315
+          }
+        ],
+        "macroF1": 0.9330532711723194,
+        "macroPrAuc": 0.9424459428299716
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "prAuc": 0.9261322745865612,
+            "brier": 0.02874760329723358
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1": 0.9473684210526315,
+            "prAuc": 0.997036510194405,
+            "brier": 0.031116150319576263
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.41721854304635764,
+            "recall": 1.0,
+            "f1": 0.5887850467289719,
+            "prAuc": 0.826090089067295,
+            "brier": 0.20810061693191528
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.48484848484848486,
+            "recall": 0.8888888888888888,
+            "f1": 0.6274509803921569,
+            "prAuc": 0.9444444444444444,
+            "brier": 0.05707598105072975
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.572463768115942,
+            "recall": 0.9404761904761905,
+            "f1": 0.7117117117117117,
+            "prAuc": 0.9603260038044648,
+            "brier": 0.07478909194469452
+          }
+        ],
+        "macroF1": 0.7464918034056658,
+        "macroPrAuc": 0.9308058644194339
+      },
+      "thresholds": [
+        0.40000000000000013,
+        0.8500000000000003,
+        0.30000000000000004,
+        0.8500000000000003,
+        0.20000000000000004
+      ]
+    },
+    {
+      "kind": "local_context",
+      "seed": 29,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.8587678957458175,
+          "devLoss": 0.3898453712463379,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.061621833825484
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5211103124246278,
+          "devLoss": 0.30757054686546326,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.3420335419941694
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.3939034505626083,
+          "devLoss": 0.2911464273929596,
+          "encoderGradientNormSum": 3774.8968850490637,
+          "elapsedSeconds": 5.289342833915725
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.22983686227116,
+          "devLoss": 0.20601600408554077,
+          "encoderGradientNormSum": 2885.3477334496565,
+          "elapsedSeconds": 9.151697458932176
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.1852366170641658,
+          "devLoss": 0.16711260378360748,
+          "encoderGradientNormSum": 2652.9264183795312,
+          "elapsedSeconds": 12.923530708998442
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.14561427451088527,
+          "devLoss": 0.18874238431453705,
+          "encoderGradientNormSum": 3014.9469824684784,
+          "elapsedSeconds": 16.686536459019408
+        }
+      ],
+      "encoderMaxWeightChange": 0.005789756774902344,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 16.994978124974295,
+      "weightsSha256": "41303ee963d5948d53a6b0339c2c99d97b7c8d6efcfba476b42ddbfefa9c2c88",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.7758620689655172,
+            "recall": 0.9375,
+            "f1": 0.8490566037735849,
+            "prAuc": 0.932953239101708,
+            "brier": 0.0561918206512928
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.8723404255319149,
+            "f1": 0.9318181818181818,
+            "prAuc": 0.9144678809429936,
+            "brier": 0.04363098368048668
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.8870967741935484,
+            "recall": 0.9482758620689655,
+            "f1": 0.9166666666666666,
+            "prAuc": 0.9704124749819069,
+            "brier": 0.04929361492395401
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1": 0.9411764705882353,
+            "prAuc": 0.9846892593803347,
+            "brier": 0.01568755693733692
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.9603960396039604,
+            "recall": 0.8660714285714286,
+            "f1": 0.9107981220657277,
+            "prAuc": 0.9782785871371993,
+            "brier": 0.07381170988082886
+          }
+        ],
+        "macroF1": 0.9099032089824792,
+        "macroPrAuc": 0.9561602883088284
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.8571428571428571,
+            "recall": 0.6666666666666666,
+            "f1": 0.75,
+            "prAuc": 0.9146695588589387,
+            "brier": 0.035223327577114105
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.8974358974358975,
+            "recall": 0.9722222222222222,
+            "f1": 0.9333333333333333,
+            "prAuc": 0.9924598511555034,
+            "brier": 0.015728797763586044
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.43448275862068964,
+            "recall": 1.0,
+            "f1": 0.6057692307692307,
+            "prAuc": 0.8778628995930218,
+            "brier": 0.18163160979747772
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.8888888888888888,
+            "recall": 0.8888888888888888,
+            "f1": 0.8888888888888888,
+            "prAuc": 0.9099415204678363,
+            "brier": 0.008093968965113163
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.8571428571428571,
+            "recall": 0.9285714285714286,
+            "f1": 0.8914285714285715,
+            "prAuc": 0.9290696319783235,
+            "brier": 0.14548659324645996
+          }
+        ],
+        "macroF1": 0.8138840048840048,
+        "macroPrAuc": 0.9248006924107248
+      },
+      "thresholds": [
+        0.40000000000000013,
+        0.6500000000000001,
+        0.40000000000000013,
+        0.1,
+        0.8500000000000003
+      ]
+    },
+    {
+      "kind": "local_context",
+      "seed": 43,
+      "curve": [
+        {
+          "epoch": 1,
+          "stage": "head",
+          "trainLoss": 0.9041483974663593,
+          "devLoss": 0.41024249792099,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.1519282918889076
+        },
+        {
+          "epoch": 2,
+          "stage": "head",
+          "trainLoss": 0.5793783918410872,
+          "devLoss": 0.32665982842445374,
+          "encoderGradientNormSum": 0.0,
+          "elapsedSeconds": 1.4195078329648823
+        },
+        {
+          "epoch": 3,
+          "stage": "finetune",
+          "trainLoss": 0.3923353094427559,
+          "devLoss": 0.2389526665210724,
+          "encoderGradientNormSum": 3466.3372677685693,
+          "elapsedSeconds": 5.507305624894798
+        },
+        {
+          "epoch": 4,
+          "stage": "finetune",
+          "trainLoss": 0.25843113594338796,
+          "devLoss": 0.1688074767589569,
+          "encoderGradientNormSum": 3215.246389521286,
+          "elapsedSeconds": 9.6142283747904
+        },
+        {
+          "epoch": 5,
+          "stage": "finetune",
+          "trainLoss": 0.1926689842459659,
+          "devLoss": 0.18070530891418457,
+          "encoderGradientNormSum": 3092.708594996948,
+          "elapsedSeconds": 13.521557666826993
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "trainLoss": 0.14614243583829872,
+          "devLoss": 0.21840445697307587,
+          "encoderGradientNormSum": 2982.5290273220744,
+          "elapsedSeconds": 17.40473987488076
+        }
+      ],
+      "encoderMaxWeightChange": 0.004383845254778862,
+      "batchNormUnchanged": true,
+      "reloadMaxError": 0.0,
+      "seconds": 17.69126637489535,
+      "weightsSha256": "303a24572c2ddb05b1ae8fc711f173dd0b74aedb811120e5c24b4ef471a36902",
+      "dev": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 229,
+            "positive": 48,
+            "validFraction": 1.0,
+            "precision": 0.7627118644067796,
+            "recall": 0.9375,
+            "f1": 0.8411214953271028,
+            "prAuc": 0.898779788075708,
+            "brier": 0.0666041448712349
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 203,
+            "positive": 47,
+            "validFraction": 0.8864628820960698,
+            "precision": 1.0,
+            "recall": 0.851063829787234,
+            "f1": 0.9195402298850575,
+            "prAuc": 0.909214450570067,
+            "brier": 0.042685650289058685
+          },
+          {
+            "label": "out_of_container",
+            "n": 178,
+            "positive": 58,
+            "validFraction": 0.777292576419214,
+            "precision": 0.9464285714285714,
+            "recall": 0.9137931034482759,
+            "f1": 0.9298245614035088,
+            "prAuc": 0.9739319392279323,
+            "brier": 0.042632538825273514
+          },
+          {
+            "label": "element_disappearance",
+            "n": 229,
+            "positive": 24,
+            "validFraction": 1.0,
+            "precision": 1.0,
+            "recall": 0.9166666666666666,
+            "f1": 0.9565217391304348,
+            "prAuc": 0.9966666666666666,
+            "brier": 0.00903505738824606
+          },
+          {
+            "label": "layout_displacement",
+            "n": 229,
+            "positive": 112,
+            "validFraction": 1.0,
+            "precision": 0.9532710280373832,
+            "recall": 0.9107142857142857,
+            "f1": 0.9315068493150684,
+            "prAuc": 0.9793979931342528,
+            "brier": 0.057644158601760864
+          }
+        ],
+        "macroF1": 0.9157029750122344,
+        "macroPrAuc": 0.9515981675349254
+      },
+      "test": {
+        "classes": [
+          {
+            "label": "clipping",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.7058823529411765,
+            "recall": 0.6666666666666666,
+            "f1": 0.6857142857142857,
+            "prAuc": 0.779592532991196,
+            "brier": 0.06033172830939293
+          },
+          {
+            "label": "overlap_or_occlusion",
+            "n": 293,
+            "positive": 36,
+            "validFraction": 1.0,
+            "precision": 0.9722222222222222,
+            "recall": 0.9722222222222222,
+            "f1": 0.9722222222222222,
+            "prAuc": 0.9984776443109777,
+            "brier": 0.008242938667535782
+          },
+          {
+            "label": "out_of_container",
+            "n": 293,
+            "positive": 63,
+            "validFraction": 1.0,
+            "precision": 0.39375,
+            "recall": 1.0,
+            "f1": 0.5650224215246636,
+            "prAuc": 0.8832815029869967,
+            "brier": 0.18181827664375305
+          },
+          {
+            "label": "element_disappearance",
+            "n": 293,
+            "positive": 18,
+            "validFraction": 1.0,
+            "precision": 0.8421052631578947,
+            "recall": 0.8888888888888888,
+            "f1": 0.8648648648648649,
+            "prAuc": 0.9343434343434343,
+            "brier": 0.008144853636622429
+          },
+          {
+            "label": "layout_displacement",
+            "n": 293,
+            "positive": 84,
+            "validFraction": 1.0,
+            "precision": 0.7053571428571429,
+            "recall": 0.9404761904761905,
+            "f1": 0.8061224489795918,
+            "prAuc": 0.9393806556888925,
+            "brier": 0.09518231451511383
+          }
+        ],
+        "macroF1": 0.7787892486611256,
+        "macroPrAuc": 0.9070151540642994
+      },
+      "thresholds": [
+        0.6000000000000002,
+        0.5500000000000002,
+        0.40000000000000013,
+        0.15000000000000002,
+        0.5000000000000001
+      ]
+    }
+  ],
+  "selection": "maximum development macro PR-AUC among local_context seeds",
+  "device": "mps",
+  "elapsedSeconds": 99.8702973339241,
+  "identity": {
+    "referenceReleaseModelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "dataSha256": "ff8d902e87f28cdc6daa26d6aface7e78f79cf7a719ece15330c2c1598877942",
+    "candidateTensorSha256": "fe80e521d7f7924811fac07f6c5e59485bccaa2e48598ef4382e065708030ca3",
+    "candidateCount": 1559,
+    "trainingCandidates": 807,
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+    "primaryTrainingSourceSha": "fb3136c62f0d902835ac12b5292e043dcaf7fc83",
+    "upstreamWeightsSha256": "46d2c063b18125884c48937afa4c49e18128869e52e8db96df48bf0a4d7ff697",
+    "usesReleasedTaskEncoder": "selected local_context run only; every comparison has its own checkpoint hash",
+    "verification": "All nine saved checkpoints and the selected released safetensors match the recorded weights hashes; current candidate totals and held-family dimensions match.",
+    "completedRecordModifiedUtc": "2026-09-08T14:33:31.218895+00:00",
+    "metricsPayloadCanonicalSha256": "516350491d7859b93e2f6a9f61c3742bbdffdd7a571aa801493c42af342b65b6",
+    "identityAttachedAfterRun": true
+  }
+}

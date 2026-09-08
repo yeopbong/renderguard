@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.0",
+  "sourceEvaluationSha256": "724a03498fd03c7b749e070fee2cf732874e76207a7159e98a9566b6ed8eb3a6",
+  "modelSha256": "dcedb2b5413d71f4cae4a89b7ebb0ffc0d5df41c23be2698e535f9ba8f50d4e9",
+  "inferenceRerun": false,
+  "modelChanged": false,
+  "labelChanged": false,
+  "primaryEvaluationUnchanged": true,
+  "thresholdSource": "Published model manifest; thresholds selected on development calibrated candidate scores before the challenge was evaluated.",
+  "aggregation": "Maximum calibrated candidate score per page; missing candidates retain zero page score. Page aggregation differs from the candidate threshold selection domain.",
+  "readoutStatus": "Secondary descriptive analysis requested after the prespecified fixed-0.5 readout; no tuning on challenge outcomes.",
+  "metrics": {
+    "clipping": {
+      "threshold": 0.30000000000000004,
+      "validPages": 11,
+      "positivePages": 2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "overlap_or_occlusion": {
+      "threshold": 0.25000000000000006,
+      "validPages": 11,
+      "positivePages": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "out_of_container": {
+      "threshold": 0.25000000000000006,
+      "validPages": 9,
+      "positivePages": 1,
+      "tp": 1,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "element_disappearance": {
+      "threshold": 0.3500000000000001,
+      "validPages": 11,
+      "positivePages": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "layout_displacement": {
+      "threshold": 0.3500000000000001,
+      "validPages": 11,
+      "positivePages": 3,
+      "tp": 2,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1": 0.5714285714285714
+    }
+  },
+  "executionAndContractChecks": {
+    "cases": 12,
+    "executionMatches": 12,
+    "contractMatches": 12
+  }
+}

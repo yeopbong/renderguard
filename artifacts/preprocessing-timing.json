@@ -1,0 +1,516 @@
+{
+  "runtime": "v24.19.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "processRssBytes": 304152576,
+  "definition": "No cached pixels, candidates or tensors. First trial cold; five additional warm trials in one process. Runtime import cost excluded and measured in the end-to-end command.",
+  "results": [
+    {
+      "id": "profile-0-cover",
+      "cold": {
+        "decodeMilliseconds": 63.06608399999999,
+        "candidateMilliseconds": 23.54054100000002,
+        "tensorMilliseconds": 13.504166999999995,
+        "totalMilliseconds": 100.110792,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 760,
+        "afterHeight": 760
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 39.449791000000005,
+          "candidateMilliseconds": 23.466667,
+          "tensorMilliseconds": 5.402541999999983,
+          "totalMilliseconds": 68.31899999999999,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 37.161584000000005,
+          "candidateMilliseconds": 14.081707999999992,
+          "tensorMilliseconds": 3.0202919999999835,
+          "totalMilliseconds": 54.26358399999998,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 38.20791700000001,
+          "candidateMilliseconds": 12.895083,
+          "tensorMilliseconds": 4.48562499999997,
+          "totalMilliseconds": 55.58862499999998,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 39.75633399999998,
+          "candidateMilliseconds": 16.33737500000001,
+          "tensorMilliseconds": 3.8601659999999924,
+          "totalMilliseconds": 59.95387499999998,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 40.133666000000005,
+          "candidateMilliseconds": 13.131916999999987,
+          "tensorMilliseconds": 4.514625000000024,
+          "totalMilliseconds": 57.780208000000016,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        }
+      ]
+    },
+    {
+      "id": "ledger-1-intentional_move",
+      "cold": {
+        "decodeMilliseconds": 50.024,
+        "candidateMilliseconds": 21.552167000000054,
+        "tensorMilliseconds": 5.581416999999988,
+        "totalMilliseconds": 77.15758400000004,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 760,
+        "afterHeight": 760
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 37.34249999999997,
+          "candidateMilliseconds": 12.711500000000001,
+          "tensorMilliseconds": 5.584583000000066,
+          "totalMilliseconds": 55.63858300000004,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 39.52929199999994,
+          "candidateMilliseconds": 17.107833000000028,
+          "tensorMilliseconds": 2.6827919999999494,
+          "totalMilliseconds": 59.31991699999992,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 36.74391700000001,
+          "candidateMilliseconds": 13.866125000000011,
+          "tensorMilliseconds": 2.6030000000000655,
+          "totalMilliseconds": 53.21304200000009,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 37.17716599999994,
+          "candidateMilliseconds": 12.485709000000043,
+          "tensorMilliseconds": 2.650624999999991,
+          "totalMilliseconds": 52.313499999999976,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 37.15258300000005,
+          "candidateMilliseconds": 12.247250000000008,
+          "tensorMilliseconds": 2.6579999999999018,
+          "totalMilliseconds": 52.05783299999996,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        }
+      ]
+    },
+    {
+      "id": "settings-0-clip",
+      "cold": {
+        "decodeMilliseconds": 40.047207999999955,
+        "candidateMilliseconds": 13.63391700000011,
+        "tensorMilliseconds": 3.432166999999936,
+        "totalMilliseconds": 57.113292,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 817,
+        "afterHeight": 791
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 38.85108300000002,
+          "candidateMilliseconds": 16.79824999999994,
+          "tensorMilliseconds": 3.6792500000000246,
+          "totalMilliseconds": 59.32858299999998,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 817,
+          "afterHeight": 791
+        },
+        {
+          "decodeMilliseconds": 38.61779200000001,
+          "candidateMilliseconds": 13.476332999999954,
+          "tensorMilliseconds": 3.4344580000000633,
+          "totalMilliseconds": 55.528583000000026,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 817,
+          "afterHeight": 791
+        },
+        {
+          "decodeMilliseconds": 39.01604199999997,
+          "candidateMilliseconds": 16.011208000000124,
+          "tensorMilliseconds": 3.2588329999998678,
+          "totalMilliseconds": 58.28608299999996,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 817,
+          "afterHeight": 791
+        },
+        {
+          "decodeMilliseconds": 41.97250000000008,
+          "candidateMilliseconds": 20.0173749999999,
+          "tensorMilliseconds": 3.75591600000007,
+          "totalMilliseconds": 65.74579100000005,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 817,
+          "afterHeight": 791
+        },
+        {
+          "decodeMilliseconds": 38.000749999999925,
+          "candidateMilliseconds": 13.450333,
+          "tensorMilliseconds": 3.4561670000000504,
+          "totalMilliseconds": 54.907249999999976,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 817,
+          "afterHeight": 791
+        }
+      ]
+    },
+    {
+      "id": "kanban-1-overflow",
+      "cold": {
+        "decodeMilliseconds": 36.41604099999995,
+        "candidateMilliseconds": 12.901542000000063,
+        "tensorMilliseconds": 3.799582999999984,
+        "totalMilliseconds": 53.117166,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 760,
+        "afterHeight": 760
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 36.780666999999994,
+          "candidateMilliseconds": 12.925583000000188,
+          "tensorMilliseconds": 3.8730419999999413,
+          "totalMilliseconds": 53.57929200000012,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 36.89587499999993,
+          "candidateMilliseconds": 12.619666000000052,
+          "tensorMilliseconds": 3.6657090000001062,
+          "totalMilliseconds": 53.18125000000009,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 36.506250000000136,
+          "candidateMilliseconds": 12.314374999999927,
+          "tensorMilliseconds": 3.5971669999998994,
+          "totalMilliseconds": 52.41779199999996,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 36.765874999999824,
+          "candidateMilliseconds": 12.729250000000093,
+          "tensorMilliseconds": 3.858207999999877,
+          "totalMilliseconds": 53.35333299999979,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        },
+        {
+          "decodeMilliseconds": 36.5362090000001,
+          "candidateMilliseconds": 12.304333000000042,
+          "tensorMilliseconds": 3.7499169999998685,
+          "totalMilliseconds": 52.59045900000001,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 760,
+          "afterHeight": 760
+        }
+      ]
+    },
+    {
+      "id": "invoice-0-hide",
+      "cold": {
+        "decodeMilliseconds": 45.432207999999946,
+        "candidateMilliseconds": 24.510291999999936,
+        "tensorMilliseconds": 2.6593330000000606,
+        "totalMilliseconds": 72.60183299999994,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 948,
+        "afterHeight": 948
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 47.72308399999997,
+          "candidateMilliseconds": 15.454833000000008,
+          "tensorMilliseconds": 2.676292000000103,
+          "totalMilliseconds": 65.85420900000008,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 948,
+          "afterHeight": 948
+        },
+        {
+          "decodeMilliseconds": 44.63824999999997,
+          "candidateMilliseconds": 16.036499999999933,
+          "tensorMilliseconds": 2.463124999999991,
+          "totalMilliseconds": 63.137874999999894,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 948,
+          "afterHeight": 948
+        },
+        {
+          "decodeMilliseconds": 46.54904099999999,
+          "candidateMilliseconds": 16.16124999999988,
+          "tensorMilliseconds": 2.824000000000069,
+          "totalMilliseconds": 65.53429099999994,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 948,
+          "afterHeight": 948
+        },
+        {
+          "decodeMilliseconds": 47.44249999999988,
+          "candidateMilliseconds": 16.542958,
+          "tensorMilliseconds": 2.911833999999999,
+          "totalMilliseconds": 66.89729199999988,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 948,
+          "afterHeight": 948
+        },
+        {
+          "decodeMilliseconds": 45.95720800000004,
+          "candidateMilliseconds": 17.14908300000002,
+          "tensorMilliseconds": 2.914541999999983,
+          "totalMilliseconds": 66.02083300000004,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 948,
+          "afterHeight": 948
+        }
+      ]
+    },
+    {
+      "id": "article-0-repeat",
+      "cold": {
+        "decodeMilliseconds": 82.50816600000007,
+        "candidateMilliseconds": 28.00120899999979,
+        "tensorMilliseconds": 0.0037080000001878943,
+        "totalMilliseconds": 110.51308300000005,
+        "candidates": 0,
+        "width": 900,
+        "beforeHeight": 1507,
+        "afterHeight": 1507
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 76.52133299999991,
+          "candidateMilliseconds": 24.552875000000313,
+          "tensorMilliseconds": 0.0004169999997429841,
+          "totalMilliseconds": 101.07462499999997,
+          "candidates": 0,
+          "width": 900,
+          "beforeHeight": 1507,
+          "afterHeight": 1507
+        },
+        {
+          "decodeMilliseconds": 79.33966699999974,
+          "candidateMilliseconds": 27.43837500000018,
+          "tensorMilliseconds": 0.00041599999985919567,
+          "totalMilliseconds": 106.77845799999977,
+          "candidates": 0,
+          "width": 900,
+          "beforeHeight": 1507,
+          "afterHeight": 1507
+        },
+        {
+          "decodeMilliseconds": 74.22720799999979,
+          "candidateMilliseconds": 24.654583000000002,
+          "tensorMilliseconds": 0.0004590000003190653,
+          "totalMilliseconds": 98.88225000000011,
+          "candidates": 0,
+          "width": 900,
+          "beforeHeight": 1507,
+          "afterHeight": 1507
+        },
+        {
+          "decodeMilliseconds": 77.44229200000018,
+          "candidateMilliseconds": 27.428207999999813,
+          "tensorMilliseconds": 0.0006670000002486631,
+          "totalMilliseconds": 104.87116700000024,
+          "candidates": 0,
+          "width": 900,
+          "beforeHeight": 1507,
+          "afterHeight": 1507
+        },
+        {
+          "decodeMilliseconds": 73.9034999999999,
+          "candidateMilliseconds": 24.880749999999807,
+          "tensorMilliseconds": 0.00033400000029359944,
+          "totalMilliseconds": 98.784584,
+          "candidates": 0,
+          "width": 900,
+          "beforeHeight": 1507,
+          "afterHeight": 1507
+        }
+      ]
+    },
+    {
+      "id": "catalog-1-content",
+      "cold": {
+        "decodeMilliseconds": 44.62654200000043,
+        "candidateMilliseconds": 24.40466699999979,
+        "tensorMilliseconds": 3.524416000000201,
+        "totalMilliseconds": 72.55562500000042,
+        "candidates": 1,
+        "width": 900,
+        "beforeHeight": 851,
+        "afterHeight": 868
+      },
+      "warm": [
+        {
+          "decodeMilliseconds": 41.72575000000006,
+          "candidateMilliseconds": 14.90945899999997,
+          "tensorMilliseconds": 3.536207999999988,
+          "totalMilliseconds": 60.17141700000002,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 851,
+          "afterHeight": 868
+        },
+        {
+          "decodeMilliseconds": 41.62554199999977,
+          "candidateMilliseconds": 15.025375000000167,
+          "tensorMilliseconds": 3.762583000000177,
+          "totalMilliseconds": 60.41350000000011,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 851,
+          "afterHeight": 868
+        },
+        {
+          "decodeMilliseconds": 41.60566700000027,
+          "candidateMilliseconds": 15.113875000000007,
+          "tensorMilliseconds": 3.486499999999978,
+          "totalMilliseconds": 60.20604200000025,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 851,
+          "afterHeight": 868
+        },
+        {
+          "decodeMilliseconds": 41.969708999999966,
+          "candidateMilliseconds": 15.321124999999938,
+          "tensorMilliseconds": 3.3205410000000484,
+          "totalMilliseconds": 60.61137499999995,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 851,
+          "afterHeight": 868
+        },
+        {
+          "decodeMilliseconds": 41.21929199999977,
+          "candidateMilliseconds": 15.096500000000106,
+          "tensorMilliseconds": 3.3882079999998496,
+          "totalMilliseconds": 59.70399999999972,
+          "candidates": 1,
+          "width": 900,
+          "beforeHeight": 851,
+          "afterHeight": 868
+        }
+      ]
+    }
+  ],
+  "identity": {
+    "referenceReleaseModelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "dataSha256": "ff8d902e87f28cdc6daa26d6aface7e78f79cf7a719ece15330c2c1598877942",
+    "candidateTensorSha256": "fe80e521d7f7924811fac07f6c5e59485bccaa2e48598ef4382e065708030ca3",
+    "candidateCount": 1559,
+    "trainingCandidates": 807,
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+    "primaryTrainingSourceSha": "fb3136c62f0d902835ac12b5292e043dcaf7fc83",
+    "upstreamWeightsSha256": "46d2c063b18125884c48937afa4c49e18128869e52e8db96df48bf0a4d7ff697",
+    "usesReleasedTaskEncoder": false,
+    "exampleInputs": [
+      {
+        "id": "profile-0-cover",
+        "beforeSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+        "afterSha256": "a2c975a7cc2c602e816632d7dd267d4c08a26ecef387acc3bd2c29a5b851ecaa"
+      },
+      {
+        "id": "ledger-1-intentional_move",
+        "beforeSha256": "b2e56ff60a331729e33dd88fd671ac850527d90441f65bbd1ac4b7a399954cea",
+        "afterSha256": "13b0e72c1281c8bade8a6a9e6f7bbadcb0d3d404d63422f5aa3af90a87c6de74"
+      },
+      {
+        "id": "settings-0-clip",
+        "beforeSha256": "328977271eef30ce2ca054782bdd1fb0a926dbbc03853d096d6ee39ec6df42e8",
+        "afterSha256": "12b53954c54b9e0d5c5cbc98d4aff0a18e573a9ae8162c5e5503dba830bc4c3d"
+      },
+      {
+        "id": "kanban-1-overflow",
+        "beforeSha256": "b5b18013729986dba00257892fba0cca85969088320af7bf4570de84e6368e3b",
+        "afterSha256": "0580c72104a720a9dc28ec6b07217bfd18b729b2b66d59e1090f2df33acd9fc4"
+      },
+      {
+        "id": "invoice-0-hide",
+        "beforeSha256": "3a51d81353d42345dda37eb5dd1eed3ac282d46c4950e7b2aeb57a30cfbef1c4",
+        "afterSha256": "fee29e38999b2a83e2176ac2f17d471cb511af90ea2c1190cf62ad870a5ae04e"
+      },
+      {
+        "id": "article-0-repeat",
+        "beforeSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+        "afterSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3"
+      },
+      {
+        "id": "catalog-1-content",
+        "beforeSha256": "708672868c65d85eb6127cf373af6703f25a10c78f43e74c06df13f93a24f401",
+        "afterSha256": "5b24ca18c4e4fabd7e75aefb936819d1a781e753ba19cf5318a5bca455e17ae0"
+      }
+    ],
+    "verification": "Completed final-image benchmark; example file hashes and recorded sample ordering verified. Preprocessing timing contains no neural inference.",
+    "completedRecordModifiedUtc": "2026-09-08T14:50:05.268069+00:00",
+    "metricsPayloadCanonicalSha256": "c0412c0099fb01a8deb6920fb027917b9cc2284767a8e6bcf2fc1bd5add034f6",
+    "identityAttachedAfterRun": true
+  }
+}

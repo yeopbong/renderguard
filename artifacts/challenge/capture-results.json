@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.0",
+  "manifestSha256": "3eed6586075e5c84651fd13fb572ab3461e13008c7da56147944e1f0218a3fe7",
+  "modelEvaluated": false,
+  "records": [
+    {
+      "id": "clipped-receipt",
+      "execution": "complete",
+      "before": "d6eaa1fe909602fe5b9edd67bd90a3b9ce7c3c76f8299746b04508001bad57ec",
+      "after": "259f6e9ecf851cacd358a704a9cbfd72ce9b590c686ee7b3b8501c84c62fc793",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "occluded-reading",
+      "execution": "complete",
+      "before": "4e17fba45abe0c2de8fdc37b174058f8ee6ef46432e00fec2a2713bd511da4b8",
+      "after": "7d7a58b5e61411db20fd13cbb4c889922da61409430d5ab723de29167f213456",
+      "expectedExecution": "complete",
+      "contractStatuses": [
+        "violated"
+      ],
+      "expectedContractStatuses": [
+        "violated"
+      ]
+    },
+    {
+      "id": "escaped-control",
+      "execution": "complete",
+      "before": "266860335ff2b5d32b601d6649a666841026cd8f286103972507c4dd9b082743",
+      "after": "699381f9e976d0d4b8c35159af2c7067acab1d31a98409658f0ce607e7d8cb39",
+      "expectedExecution": "complete",
+      "contractStatuses": [
+        "violated"
+      ],
+      "expectedContractStatuses": [
+        "violated"
+      ]
+    },
+    {
+      "id": "missing-download",
+      "execution": "complete",
+      "before": "c5f74725f8244317f7d84975fb2afa58ef16dd5d4f3f9a78f4a20e0985614900",
+      "after": "714ddce654181de1273296edeb0c4c1cd0a8df739727338ea9579ff1b082e17f",
+      "expectedExecution": "complete",
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "expectedContractStatuses": [
+        "inconclusive"
+      ]
+    },
+    {
+      "id": "intentional-relocation",
+      "execution": "complete",
+      "before": "2b48247e2b6acba151e7931146cddf88cf2771b890695ef4d76e76cd8e7d0750",
+      "after": "00be2d261526def8a3872eb100c87edf4cf806d0a2846266ec39a3ede3981209",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "clipped-multilingual",
+      "execution": "complete",
+      "before": "2c306920aafc58b82329822d0cfa41dfe394f13982b3f4ab657151bd780172e1",
+      "after": "69644c0acf6cc043fcd7659fd967c1ede4b9a0014db94293f6192578e125a34a",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "ordinary-content",
+      "execution": "complete",
+      "before": "140b69ccd92b2b61671582ba502ceec766f3bb052b4e81f87b0accef55f6ac4c",
+      "after": "54f47788451794f40b7b8ca38e024630bbc696d2f3114643d060bff9e199439a",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "repeat-capture",
+      "execution": "complete",
+      "before": "80179b4b85855b78cf1a8c0626758205456b5f64485a8eec96cd7de6a4c4f5eb",
+      "after": "80179b4b85855b78cf1a8c0626758205456b5f64485a8eec96cd7de6a4c4f5eb",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "masked-dynamic",
+      "execution": "complete",
+      "before": "032f9513b92feff0128aa25ccf6a227b55f92715a262fb889ccd81a6cbe20236",
+      "after": "5aa2b18edebb50582a91a28cf6f12a5b6740427ae84e17f9e6cf4b743dd2e724",
+      "expectedExecution": "complete",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    },
+    {
+      "id": "removed-long-tail",
+      "execution": "complete",
+      "before": "be1c09b7459857ffb80c6e154019eff01bd81069eb93d12dd9e1fea0490e0152",
+      "after": "8ba3824fea00f3462b69ca7a3b5417014244db9ee79790d10a9110914dc1886b",
+      "expectedExecution": "complete",
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "expectedContractStatuses": [
+        "inconclusive"
+      ]
+    },
+    {
+      "id": "unmeasurable-contract",
+      "execution": "complete",
+      "before": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+      "after": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+      "expectedExecution": "complete",
+      "contractStatuses": [
+        "inconclusive"
+      ],
+      "expectedContractStatuses": [
+        "inconclusive"
+      ]
+    },
+    {
+      "id": "incomparable-width",
+      "execution": "incomparable",
+      "before": "8888f6cc440bcf55bbf8567208337b42cf21969b9df6b4e62320acc9fe375c2a",
+      "after": "5835d4d28a9871b97b0703b425927b49f83ba9e7fc8a75c2bb84387db9a92591",
+      "expectedExecution": "incomparable",
+      "contractStatuses": [],
+      "expectedContractStatuses": []
+    }
+  ]
+}

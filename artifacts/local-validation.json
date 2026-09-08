@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "platform": "macOS 26.5.2 arm64",
+  "checks": [
+    {
+      "command": "node --import tsx --test tests/core*.test.ts",
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 4.512
+    },
+    {
+      "command": ".venv/bin/python -m pytest tests/test_service.py tests/test_learning.py tests/test_learning_render.py tests/test_e2e.py tests/test_feedback.py -q",
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 26.43
+    },
+    {
+      "command": ".venv/bin/python -m pytest tests/test_feedback.py -q",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 12.96,
+      "purpose": "Final retained-data bundle regression"
+    },
+    {
+      "command": "node --import tsx --test tests/browser*.test.ts",
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 10.24
+    },
+    {
+      "command": "pnpm build",
+      "execution": "complete"
+    },
+    {
+      "command": ".venv/bin/python scripts/verify_model.py",
+      "execution": "complete",
+      "realCPUInference": true
+    }
+  ],
+  "independentAcceptance": "not performed; next stage"
+}

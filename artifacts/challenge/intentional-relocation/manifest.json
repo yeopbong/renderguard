@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/intentional-relocation/before.html",
+    "screenshot": "before.png",
+    "sha256": "2b48247e2b6acba151e7931146cddf88cf2771b890695ef4d76e76cd8e7d0750",
+    "repeatedSha256": "2b48247e2b6acba151e7931146cddf88cf2771b890695ef4d76e76cd8e7d0750",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": []
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/intentional-relocation/after.html",
+    "screenshot": "after.png",
+    "sha256": "00be2d261526def8a3872eb100c87edf4cf806d0a2846266ec39a3ede3981209",
+    "repeatedSha256": "00be2d261526def8a3872eb100c87edf4cf806d0a2846266ec39a3ede3981209",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": []
+  },
+  "contracts": [],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

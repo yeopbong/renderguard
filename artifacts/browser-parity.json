@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "checkedAt": "2026-09-08T14:41:24.210Z",
+  "browser": "140.0.7339.16",
+  "execution": "complete",
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "calibrationSha256": "be620779854fc08bcc912d4d57733299bbb79bffd9aab29df0dd086504ca50ba",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "sampleId": "profile-0-cover",
+  "candidateCount": 1,
+  "reference": "Published shared-tensor ONNX Runtime fixture in models/parity.json",
+  "exactDecodedRasterHashes": {
+    "rasterBeforeSHA256": "dadb0675479a447eccf091702c0c5e242a110018653544334b1ed17f223bd64c",
+    "rasterAfterSHA256": "5c7b621d76f7f5601f2cdee41079505e67edd5bdc01bcbec522bc5a9f51aac38",
+    "tensorSHA256s": [
+      {
+        "candidateId": "region-1",
+        "sha256": "cc495da2d7e8e377fcfafae5d6c947d140d873a1275fa14d24313e4c75a665ce"
+      }
+    ]
+  },
+  "exactCandidateEquality": true,
+  "maxAbsoluteLogitError": 0.00001430511474609375,
+  "maxAbsoluteScoreError": 3.051419176225423e-7,
+  "logitZeroDecisionDifferences": 0,
+  "publishedThresholdDecisionDifferences": 0,
+  "tolerance": 0.0001
+}

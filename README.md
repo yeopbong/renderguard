@@ -25,6 +25,8 @@ Open **http://127.0.0.1:8765**. One local service serves the production frontend
 
 The tested local platform is macOS arm64. CI also runs the key tests and browser build on Ubuntu; that does not establish full desktop installation support on every Linux distribution or on Windows.
 
+On Linux, Chromium additionally requires operating-system libraries. Install these with `pnpm exec playwright install-deps chromium` after installing Node dependencies; this may require administrator privileges. The macOS setup does not need that extra system-library step.
+
 ## What a result means
 
 - **Observation:** a visible symptom such as clipping, overlap, border crossing, disappearance or displacement. The model receives only image crops and image-derived geometry.
@@ -69,7 +71,7 @@ node --import tsx --test tests/browser*.test.ts
 ./scripts/benchmark.sh
 ```
 
-Full training is separate from routine CI. It regenerates the authored corpus and uses verified generic pretrained weights before head warmup and genuine encoder fine-tuning. Feedback training is explicit, compares against retained development data, invalidates calibration, and requires manual activation. Previous model versions remain available for rollback.
+Full training is separate from routine CI. It regenerates the authored corpus and uses verified generic pretrained weights before head warmup and genuine encoder fine-tuning. Feedback training is explicit, compares against retained development data, invalidates calibration, and requires manual activation. Previous model versions remain available for rollback. See [release artifacts and offline use](docs/releases.md) for downloads, checksums, retained experiment evidence, and model restoration.
 
 ## Licenses
 

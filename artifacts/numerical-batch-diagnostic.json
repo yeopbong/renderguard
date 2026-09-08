@@ -1,0 +1,560 @@
+{
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "dataSha256": "ff8d902e87f28cdc6daa26d6aface7e78f79cf7a719ece15330c2c1598877942",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "torchThreads": 4,
+  "toleranceUnchanged": 0.0001,
+  "batches": [
+    {
+      "batchSize": 1,
+      "candidates": 24,
+      "tolerance": 0.0001,
+      "unfusedPyTorch": {
+        "maxLogitError": 0.00012159347534179688,
+        "maxScoreError": 6.9141387939453125e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": false
+      },
+      "deploymentFusedPyTorch": {
+        "maxLogitError": 6.580352783203125e-05,
+        "maxScoreError": 6.973743438720703e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": true
+      }
+    },
+    {
+      "batchSize": 3,
+      "candidates": 24,
+      "tolerance": 0.0001,
+      "unfusedPyTorch": {
+        "maxLogitError": 0.00012254714965820312,
+        "maxScoreError": 6.67572021484375e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": false
+      },
+      "deploymentFusedPyTorch": {
+        "maxLogitError": 6.413459777832031e-05,
+        "maxScoreError": 6.9141387939453125e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": true
+      }
+    },
+    {
+      "batchSize": 4,
+      "candidates": 24,
+      "tolerance": 0.0001,
+      "unfusedPyTorch": {
+        "maxLogitError": 0.00012254714965820312,
+        "maxScoreError": 6.67572021484375e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": false
+      },
+      "deploymentFusedPyTorch": {
+        "maxLogitError": 6.413459777832031e-05,
+        "maxScoreError": 6.9141387939453125e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": true
+      }
+    },
+    {
+      "batchSize": 24,
+      "candidates": 24,
+      "tolerance": 0.0001,
+      "unfusedPyTorch": {
+        "maxLogitError": 0.000110626220703125,
+        "maxScoreError": 7.033348083496094e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": false
+      },
+      "deploymentFusedPyTorch": {
+        "maxLogitError": 7.227808237075806e-05,
+        "maxScoreError": 7.897615432739258e-06,
+        "thresholdDisagreements": 0,
+        "passesOriginalLogitTolerance": true
+      }
+    }
+  ],
+  "exportGraph": {
+    "batchNormalizationNodes": 0,
+    "firstBranchConvWeightsCompared": 52,
+    "maxFusedWeightDifference": 7.62939453125e-06,
+    "maxFusedWeightRelativeDifference": 2.289264102728339e-07,
+    "maxFusedWeightUlpDistance": 2,
+    "weightRoundingCheck": "Zero absolute slack; four float32 eps relative budget for independent frozen-BN folding arithmetic. Separate from the unchanged 1e-4 output-logit requirement.",
+    "convolutions": [
+      {
+        "module": "encoder.0",
+        "maxAbsoluteDifference": 1.4901161193847656e-08,
+        "referenceAtLargestAbsoluteDifference": -0.18129132688045502,
+        "fusedAtLargestAbsoluteDifference": -0.18129131197929382,
+        "maxRelativeDifference": 1.8470099405476503e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.2.0.conv_dw",
+        "maxAbsoluteDifference": 9.5367431640625e-07,
+        "referenceAtLargestAbsoluteDifference": 8.446003913879395,
+        "fusedAtLargestAbsoluteDifference": 8.446002960205078,
+        "maxRelativeDifference": 1.2309752150940767e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.2.0.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.0041990093886852264,
+        "fusedAtLargestAbsoluteDifference": -0.0041990093886852264,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.2.0.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.054936543107032776,
+        "fusedAtLargestAbsoluteDifference": 0.054936543107032776,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.2.0.conv_pw",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": 24.93918800354004,
+        "fusedAtLargestAbsoluteDifference": 24.939186096191406,
+        "maxRelativeDifference": 1.8041960458958783e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.0.conv_pw",
+        "maxAbsoluteDifference": 2.384185791015625e-07,
+        "referenceAtLargestAbsoluteDifference": -2.790630578994751,
+        "fusedAtLargestAbsoluteDifference": -2.79063081741333,
+        "maxRelativeDifference": 1.7418325626294973e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.0.conv_dw",
+        "maxAbsoluteDifference": 4.76837158203125e-07,
+        "referenceAtLargestAbsoluteDifference": -3.599018096923828,
+        "fusedAtLargestAbsoluteDifference": -3.59901762008667,
+        "maxRelativeDifference": 1.930079918111005e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.0.conv_pwl",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": -1.2104301452636719,
+        "fusedAtLargestAbsoluteDifference": -1.2104302644729614,
+        "maxRelativeDifference": 2.2461821913566382e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.1.conv_pw",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": -1.835052728652954,
+        "fusedAtLargestAbsoluteDifference": -1.8350526094436646,
+        "maxRelativeDifference": 2.0121382249271846e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.1.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": 22.32454490661621,
+        "fusedAtLargestAbsoluteDifference": 22.324541091918945,
+        "maxRelativeDifference": 2.0979578607693838e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.3.1.conv_pwl",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": 1.1958805322647095,
+        "fusedAtLargestAbsoluteDifference": 1.19588041305542,
+        "maxRelativeDifference": 2.0963132385531935e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.0.conv_pw",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": -1.5386570692062378,
+        "fusedAtLargestAbsoluteDifference": -1.5386569499969482,
+        "maxRelativeDifference": 2.176286812982653e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.0.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": -28.5943603515625,
+        "fusedAtLargestAbsoluteDifference": -28.594356536865234,
+        "maxRelativeDifference": 2.084281902625662e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.0.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -2.0168745146209588e-12,
+        "fusedAtLargestAbsoluteDifference": -2.0168745146209588e-12,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.0.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -3.976585499689683e-13,
+        "fusedAtLargestAbsoluteDifference": -3.976585499689683e-13,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.0.conv_pwl",
+        "maxAbsoluteDifference": 2.384185791015625e-07,
+        "referenceAtLargestAbsoluteDifference": 2.2567648887634277,
+        "fusedAtLargestAbsoluteDifference": 2.2567646503448486,
+        "maxRelativeDifference": 1.6329369145751116e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.1.conv_pw",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": 1.279030203819275,
+        "fusedAtLargestAbsoluteDifference": 1.2790303230285645,
+        "maxRelativeDifference": 2.1579256781478762e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.1.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": -41.339759826660156,
+        "fusedAtLargestAbsoluteDifference": -41.33976364135742,
+        "maxRelativeDifference": 2.1281869067024672e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.1.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.08866144716739655,
+        "fusedAtLargestAbsoluteDifference": -0.08866144716739655,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.1.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.042522527277469635,
+        "fusedAtLargestAbsoluteDifference": 0.042522527277469635,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.1.conv_pwl",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": -19.88062286376953,
+        "fusedAtLargestAbsoluteDifference": -19.8806209564209,
+        "maxRelativeDifference": 2.1927745308403246e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.2.conv_pw",
+        "maxAbsoluteDifference": 5.960464477539063e-08,
+        "referenceAtLargestAbsoluteDifference": -0.5882425308227539,
+        "fusedAtLargestAbsoluteDifference": -0.5882425904273987,
+        "maxRelativeDifference": 2.14628528283356e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.2.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": -34.54155731201172,
+        "fusedAtLargestAbsoluteDifference": -34.541561126708984,
+        "maxRelativeDifference": 2.1813799833125813e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.2.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.14556631445884705,
+        "fusedAtLargestAbsoluteDifference": -0.14556631445884705,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.2.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.02298503927886486,
+        "fusedAtLargestAbsoluteDifference": 0.02298503927886486,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.4.2.conv_pwl",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": 17.664409637451172,
+        "fusedAtLargestAbsoluteDifference": 17.664411544799805,
+        "maxRelativeDifference": 1.9923997740534105e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.0.conv_pw",
+        "maxAbsoluteDifference": 2.9802322387695312e-08,
+        "referenceAtLargestAbsoluteDifference": 0.3154100775718689,
+        "fusedAtLargestAbsoluteDifference": 0.3154101073741913,
+        "maxRelativeDifference": 2.2540930899594969e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.0.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": -21.844820022583008,
+        "fusedAtLargestAbsoluteDifference": -21.844816207885742,
+        "maxRelativeDifference": 2.0624203500574367e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.0.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.06308314204216003,
+        "fusedAtLargestAbsoluteDifference": 0.06308314204216003,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.0.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.04748152568936348,
+        "fusedAtLargestAbsoluteDifference": -0.04748152568936348,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.0.conv_pwl",
+        "maxAbsoluteDifference": 4.76837158203125e-07,
+        "referenceAtLargestAbsoluteDifference": 3.4563663005828857,
+        "fusedAtLargestAbsoluteDifference": 3.4563658237457275,
+        "maxRelativeDifference": 2.0545459733511962e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.1.conv_pw",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": -0.6069166660308838,
+        "fusedAtLargestAbsoluteDifference": -0.6069165468215942,
+        "maxRelativeDifference": 2.0440039349978179e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.1.conv_dw",
+        "maxAbsoluteDifference": 3.814697265625e-06,
+        "referenceAtLargestAbsoluteDifference": -27.50016975402832,
+        "fusedAtLargestAbsoluteDifference": -27.500165939331055,
+        "maxRelativeDifference": 2.1616071421703964e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.1.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.048682134598493576,
+        "fusedAtLargestAbsoluteDifference": -0.048682134598493576,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.1.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.06520497053861618,
+        "fusedAtLargestAbsoluteDifference": -0.06520497053861618,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.5.1.conv_pwl",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": -11.29807186126709,
+        "fusedAtLargestAbsoluteDifference": -11.298073768615723,
+        "maxRelativeDifference": 2.0872721506748348e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.0.conv_pw",
+        "maxAbsoluteDifference": 5.960464477539063e-08,
+        "referenceAtLargestAbsoluteDifference": -0.4122920334339142,
+        "fusedAtLargestAbsoluteDifference": -0.41229209303855896,
+        "maxRelativeDifference": 2.2691806123020797e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.0.conv_dw",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": -16.451374053955078,
+        "fusedAtLargestAbsoluteDifference": -16.451372146606445,
+        "maxRelativeDifference": 2.111463146547976e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.0.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.001578981289640069,
+        "fusedAtLargestAbsoluteDifference": -0.001578981289640069,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.0.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.03403176739811897,
+        "fusedAtLargestAbsoluteDifference": 0.03403176739811897,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.0.conv_pwl",
+        "maxAbsoluteDifference": 9.5367431640625e-07,
+        "referenceAtLargestAbsoluteDifference": -7.648892402648926,
+        "fusedAtLargestAbsoluteDifference": -7.648891448974609,
+        "maxRelativeDifference": 1.8726930761658878e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.1.conv_pw",
+        "maxAbsoluteDifference": 5.960464477539063e-08,
+        "referenceAtLargestAbsoluteDifference": 0.6994497179985046,
+        "fusedAtLargestAbsoluteDifference": 0.6994497776031494,
+        "maxRelativeDifference": 2.289264102728339e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.1.conv_dw",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": -16.19023323059082,
+        "fusedAtLargestAbsoluteDifference": -16.190231323242188,
+        "maxRelativeDifference": 2.261734266539861e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.1.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.027247218415141106,
+        "fusedAtLargestAbsoluteDifference": 0.027247218415141106,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.1.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.013592162169516087,
+        "fusedAtLargestAbsoluteDifference": 0.013592162169516087,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.1.conv_pwl",
+        "maxAbsoluteDifference": 1.9073486328125e-06,
+        "referenceAtLargestAbsoluteDifference": 14.836965560913086,
+        "fusedAtLargestAbsoluteDifference": 14.836967468261719,
+        "maxRelativeDifference": 2.2149473011268128e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.2.conv_pw",
+        "maxAbsoluteDifference": 2.9802322387695312e-08,
+        "referenceAtLargestAbsoluteDifference": 0.26175418496131897,
+        "fusedAtLargestAbsoluteDifference": 0.2617541551589966,
+        "maxRelativeDifference": 2.195212829292359e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.2.conv_dw",
+        "maxAbsoluteDifference": 7.62939453125e-06,
+        "referenceAtLargestAbsoluteDifference": -88.44135284423828,
+        "fusedAtLargestAbsoluteDifference": -88.44134521484375,
+        "maxRelativeDifference": 2.2378198138994776e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.2.se.conv_reduce",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": 0.052056171000003815,
+        "fusedAtLargestAbsoluteDifference": 0.052056171000003815,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.2.se.conv_expand",
+        "maxAbsoluteDifference": 0.0,
+        "referenceAtLargestAbsoluteDifference": -0.08040186762809753,
+        "fusedAtLargestAbsoluteDifference": -0.08040186762809753,
+        "maxRelativeDifference": 0.0,
+        "maxFloat32UlpDistance": 0,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.6.2.conv_pwl",
+        "maxAbsoluteDifference": 9.5367431640625e-07,
+        "referenceAtLargestAbsoluteDifference": 7.698789596557617,
+        "fusedAtLargestAbsoluteDifference": 7.698788642883301,
+        "maxRelativeDifference": 2.1458538412844064e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      },
+      {
+        "module": "encoder.7.0.conv",
+        "maxAbsoluteDifference": 1.1920928955078125e-07,
+        "referenceAtLargestAbsoluteDifference": -1.1244996786117554,
+        "fusedAtLargestAbsoluteDifference": -1.1244995594024658,
+        "maxRelativeDifference": 2.2847298453143594e-07,
+        "maxFloat32UlpDistance": 2,
+        "withinFourFloat32EpsRelative": true
+      }
+    ]
+  },
+  "float64Reference": {
+    "unfusedPyTorchFloat32MaxError": 7.199115485700958e-05,
+    "onnxFloat32MaxError": 5.784551647813885e-05
+  },
+  "interpretation": "The raw float32 PyTorch comparison exceeds the original absolute logit budget and remains a recorded failure. ONNX folds frozen BatchNorm into convolution. Standard PyTorch Conv/BN fusion preserves activation and agrees with the exported convolution weights within recorded float32 rounding; this separately named deployment-equivalence check keeps the original tolerance. Model weights, ONNX, calibration, inputs and thresholds are unchanged."
+}

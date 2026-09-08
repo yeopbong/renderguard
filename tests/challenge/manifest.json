@@ -9,7 +9,7 @@
     "element_disappearance",
     "layout_displacement"
   ],
-  "annotationStatus": "Provisional authored expectations; rendering and visual inspection required before final evaluation.",
+  "annotationStatus": "Rendered before/after images were visually inspected by the implementation author. This is an internal visual audit, not an external human annotation study.",
   "cases": [
     {
       "id": "clipped-receipt",
@@ -29,7 +29,8 @@
       "fixtureHashes": {
         "before": "77b767e71ffe964822ee72bf4f85228249139a8171aa47b55775fe280dec307d",
         "after": "13fef4d22984c7ac89a86199d010823a85dd2352bcb139cfbdf0e529ece3bd41"
-      }
+      },
+      "inspectionReason": "The right side of PAYMENT CONFIRMED is visibly removed while the receipt boundary and other copy stay fixed. Container overflow is unknown because clipped pixels do not reveal their position."
     },
     {
       "id": "occluded-reading",
@@ -57,7 +58,8 @@
       "fixtureHashes": {
         "before": "014c191833b145db7ea595d40d6b04766b3ae89f1eaf21c51f635e5c19bc5501",
         "after": "c4451db7f91075189ecbcc29a5f8a196bbb6cceab6a4207675e58009c6c5fdce"
-      }
+      },
+      "inspectionReason": "The opaque notice moves upward and visibly covers the reading passage. The article boundary remains unchanged."
     },
     {
       "id": "escaped-control",
@@ -85,7 +87,8 @@
       "fixtureHashes": {
         "before": "51083a03edf7bc6b41b738698483e1e7f54d358a8217f967c520fa9fbd544770",
         "after": "206f05f3ec862a944099c98ea8924ca037a8e014f7c3a3b57d954b7ea1c7aec9"
-      }
+      },
+      "inspectionReason": "The save control moves right and visibly crosses the outlined settings boundary."
     },
     {
       "id": "missing-download",
@@ -112,7 +115,8 @@
       "fixtureHashes": {
         "before": "cf8cac459ecc155faf1dd91d2e3555d8e4c2334c4203fcc220ab9645b1eec204",
         "after": "358dadf28d5960761413680ade2e07e876fc02027fc98f18020f582cbeea1040"
-      }
+      },
+      "inspectionReason": "The large green download link disappears without shifting the title or period line. A missing selector is correctly inconclusive for the DOM contract."
     },
     {
       "id": "intentional-relocation",
@@ -132,7 +136,8 @@
       "fixtureHashes": {
         "before": "9b4e4523d3d51e5b95c99576b41262e8546201ccbb65c488e1e0e3ce8830ece8",
         "after": "e9cb51b485ae8cdee66cbc3fcf2e15eb1629029feff157e52cfa8c76beb9c750"
-      }
+      },
+      "inspectionReason": "The reading card moves from left to right. Layout displacement remains positive despite the explicitly intentional decision."
     },
     {
       "id": "clipped-multilingual",
@@ -152,7 +157,8 @@
       "fixtureHashes": {
         "before": "667963009b7c63e77062df9cb39c7d7bcd637b19413b2ef69bc1889d9da7735e",
         "after": "173b0e412eab09b14d0d4d935fec02e1891a6f30e86fd2e88f6c2f39740bae25"
-      }
+      },
+      "inspectionReason": "The lower English departure line is cut through its glyphs; the Korean first line remains readable. Border escape is not inferred from hidden geometry."
     },
     {
       "id": "ordinary-content",
@@ -172,7 +178,8 @@
       "fixtureHashes": {
         "before": "28ad854255c250a0ebb717b8a6417eeaa70ab635ee191ae5949a0e47649af4be",
         "after": "fd2e0d9419cc6c650b5897405f0e81372282fa164543ff14053efecd74f6e2fa"
-      }
+      },
+      "inspectionReason": "Temperature changes from 18 to 19 and the panel color changes; the layout and complete text remain visible."
     },
     {
       "id": "repeat-capture",
@@ -192,7 +199,8 @@
       "fixtureHashes": {
         "before": "014f2fdf554bd48e30b8400fe8d930e0805510acde0cfa6ff3162d4ae759e7a6",
         "after": "014f2fdf554bd48e30b8400fe8d930e0805510acde0cfa6ff3162d4ae759e7a6"
-      }
+      },
+      "inspectionReason": "Repeated renders have the same image hash and no changed pixels."
     },
     {
       "id": "masked-dynamic",
@@ -221,7 +229,8 @@
       "fixtureHashes": {
         "before": "1e55dd7b534f9d847ed727d68dd9b6191b7723298ed7cd008e0ba70507046106",
         "after": "1e55dd7b534f9d847ed727d68dd9b6191b7723298ed7cd008e0ba70507046106"
-      }
+      },
+      "inspectionReason": "The only changing area is the predeclared pulse rectangle; it is excluded and its provenance remains recorded."
     },
     {
       "id": "removed-long-tail",
@@ -248,7 +257,8 @@
       "fixtureHashes": {
         "before": "cbe82088de1c9db7f2be661a67f9c71a0b6408957f56deb5d4bd31503c53b25e",
         "after": "0224c3fe801417d19bdd81edee1e2e66fef312d41e2fc669ae27f176016f4213"
-      }
+      },
+      "inspectionReason": "The dark emergency contact footer vanishes and the shorter after image retains its own valid page extent."
     },
     {
       "id": "unmeasurable-contract",
@@ -275,7 +285,8 @@
       "fixtureHashes": {
         "before": "8162eff6512d8372b73aa3367121e50cef0d0da0f62ad5ae53e9fcb34b8d1d03",
         "after": "8162eff6512d8372b73aa3367121e50cef0d0da0f62ad5ae53e9fcb34b8d1d03"
-      }
+      },
+      "inspectionReason": "The identical visible team summary has no requested control. Its contract is inconclusive even though the images do not change."
     },
     {
       "id": "incomparable-width",
@@ -295,7 +306,8 @@
       "fixtureHashes": {
         "before": "9f403c7fab1f7c0b0f9876c96a68f0d13c3cdb77f262a725715e2a89980721ea",
         "after": "9c0123d73226b35d5c836026899a75d6e0da2a7d38372518279736ceb3066e15"
-      }
+      },
+      "inspectionReason": "The after canvas exceeds the viewport width. Images retain their different widths and capture returns incomparable."
     }
   ]
 }

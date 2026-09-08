@@ -1,0 +1,5868 @@
+{
+  "schemaVersion": "1.0",
+  "labels": [
+    "clipping",
+    "overlap_or_occlusion",
+    "out_of_container",
+    "element_disappearance",
+    "layout_displacement"
+  ],
+  "families": [
+    "nested-file-inspector",
+    "expanded-questions",
+    "appointment-swimlane"
+  ],
+  "cases": [
+    {
+      "id": "nested-file-inspector/repeat-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/repeat-a/before.html",
+      "after": "nested-file-inspector/repeat-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-a",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "nested-file-inspector/repeat-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/repeat-b/before.html",
+      "after": "nested-file-inspector/repeat-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-b",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "nested-file-inspector/repeat-a",
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "nested-file-inspector/content-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/content-a/before.html",
+      "after": "nested-file-inspector/content-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "cd02162c7bc98df251e7104d7eb0f342c2f618cd991bd09117c4ccdccb18bbf9"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "a71d97e8780dc0dcc02d124addd32310ccefba0f3ea26a5da9e354cc37f5ee71"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 379,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-a",
+        "operation": "content",
+        "severity": 1
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "nested-file-inspector/content-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/content-b/before.html",
+      "after": "nested-file-inspector/content-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "432cd2b903581b63ef8c6b3c40cbc529627491e5b3913c7665a14b6e211efa7d"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "a36cdfa60f782923dab0b5bfcca2692874ccadcf17d76d4a6fa12a6fbddbb34c"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 457,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-b",
+        "operation": "content",
+        "severity": 2
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "nested-file-inspector/intent-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/intent-a/before.html",
+      "after": "nested-file-inspector/intent-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "852226d8a109e4ec5a27f0ca29783d0b66c6356a39e366f97fa43469138cbc89"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "e94aa88af6b1eba3fd7e9e62e7ffa3ca9ac34fe725959d1d9abef67324ca9870"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 430,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 11665,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 430,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 444,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-a",
+        "operation": "move",
+        "severity": 70
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "nested-file-inspector/intent-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/intent-b/before.html",
+      "after": "nested-file-inspector/intent-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "ab8f7a465186d7934cc3ba474fb435f0d13c9faa01e1312a74e4ef13dd1fda4e"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "6c1903d8d57a77d2560dd2ceef4d5ff50907994da3fe7822e7556f02b659d7fe"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 485,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 19125,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 485,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 499,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-b",
+        "operation": "move",
+        "severity": 125
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "nested-file-inspector/clip-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/clip-a/before.html",
+      "after": "nested-file-inspector/clip-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "37702fafa849a467ccfd9e9e15686e1217532edcb6cf278c14ade4a340e6f8a0"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "084c9ad50323c54bc067303ada3fe27bf0c9cb25d83c8632816f4364a06e23a0"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 545,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 150,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.6637168141592921,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-a",
+        "operation": "clip",
+        "severity": 150
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "nested-file-inspector/clip-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/clip-b/before.html",
+      "after": "nested-file-inspector/clip-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "469d16cdf94a10aca8d9dcf2dd727b13c691af89b0cdf7dc868ba70274faee13"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "f8f0791f2a5441c903208fccb18621a059b58d4255f722664d8461fc09a53891"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 930,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 100,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.4424778761061947,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-b",
+        "operation": "clip",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "nested-file-inspector/clip-c",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/clip-c/before.html",
+      "after": "nested-file-inspector/clip-c/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "951976a7b2325dcec8ab08093cde84273ad22b43869529491ef2a30f4c636398"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "c159150236e7605aa7e32edfda6e78ab605146267b9f9a32e81cf5d54a84ddab"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 1230,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 60,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.26548672566371684,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-c",
+        "operation": "clip",
+        "severity": 60
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "nested-file-inspector/cover-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/cover-a/before.html",
+      "after": "nested-file-inspector/cover-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "edd6cedf3a25338c259c6d29b3fa40ccb44531f6f881d78d669d925878d022ee"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "7e69fc86fa6bd0a2966bab4f12bf7f2658453864bff7d1fd7627899d026d7ba7"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 4800,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.4166666666666667,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-a",
+        "operation": "cover",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "nested-file-inspector/cover-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/cover-b/before.html",
+      "after": "nested-file-inspector/cover-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "d19f38913c7a1a3df87e2329e884db6b2b9a3a63f4c344bc9149d5ce408c9e50"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "3e687671c7ba6fdaca3935eb57c9662a344ab53bb9ea3e24989a21b5c01dfa81"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 7680,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.6666666666666666,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-b",
+        "operation": "cover",
+        "severity": 160
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "nested-file-inspector/cover-c",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/cover-c/before.html",
+      "after": "nested-file-inspector/cover-c/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "c3a2f95c032e5cdaddc398da4e3a24340370ffa1b571c6e95e36a3b0c660d1ee"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "2e20301034e70bbb169a50191d3fa65ab7eaf3ee145899af9023df159ab1b9bf"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 10080,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.8333333333333334,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-c",
+        "operation": "cover",
+        "severity": 210
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "nested-file-inspector/outside-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/outside-a/before.html",
+      "after": "nested-file-inspector/outside-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "11633c401455b74ae1eed9d0119da7df7a399891371ca23ef57f5d7ccdcb345f"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "b3c7f88529a3cfa558fca289ac5cbb3c505d39cd1848f97730fa1e109db3543c"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 804,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37781,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 804,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 818,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0.7148148148148148,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-a",
+        "operation": "outside",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "nested-file-inspector/outside-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/outside-b/before.html",
+      "after": "nested-file-inspector/outside-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "0147d6c7d70d7f769584d9123cfc7ff979e6f6ae3ca9b48bdd3b77c914b619f7"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "eff60a3f421d6567b85d0c1e650ceed3214e9252d6c511dc8c2bab6d6915727d"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 844,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37781,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 844,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 858,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0.8629629629629629,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-b",
+        "operation": "outside",
+        "severity": 40
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "nested-file-inspector/absent-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/absent-a/before.html",
+      "after": "nested-file-inspector/absent-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "363f4d7e2ad91a952a1a61b1c7ec205f50b6f524549dbb2eb910dec0a1a51322"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "4013f9d3725c25a9294275b84dec0a69ee5118cd3ccafe8f7a8305ee2ab42307"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": false,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-a",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object."
+    },
+    {
+      "id": "nested-file-inspector/absent-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/absent-b/before.html",
+      "after": "nested-file-inspector/absent-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "363f4d7e2ad91a952a1a61b1c7ec205f50b6f524549dbb2eb910dec0a1a51322"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "4013f9d3725c25a9294275b84dec0a69ee5118cd3ccafe8f7a8305ee2ab42307"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": false,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-b",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "nested-file-inspector/absent-a",
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object."
+    },
+    {
+      "id": "nested-file-inspector/shift-a",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/shift-a/before.html",
+      "after": "nested-file-inspector/shift-a/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "943a20045d3f583ebd7b1465e67d4f755f0aa1d925679029223260ec666fe2fa"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "f79eed2da952d9bb42b5af0520cd9fdf8114f688c75f216102602a11f225bced"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 455,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 15080,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 455,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 469,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-a",
+        "operation": "move",
+        "severity": 95
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "nested-file-inspector/shift-b",
+      "family": "nested-file-inspector",
+      "before": "nested-file-inspector/shift-b/before.html",
+      "after": "nested-file-inspector/shift-b/after.html",
+      "fixtureHashes": {
+        "before": "a92d47e1c0d36064edd7326f8c02b552575cecfd1b96269cb8dad4d00a850a17",
+        "after": "43be95c9c58df3a62c7492caa79c4c1b568677bacc4eaf612f9d9d6e2a5a020f"
+      },
+      "screenshotHashes": {
+        "before": "5f772d2c9ced1a3b91b6e7c34eaa39a11d35ba6c756967a2bdfd7f2284675096",
+        "after": "87b2f5a933cc7012b9ae93c138fb05e9a2576d48f09c59b7e3ccb1ce6948fea3"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1090
+        },
+        "after": {
+          "width": 1360,
+          "height": 1090
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 360,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 515,
+          "y": 360.953125,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 22949,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 360,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 374,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 515,
+            "y": 360.953125,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 529,
+            "y": 380.953125,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 331,
+            "y": 227.953125,
+            "width": 550,
+            "height": 310
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-b",
+        "operation": "move",
+        "severity": 155
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/repeat-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/repeat-a/before.html",
+      "after": "expanded-questions/repeat-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-a",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "expanded-questions/repeat-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/repeat-b/before.html",
+      "after": "expanded-questions/repeat-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-b",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "expanded-questions/repeat-a",
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "expanded-questions/content-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/content-a/before.html",
+      "after": "expanded-questions/content-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "74ebb2c10b595ad92071afc1778f7aae59bf9f95e01207cd9a55ef484969b9a5"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "ea3211dad6d6728d547bb427e57f385c528b84d7e3db050b3f0cff7dc06a5967"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 379,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-a",
+        "operation": "content",
+        "severity": 1
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "expanded-questions/content-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/content-b/before.html",
+      "after": "expanded-questions/content-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "a441298be102617547f06ecada09413116299ca53ca7946246a8f44b3de34fed"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "46a216ca88d8edc63f1e76abb3a9f3871af0cc125f37c46ff5bf763c4af28650"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 457,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-b",
+        "operation": "content",
+        "severity": 2
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged."
+    },
+    {
+      "id": "expanded-questions/intent-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/intent-a/before.html",
+      "after": "expanded-questions/intent-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "eca280c9f84ce2bfd5fbdb3ef824cd138c0fdddc0eca1824e5af7a7d2a7e5ea1"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "38f59210fc9118965f688dc4649f05769f69a57eff9992e2b16dccfb74ed1488"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 152,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 11751,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 152,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 166,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-a",
+        "operation": "move",
+        "severity": 70
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/intent-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/intent-b/before.html",
+      "after": "expanded-questions/intent-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "d649d9e70525ae9d7c31e7e2a3fd04be776783eb38d9b17a15d887cb4674845b"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "b1a68aa5cd985be931e6248d55923a4ed5d450bcb2e2432aea1001f9493cf5f2"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 207,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 19034,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 207,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 221,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-b",
+        "operation": "move",
+        "severity": 125
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/clip-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/clip-a/before.html",
+      "after": "expanded-questions/clip-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "a154b0345ea9f28f4dea83d6eea1a28692d82f1d540492bf151e4e637cc4a2b0"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "0a543138059656db71939cd7fc42234369097b21f13652bc886ef0cf777e7e53"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 672,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 150,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.6302521008403361,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-a",
+        "operation": "clip",
+        "severity": 150
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "expanded-questions/clip-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/clip-b/before.html",
+      "after": "expanded-questions/clip-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "3c28cf0f4cf3e0a9a532913ddcd277c294b032a028816234754a9ce2abf1cdc0"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "3c64cfc4abf49abef2076437289752ee57e6b89f61085546d6f3a446f0fb1ec3"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 1087,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 100,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.42016806722689076,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-b",
+        "operation": "clip",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "expanded-questions/clip-c",
+      "family": "expanded-questions",
+      "before": "expanded-questions/clip-c/before.html",
+      "after": "expanded-questions/clip-c/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "12401a8d4adeb9757c05599ba714773f05d985c966210e36f285d159039c81c6"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "854328483ab0b585479f92100252f47cd7ae565bfe7b4c0d906813d740fb534e"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 1376,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 60,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.25210084033613445,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-c",
+        "operation": "clip",
+        "severity": 60
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place."
+    },
+    {
+      "id": "expanded-questions/cover-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/cover-a/before.html",
+      "after": "expanded-questions/cover-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "dcf51b52ca3f83816683ae86aacec784faf608cf830321566f8ab2396df3b1cd"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "3b4211a3d2db6033a3d48da7699421cb1e0920cc511cb1c95920924c92b534a7"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 4800,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.4166666666666667,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-a",
+        "operation": "cover",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "expanded-questions/cover-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/cover-b/before.html",
+      "after": "expanded-questions/cover-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "a65884e05394a8b6709d5ffd9ff5b8f8809bbec8d581d9a308fdd98a8196af87"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "e1ffb650d818445992546307e98ce93c88cb38a74e6e380312c99e3f0cdda3b9"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 7680,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.6666666666666666,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-b",
+        "operation": "cover",
+        "severity": 160
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "expanded-questions/cover-c",
+      "family": "expanded-questions",
+      "before": "expanded-questions/cover-c/before.html",
+      "after": "expanded-questions/cover-c/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "bc1a298baeba3cf202086316167883d33f41c17885e90a3e9950d95883d57fea"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "4b9e1deb03c5abc5d5ff679a45b5a89e4a79c976f6292b6ffd002e9a9f4cb103"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 10080,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.8333333333333334,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-c",
+        "operation": "cover",
+        "severity": 210
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface."
+    },
+    {
+      "id": "expanded-questions/outside-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/outside-a/before.html",
+      "after": "expanded-questions/outside-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "f361be61652a7ebed47f33d2f1c71f303b0f480d1d5255609b21629bfe2b553e"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "5652022943bf83327deb61f0235037840a491eb26968d60f125c056dc1a85119"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 725,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37746,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 725,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 739,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0.5851851851851853,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-a",
+        "operation": "outside",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/outside-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/outside-b/before.html",
+      "after": "expanded-questions/outside-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "69f9e94128a7483952a1a8f98e6a763b9691483520824f9fd1ba318ce0ea5237"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "b1ce43ffc28851bdbc7718d4890b924275cbabae4b2692647e511bb789d5ef3f"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 765,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37747,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 765,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 779,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0.7333333333333334,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-b",
+        "operation": "outside",
+        "severity": 40
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/absent-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/absent-a/before.html",
+      "after": "expanded-questions/absent-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "251438e9f74d85a98690bfa7f1499a9a838d14b66fa0fec48fa157d954fb27df"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "a712f8aa484ecc29291c99a4671dbbca3179c168027992c3f31474e256da3cf0"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": false,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-a",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object."
+    },
+    {
+      "id": "expanded-questions/absent-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/absent-b/before.html",
+      "after": "expanded-questions/absent-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "251438e9f74d85a98690bfa7f1499a9a838d14b66fa0fec48fa157d954fb27df"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "a712f8aa484ecc29291c99a4671dbbca3179c168027992c3f31474e256da3cf0"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": false,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-b",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "expanded-questions/absent-a",
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object."
+    },
+    {
+      "id": "expanded-questions/shift-a",
+      "family": "expanded-questions",
+      "before": "expanded-questions/shift-a/before.html",
+      "after": "expanded-questions/shift-a/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "7e04361bd7fbe7e4ce4101ee1e938b376a6b3d67e1423a6de6b0a71787acdbb1"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "fa987cbe6a9aa23f5ce3273c678c951bfa9fb81ae208cd055c3eca80906e3a96"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 177,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 15313,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 177,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 191,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-a",
+        "operation": "move",
+        "severity": 95
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "expanded-questions/shift-b",
+      "family": "expanded-questions",
+      "before": "expanded-questions/shift-b/before.html",
+      "after": "expanded-questions/shift-b/after.html",
+      "fixtureHashes": {
+        "before": "0f8a14aee0dce612089d607f5c1663852aaecc17268a1cbc0f3c6c72623d1627",
+        "after": "b6730084dbf4267d92ed4ebbb3c893f0bdcdfcc06e854ba5e50491a1a33e8a0e"
+      },
+      "screenshotHashes": {
+        "before": "81a5563fd15e35cbdac00334f09230de3683a7700e72b1f8e02c3bd793ac7f19",
+        "after": "25c393b1b52c538342d9e9fa32ad2b3bc43e5b01f04aacf4620e137856359cc6"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1507
+        },
+        "after": {
+          "width": 1360,
+          "height": 1507
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 82,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 237,
+          "y": 921.390625,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 23025,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 82,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 96,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 237,
+            "y": 921.390625,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 251,
+            "y": 941.390625,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 47,
+            "y": 813.390625,
+            "width": 790,
+            "height": 260
+          },
+          "visible": true,
+          "labelVisibleRatio": 1,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-b",
+        "operation": "move",
+        "severity": 155
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation."
+    },
+    {
+      "id": "appointment-swimlane/repeat-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/repeat-a/before.html",
+      "after": "appointment-swimlane/repeat-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-a",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/repeat-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/repeat-b/before.html",
+      "after": "appointment-swimlane/repeat-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 0,
+      "candidateCount": 0,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "repeat-b",
+        "operation": "none",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "appointment-swimlane/repeat-a",
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/content-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/content-a/before.html",
+      "after": "appointment-swimlane/content-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "1c014561360fce357c8671eb2f01b49abc244bdb103b20a2e15372bae8735587"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "c6ce461e4581f33cbae51770de3e1512eeb657495bc66217f1691a2faf4e3265"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 379,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-a",
+        "operation": "content",
+        "severity": 1
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/content-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/content-b/before.html",
+      "after": "appointment-swimlane/content-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "14f929392e210eee10873f4055fdd4ec5178429231cae436a6d769f1e0f88528"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "fa6a9a5787d230969877bd8626d74d80b3211b6c5f1d7a1ec1457b97ee9deecd"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 457,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "content-b",
+        "operation": "content",
+        "severity": 2
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "No new or worsened target sign is visible. Repeated pages or the timestamp content changes leave the target geometry and visibility unchanged. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/intent-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/intent-a/before.html",
+      "after": "appointment-swimlane/intent-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "c45b413f93eb09f45a083603551dbddf9a40d82e83b3cf7e879e99d5af86c8e6"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "ac71f32062c194e9e8c9a516a8cf231f11a611e92c3f21ce617b6955765c7264"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 493.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 12044,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 493.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 507.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-a",
+        "operation": "move",
+        "severity": 70
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/intent-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/intent-b/before.html",
+      "after": "appointment-swimlane/intent-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "62440a60ceb521425dbca481ca1339edf4ea3b14d0b1b1ff6c5e8291e647048b"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "0870bff506084c42ff924cd9e1bccc23f2780a4061ba5e2ec7c94030ffb8f2c6"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 548.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 19011,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 548.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 562.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": true,
+      "provenance": {
+        "authoredVariant": "intent-b",
+        "operation": "move",
+        "severity": 125
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/clip-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/clip-a/before.html",
+      "after": "appointment-swimlane/clip-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "e116388be1147c7839206005c4ac86481916196d3e5eda5bd56130ca159bfc56"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "7b63e7b6ce5df405522118a9be7d35822840284b9e7fa29d5a50619cd431bd09"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 652,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 150,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.6072874493927125,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-a",
+        "operation": "clip",
+        "severity": 150
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/clip-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/clip-b/before.html",
+      "after": "appointment-swimlane/clip-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "7deadd85ac1add3034d22244117ff2d07e2f484adf5db5e017ccc665a1b30920"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "3351689d0b882a232996d588714e40f59f6822a04c00e26ccf26088cc4c47124"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 930,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 100,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.4048582995951417,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-b",
+        "operation": "clip",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/clip-c",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/clip-c/before.html",
+      "after": "appointment-swimlane/clip-c/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "44230bcea3857d6934c13084c90b52bd335aa3c6d4461e4f8b6d2671d76e962c"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "0a946b8653ee572e83d32615cfed3af4fc1239f4160bee291307915939c2ad32"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 1283,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 60,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.242914979757085,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "clip-c",
+        "operation": "clip",
+        "severity": 60
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The visible text extent decreases and complete trailing glyphs disappear while the framed control remains in place. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/cover-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/cover-a/before.html",
+      "after": "appointment-swimlane/cover-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "bd8bbb06f19b567a4a5a5b61ca57ea0d61f96e33754294983e1ba9b9947ed1da"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "da09e9ce62af7acf3758820163ecc2be9831dcda9496dc334383e7b514aff355"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 4800,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.4166666666666667,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-a",
+        "operation": "cover",
+        "severity": 100
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/cover-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/cover-b/before.html",
+      "after": "appointment-swimlane/cover-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "80dc67905f9e92859fc93505eb9d77d1ed88316e36ed6407d3c38e8db0a4d5b7"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "90f1ac6fe09ed910e0e00ca9e80767ebba6e56d03aaaf709e9b7a7aafd3e060e"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 7680,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.6666666666666666,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-b",
+        "operation": "cover",
+        "severity": 160
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/cover-c",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/cover-c/before.html",
+      "after": "appointment-swimlane/cover-c/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "aa864ef6ac9aee56cfb4eb1779c04a52d37d15ecddbdcafd4901436359bf54e4"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "ed2e38d383f8fba45a90e8d8395064c920d85cb8cd1b1cb94d42f3dbd745b291"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 10080,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0.8333333333333334,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "cover-c",
+        "operation": "cover",
+        "severity": 210
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "An opaque foreground panel visibly covers the control text; sampled hit testing confirms the foreground surface. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/outside-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/outside-a/before.html",
+      "after": "appointment-swimlane/outside-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "595c8250fb0e02f93346e3314c92a0da4d81e2560414ffc2ba9dc033a92d2e32"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "aa098aff782d3fc32a0bffe7282a128db0d0f557586d54312d17f11729a8e411"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 853.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37727,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 853.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 867.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0.44010416666666663,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-a",
+        "operation": "outside",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/outside-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/outside-b/before.html",
+      "after": "appointment-swimlane/outside-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "81a471b2cd6423d8bf03b1bd22a37cc1d6e4f601125a4f939acaea0fb8d55d95"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "97503fad4577268d5e2061b7bcbfec7154a7db7f22ab9bd4bf411e4b9e5deed4"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 893.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 37767,
+      "candidateCount": 2,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 893.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 907.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0.5882523148148149,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "outside-b",
+        "operation": "outside",
+        "severity": 40
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control visibly crosses the outlined container boundary. The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/absent-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/absent-a/before.html",
+      "after": "appointment-swimlane/absent-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "af2a084bcb1381f5b983adb14c6902d16d7b0a42f244fb4587c741fb2ab2c66b"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "58993782f43f0d95d439dd438f1aa5b6a8db65e5b1f4eccb12f52842bdec725f"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": false,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-a",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/absent-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/absent-b/before.html",
+      "after": "appointment-swimlane/absent-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "af2a084bcb1381f5b983adb14c6902d16d7b0a42f244fb4587c741fb2ab2c66b"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "58993782f43f0d95d439dd438f1aa5b6a8db65e5b1f4eccb12f52842bdec725f"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 18900,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": false,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": null,
+          "coverageSamples": 0
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "absent-b",
+        "operation": "absent",
+        "severity": 0
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": "appointment-swimlane/absent-a",
+      "visualInspectionReason": "The previously visible control is absent; clipping, occlusion, and containment are unknown for the invisible object. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/shift-a",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/shift-a/before.html",
+      "after": "appointment-swimlane/shift-a/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "14befbb1a3328e70af33a119dc642f8b7c04df10b7f59523e2a9a94f60284af4"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "8d0c8fb51870160be35839472eeab97dad1860a89e92835a34cbdfe99144f67c"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 518.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 15232,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 518.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 532.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-a",
+        "operation": "move",
+        "severity": 95
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    },
+    {
+      "id": "appointment-swimlane/shift-b",
+      "family": "appointment-swimlane",
+      "before": "appointment-swimlane/shift-b/before.html",
+      "after": "appointment-swimlane/shift-b/after.html",
+      "fixtureHashes": {
+        "before": "7d5dbe71b9356abe1adb9ceb2562fcba80cb29aca83ad7f76cac24ca174ba23f",
+        "after": "9fa8fc94a6a4258ab2c374bc8f47d0d4d0d6b023fd7b0d054a2f2b3bd925a1a3"
+      },
+      "screenshotHashes": {
+        "before": "2be293f90977f56f88b1b4c854a89b0cbdf6709da0d037cfadffebd5da856c10",
+        "after": "60c055e56a5c32a6f213e018ae659c3716b3cb882b7a8fa7af29e6dce1e99b4a"
+      },
+      "imageSizes": {
+        "before": {
+          "width": 1360,
+          "height": 1245
+        },
+        "after": {
+          "width": 1360,
+          "height": 1245
+        }
+      },
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "expectedRegions": [
+        {
+          "x": 423.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        },
+        {
+          "x": 578.828125,
+          "y": 408.796875,
+          "width": 270,
+          "height": 70
+        }
+      ],
+      "changedPixels": 23082,
+      "candidateCount": 1,
+      "measurementEvidence": {
+        "before": {
+          "target": {
+            "x": 423.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 437.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        },
+        "after": {
+          "target": {
+            "x": 578.828125,
+            "y": 408.796875,
+            "width": 270,
+            "height": 70
+          },
+          "label": {
+            "x": 592.828125,
+            "y": 428.796875,
+            "width": 240,
+            "height": 30
+          },
+          "container": {
+            "x": 215.828125,
+            "y": 373.796875,
+            "width": 789.171875,
+            "height": 120
+          },
+          "visible": true,
+          "labelVisibleRatio": 0.97165991902834,
+          "targetOutsideFraction": 0,
+          "coveredFraction": 0,
+          "coverageSamples": 36
+        }
+      },
+      "intentional": false,
+      "provenance": {
+        "authoredVariant": "shift-b",
+        "operation": "move",
+        "severity": 155
+      },
+      "annotationMethod": "Rendered geometry, clipping extent, sampled hit-testing and actual pixel difference; operation provenance does not assign labels.",
+      "duplicateOf": null,
+      "visualInspectionReason": "The control changes position. Intent is separately recorded and does not erase this observation. Minor pre-existing text clipping is present in the baseline; unchanged clipping is not labeled as a newly appearing sign."
+    }
+  ],
+  "inferenceExecuted": false,
+  "inspectionStatus": "All 54 before/after pairs inspected in three family contact sheets; full-resolution checks additionally covered FAQ clip-b, swimlane cover-b, and file-inspector outside-b. Inspection is internal, not an external human study.",
+  "scope": "Three original structures entirely withheld from training, calibration and selection. This is an internal final check, not external acceptance.",
+  "configuration": {
+    "viewport": {
+      "width": 1360,
+      "height": 760
+    },
+    "deviceScaleFactor": 1,
+    "screenshotScale": "css",
+    "fullPage": true,
+    "readySelector": "[data-ready]",
+    "fixedTime": 1700000000000,
+    "randomSeed": 307
+  },
+  "metricDenominatorPolicy": "Exclude exact screenshot-pair duplicates within a family; preserve them as repeated-capture evidence.",
+  "uniqueImagePairs": 48,
+  "renderedPairs": 54,
+  "thresholdPolicy": "Report prespecified fixed0.5 and existing final model manifest development-selected calibrated thresholds; never tune on this holdout."
+}

@@ -62,5 +62,5 @@
   "license": "Apache-2.0 for the pretrained and derived model; see docs/model.md",
   "scope": "Research review assistant for tested synthetic scenes; scores are observations, not defect probabilities.",
   "configurationSha256": "4b54c6da435c16c48d2a9edbe200d3e342b6a3321de462444dc4b80d5c37eeb3",
-  "limitations": "Research assistance only. Untouched final structural holdout missed all nine clipping-positive pages and most boundary crossings; occlusion and displacement transferred better."
+  "limitations": "Research assistance only. Independent structural evaluations reveal material class-level failures. Observation scores do not establish defects or authorize release approval."
 }

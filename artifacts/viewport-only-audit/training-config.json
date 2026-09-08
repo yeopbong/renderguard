@@ -1,0 +1,45 @@
+{
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "epochs": 6,
+  "headWarmupEpochs": 2,
+  "fineTuneEpochs": 4,
+  "optimizer": "AdamW",
+  "optimizerResetEachEpoch": true,
+  "weightDecay": 0.001,
+  "headWarmupLearningRate": 0.001,
+  "fineTuneHeadLearningRate": 0.0004,
+  "encoderLearningRate": 0.0001,
+  "headBatchSize": 64,
+  "fineTuneBatchSize": 24,
+  "positiveWeight": [
+    4.101449489593506,
+    3.6917808055877686,
+    1.814814805984497,
+    7.0,
+    1.034682035446167
+  ],
+  "trainingPositive": [
+    138.0,
+    146.0,
+    243.0,
+    88.0,
+    346.0
+  ],
+  "trainingNegative": [
+    566.0,
+    539.0,
+    441.0,
+    616.0,
+    358.0
+  ],
+  "frozenBatchNormStatistics": true,
+  "fineTuneEncoderStages": 3,
+  "gradientClipNorm": 5,
+  "dropout": 0.15,
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "trainingSourceSha": "863a839dadf4316b0ad1da1c9bb53c40ee366c9a"
+}

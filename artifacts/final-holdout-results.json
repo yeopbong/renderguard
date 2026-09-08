@@ -1,0 +1,3726 @@
+{
+  "schemaVersion": "1.0",
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "modelVersion": "0.1.0-rc.1",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "manifestSha256": "a65fbf67de34660c4815639cda67ab8d3eed57dc6c4f605830657f7ab417e532",
+  "withheldAtEvaluation": true,
+  "externalAcceptance": false,
+  "evaluationPasses": 1,
+  "modelUpdatedFromHoldout": false,
+  "labelChangedAfterPredictions": false,
+  "renderedPairs": 54,
+  "uniqueImagePairs": 48,
+  "familyCount": 3,
+  "thresholdPolicy": "Both the fixed 0.5 cutoff and the already-published development-selected calibrated cutoffs were specified before this evaluation.",
+  "publishedThresholds": {
+    "clipping": {
+      "threshold": 0.30000000000000004,
+      "knownPages": 45,
+      "positivePages": 9,
+      "negativePages": 36,
+      "tp": 0,
+      "fp": 0,
+      "fn": 9,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "averagePrecision": 0.13741651023349616,
+      "positivePrevalence": 0.2
+    },
+    "overlap_or_occlusion": {
+      "threshold": 0.5500000000000002,
+      "knownPages": 45,
+      "positivePages": 9,
+      "negativePages": 36,
+      "tp": 8,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.8888888888888888,
+      "recall": 0.8888888888888888,
+      "f1": 0.8888888888888888,
+      "averagePrecision": 0.9888888888888889,
+      "positivePrevalence": 0.2
+    },
+    "out_of_container": {
+      "threshold": 0.20000000000000004,
+      "knownPages": 45,
+      "positivePages": 6,
+      "negativePages": 39,
+      "tp": 1,
+      "fp": 15,
+      "fn": 5,
+      "precision": 0.0625,
+      "recall": 0.16666666666666666,
+      "f1": 0.09090909090909091,
+      "averagePrecision": 0.1485788768397464,
+      "positivePrevalence": 0.13333333333333333
+    },
+    "element_disappearance": {
+      "threshold": 0.5500000000000002,
+      "knownPages": 48,
+      "positivePages": 3,
+      "negativePages": 45,
+      "tp": 2,
+      "fp": 4,
+      "fn": 1,
+      "precision": 0.3333333333333333,
+      "recall": 0.6666666666666666,
+      "f1": 0.4444444444444444,
+      "averagePrecision": 0.3333333333333333,
+      "positivePrevalence": 0.0625
+    },
+    "layout_displacement": {
+      "threshold": 0.40000000000000013,
+      "knownPages": 48,
+      "positivePages": 18,
+      "negativePages": 30,
+      "tp": 13,
+      "fp": 6,
+      "fn": 5,
+      "precision": 0.6842105263157895,
+      "recall": 0.7222222222222222,
+      "f1": 0.7027027027027027,
+      "averagePrecision": 0.8885115664063031,
+      "positivePrevalence": 0.375
+    }
+  },
+  "fixedHalf": {
+    "clipping": {
+      "threshold": 0.5,
+      "knownPages": 45,
+      "positivePages": 9,
+      "negativePages": 36,
+      "tp": 0,
+      "fp": 0,
+      "fn": 9,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "averagePrecision": 0.13741651023349616,
+      "positivePrevalence": 0.2
+    },
+    "overlap_or_occlusion": {
+      "threshold": 0.5,
+      "knownPages": 45,
+      "positivePages": 9,
+      "negativePages": 36,
+      "tp": 9,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.8181818181818182,
+      "recall": 1.0,
+      "f1": 0.9,
+      "averagePrecision": 0.9888888888888889,
+      "positivePrevalence": 0.2
+    },
+    "out_of_container": {
+      "threshold": 0.5,
+      "knownPages": 45,
+      "positivePages": 6,
+      "negativePages": 39,
+      "tp": 0,
+      "fp": 12,
+      "fn": 6,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "averagePrecision": 0.1485788768397464,
+      "positivePrevalence": 0.13333333333333333
+    },
+    "element_disappearance": {
+      "threshold": 0.5,
+      "knownPages": 48,
+      "positivePages": 3,
+      "negativePages": 45,
+      "tp": 3,
+      "fp": 6,
+      "fn": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5,
+      "averagePrecision": 0.3333333333333333,
+      "positivePrevalence": 0.0625
+    },
+    "layout_displacement": {
+      "threshold": 0.5,
+      "knownPages": 48,
+      "positivePages": 18,
+      "negativePages": 30,
+      "tp": 12,
+      "fp": 5,
+      "fn": 6,
+      "precision": 0.7058823529411765,
+      "recall": 0.6666666666666666,
+      "f1": 0.6857142857142857,
+      "averagePrecision": 0.8885115664063031,
+      "positivePrevalence": 0.375
+    }
+  },
+  "families": {
+    "nested-file-inspector": {
+      "clipping": {
+        "threshold": 0.30000000000000004,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.17086247086247086,
+        "positivePrevalence": 0.2
+      },
+      "overlap_or_occlusion": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "averagePrecision": 1.0,
+        "positivePrevalence": 0.2
+      },
+      "out_of_container": {
+        "threshold": 0.20000000000000004,
+        "knownPages": 15,
+        "positivePages": 2,
+        "negativePages": 13,
+        "tp": 0,
+        "fp": 5,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.19642857142857142,
+        "positivePrevalence": 0.13333333333333333
+      },
+      "element_disappearance": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 16,
+        "positivePages": 1,
+        "negativePages": 15,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.3333333333333333,
+        "positivePrevalence": 0.0625
+      },
+      "layout_displacement": {
+        "threshold": 0.40000000000000013,
+        "knownPages": 16,
+        "positivePages": 6,
+        "negativePages": 10,
+        "tp": 4,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "averagePrecision": 0.9107142857142857,
+        "positivePrevalence": 0.375
+      }
+    },
+    "expanded-questions": {
+      "clipping": {
+        "threshold": 0.30000000000000004,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.17976190476190476,
+        "positivePrevalence": 0.2
+      },
+      "overlap_or_occlusion": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "averagePrecision": 1.0,
+        "positivePrevalence": 0.2
+      },
+      "out_of_container": {
+        "threshold": 0.20000000000000004,
+        "knownPages": 15,
+        "positivePages": 2,
+        "negativePages": 13,
+        "tp": 1,
+        "fp": 5,
+        "fn": 1,
+        "precision": 0.16666666666666666,
+        "recall": 0.5,
+        "f1": 0.25,
+        "averagePrecision": 0.225,
+        "positivePrevalence": 0.13333333333333333
+      },
+      "element_disappearance": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 16,
+        "positivePages": 1,
+        "negativePages": 15,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "averagePrecision": 0.3333333333333333,
+        "positivePrevalence": 0.0625
+      },
+      "layout_displacement": {
+        "threshold": 0.40000000000000013,
+        "knownPages": 16,
+        "positivePages": 6,
+        "negativePages": 10,
+        "tp": 5,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.7142857142857143,
+        "recall": 0.8333333333333334,
+        "f1": 0.7692307692307693,
+        "averagePrecision": 0.9107142857142857,
+        "positivePrevalence": 0.375
+      }
+    },
+    "appointment-swimlane": {
+      "clipping": {
+        "threshold": 0.30000000000000004,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.15048840048840048,
+        "positivePrevalence": 0.2
+      },
+      "overlap_or_occlusion": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 15,
+        "positivePages": 3,
+        "negativePages": 12,
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "averagePrecision": 0.9166666666666666,
+        "positivePrevalence": 0.2
+      },
+      "out_of_container": {
+        "threshold": 0.20000000000000004,
+        "knownPages": 15,
+        "positivePages": 2,
+        "negativePages": 13,
+        "tp": 0,
+        "fp": 5,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "averagePrecision": 0.1736111111111111,
+        "positivePrevalence": 0.13333333333333333
+      },
+      "element_disappearance": {
+        "threshold": 0.5500000000000002,
+        "knownPages": 16,
+        "positivePages": 1,
+        "negativePages": 15,
+        "tp": 1,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "averagePrecision": 0.3333333333333333,
+        "positivePrevalence": 0.0625
+      },
+      "layout_displacement": {
+        "threshold": 0.40000000000000013,
+        "knownPages": 16,
+        "positivePages": 6,
+        "negativePages": 10,
+        "tp": 4,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "averagePrecision": 0.8617424242424243,
+        "positivePrevalence": 0.375
+      }
+    }
+  },
+  "meanCandidatesPerUniquePage": 1.0625,
+  "positivePagesWithoutCandidates": 0,
+  "cases": [
+    {
+      "id": "nested-file-inspector/repeat-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "nested-file-inspector/repeat-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": "nested-file-inspector/repeat-a",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "nested-file-inspector/content-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 379,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 379,
+          "stats": [
+            0.5614814814814815,
+            0.16495570079883803,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.685993194580078,
+            -6.364622116088867,
+            -0.47299817204475403,
+            -11.906825065612793,
+            3.187411308288574
+          ],
+          "scores": [
+            0.004779555895788682,
+            0.010351560598581631,
+            0.1978481721783426,
+            6.729866329423924e-05,
+            0.5203206565211147
+          ]
+        }
+      ],
+      "pageScores": [
+        0.004779555895788682,
+        0.010351560598581631,
+        0.1978481721783426,
+        6.729866329423924e-05,
+        0.5203206565211147
+      ]
+    },
+    {
+      "id": "nested-file-inspector/content-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 457,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 457,
+          "stats": [
+            0.677037037037037,
+            0.2297981118373275,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.102381706237793,
+            -6.406150817871094,
+            0.13349968194961548,
+            -13.27823543548584,
+            4.658662796020508
+          ],
+          "scores": [
+            0.006349244431463925,
+            0.010064988550447431,
+            0.2595630981766827,
+            1.9307336678210786e-05,
+            0.6274912156651703
+          ]
+        }
+      ],
+      "pageScores": [
+        0.006349244431463925,
+        0.010064988550447431,
+        0.2595630981766827,
+        1.9307336678210786e-05,
+        0.6274912156651703
+      ]
+    },
+    {
+      "id": "nested-file-inspector/intent-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 11665,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 340,
+            "height": 70
+          },
+          "changedPixels": 11665,
+          "stats": [
+            0.49012605042016805,
+            0.3408462679189323,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.864840507507324,
+            -5.753594875335693,
+            3.59303879737854,
+            -13.811202049255371,
+            6.962883472442627
+          ],
+          "scores": [
+            0.011572207395117485,
+            0.01562885825604525,
+            0.7225380691073124,
+            1.1884241106677182e-05,
+            0.7704409815406397
+          ]
+        }
+      ],
+      "pageScores": [
+        0.011572207395117485,
+        0.01562885825604525,
+        0.7225380691073124,
+        1.1884241106677182e-05,
+        0.7704409815406397
+      ]
+    },
+    {
+      "id": "nested-file-inspector/intent-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 19125,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 395,
+            "height": 70
+          },
+          "changedPixels": 19125,
+          "stats": [
+            0.6916817359855335,
+            0.4962965641952984,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -4.866205215454102,
+            -4.203711032867432,
+            4.304379463195801,
+            -11.053955078125,
+            7.208267688751221
+          ],
+          "scores": [
+            0.04832619932444124,
+            0.04375865351909588,
+            0.7972857897800399,
+            0.00014629434854113082,
+            0.7831659632295158
+          ]
+        }
+      ],
+      "pageScores": [
+        0.04832619932444124,
+        0.04375865351909588,
+        0.7972857897800399,
+        0.00014629434854113082,
+        0.7831659632295158
+      ]
+    },
+    {
+      "id": "nested-file-inspector/clip-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 545,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 524,
+            "y": 388,
+            "width": 75,
+            "height": 16
+          },
+          "changedPixels": 545,
+          "stats": [
+            0.45416666666666666,
+            0.2673464052287582,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.055541038513184,
+            -4.342413902282715,
+            -6.05192756652832,
+            -9.967825889587402,
+            -4.7671098709106445
+          ],
+          "scores": [
+            0.006495490790540055,
+            0.03996159894508246,
+            0.009625830602738894,
+            0.00039320114826284496,
+            0.09125903087577282
+          ]
+        }
+      ],
+      "pageScores": [
+        0.006495490790540055,
+        0.03996159894508246,
+        0.009625830602738894,
+        0.00039320114826284496,
+        0.09125903087577282
+      ]
+    },
+    {
+      "id": "nested-file-inspector/clip-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 930,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 474,
+            "y": 388,
+            "width": 125,
+            "height": 16
+          },
+          "changedPixels": 930,
+          "stats": [
+            0.465,
+            0.2754156862745098,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.11833667755127,
+            -4.36684513092041,
+            -3.5843682289123535,
+            -6.859445095062256,
+            -4.231701850891113
+          ],
+          "scores": [
+            0.006300180448258288,
+            0.03932632180068106,
+            0.039041417954770334,
+            0.0066231563223426585,
+            0.10544048814288139
+          ]
+        }
+      ],
+      "pageScores": [
+        0.006300180448258288,
+        0.03932632180068106,
+        0.039041417954770334,
+        0.0066231563223426585,
+        0.10544048814288139
+      ]
+    },
+    {
+      "id": "nested-file-inspector/clip-c",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 1230,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 434,
+            "y": 388,
+            "width": 165,
+            "height": 19
+          },
+          "changedPixels": 1230,
+          "stats": [
+            0.3923444976076555,
+            0.2321856334240235,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.24596881866455,
+            -2.019550085067749,
+            -8.45247745513916,
+            -4.20911169052124,
+            -8.317730903625488
+          ],
+          "scores": [
+            0.009622338782882229,
+            0.16902544963655325,
+            0.0024114445846861107,
+            0.06930957397887062,
+            0.03355083873064657
+          ]
+        }
+      ],
+      "pageScores": [
+        0.009622338782882229,
+        0.16902544963655325,
+        0.0024114445846861107,
+        0.06930957397887062,
+        0.03355083873064657
+      ]
+    },
+    {
+      "id": "nested-file-inspector/cover-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 4800,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 372,
+            "y": 373,
+            "width": 100,
+            "height": 48
+          },
+          "changedPixels": 4800,
+          "stats": [
+            1,
+            0.668015522875817,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.481998443603516,
+            1.8108546733856201,
+            -5.852484703063965,
+            -13.239794731140137,
+            -2.8228204250335693
+          ],
+          "scores": [
+            0.022513452802370843,
+            0.7356727633438287,
+            0.010792792229064803,
+            1.9995068953168202e-05,
+            0.15229647861870957
+          ]
+        }
+      ],
+      "pageScores": [
+        0.022513452802370843,
+        0.7356727633438287,
+        0.010792792229064803,
+        1.9995068953168202e-05,
+        0.15229647861870957
+      ]
+    },
+    {
+      "id": "nested-file-inspector/cover-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 7680,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 372,
+            "y": 373,
+            "width": 160,
+            "height": 48
+          },
+          "changedPixels": 7680,
+          "stats": [
+            1,
+            0.6691350081699347,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.732484340667725,
+            5.365791320800781,
+            -6.176776885986328,
+            -14.529483795166016,
+            -1.7635128498077393
+          ],
+          "scores": [
+            0.019968344450136552,
+            0.9692788678442136,
+            0.008959848418526876,
+            6.179303606267203e-06,
+            0.19784818423973607
+          ]
+        }
+      ],
+      "pageScores": [
+        0.019968344450136552,
+        0.9692788678442136,
+        0.008959848418526876,
+        6.179303606267203e-06,
+        0.19784818423973607
+      ]
+    },
+    {
+      "id": "nested-file-inspector/cover-c",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 10080,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 372,
+            "y": 373,
+            "width": 210,
+            "height": 48
+          },
+          "changedPixels": 10080,
+          "stats": [
+            1,
+            0.6693880329909742,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -5.24474573135376,
+            8.490287780761719,
+            -9.125978469848633,
+            -13.11319637298584,
+            -2.345148801803589
+          ],
+          "scores": [
+            0.040485949717783916,
+            0.9962625868049518,
+            0.00163331196023553,
+            2.243796067423333e-05,
+            0.17167521657921153
+          ]
+        }
+      ],
+      "pageScores": [
+        0.040485949717783916,
+        0.9962625868049518,
+        0.00163331196023553,
+        2.243796067423333e-05,
+        0.17167521657921153
+      ]
+    },
+    {
+      "id": "nested-file-inspector/outside-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37781,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7401259466749662,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 804,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18881,
+          "stats": [
+            0.998994708994709,
+            0.7343485838779956,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.317032337188721,
+            -4.433100700378418,
+            -5.432020664215088,
+            -1.195989727973938,
+            -4.222092628479004
+          ],
+          "scores": [
+            0.015075983296293708,
+            0.03765189518922527,
+            0.01373059903560264,
+            0.5364797474995979,
+            0.10571194636443268
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -4.6704301834106445,
+            -2.1320345401763916,
+            -3.20910906791687,
+            -6.910528182983398,
+            -0.8550082445144653
+          ],
+          "scores": [
+            0.05292743459601754,
+            0.1585073653404231,
+            0.048072037277223936,
+            0.0063240553498020245,
+            0.24452883053540064
+          ]
+        }
+      ],
+      "pageScores": [
+        0.05292743459601754,
+        0.1585073653404231,
+        0.048072037277223936,
+        0.5364797474995979,
+        0.24452883053540064
+      ]
+    },
+    {
+      "id": "nested-file-inspector/outside-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37781,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7401259466749662,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 844,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18881,
+          "stats": [
+            0.998994708994709,
+            0.734246913580247,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.317032337188721,
+            -4.433100700378418,
+            -5.432020664215088,
+            -1.195989727973938,
+            -4.222092628479004
+          ],
+          "scores": [
+            0.015075983296293708,
+            0.03765189518922527,
+            0.01373059903560264,
+            0.5364797474995979,
+            0.10571194636443268
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -4.419579029083252,
+            -2.054422378540039,
+            -3.398963689804077,
+            -7.198108196258545,
+            -1.1420872211456299
+          ],
+          "scores": [
+            0.05942870782013347,
+            0.1657064486671975,
+            0.04327925139847275,
+            0.0048742676997176665,
+            0.22901324651325686
+          ]
+        }
+      ],
+      "pageScores": [
+        0.05942870782013347,
+        0.1657064486671975,
+        0.04327925139847275,
+        0.5364797474995979,
+        0.22901324651325686
+      ]
+    },
+    {
+      "id": "nested-file-inspector/absent-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7401259466749662,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.317032337188721,
+            -4.433100700378418,
+            -5.432020664215088,
+            -1.195989727973938,
+            -4.222092628479004
+          ],
+          "scores": [
+            0.015075983296293708,
+            0.03765189518922527,
+            0.01373059903560264,
+            0.5364797474995979,
+            0.10571194636443268
+          ]
+        }
+      ],
+      "pageScores": [
+        0.015075983296293708,
+        0.03765189518922527,
+        0.01373059903560264,
+        0.5364797474995979,
+        0.10571194636443268
+      ]
+    },
+    {
+      "id": "nested-file-inspector/absent-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": "nested-file-inspector/absent-a",
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7401259466749662,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.317032337188721,
+            -4.433100700378418,
+            -5.432020664215088,
+            -1.195989727973938,
+            -4.222092628479004
+          ],
+          "scores": [
+            0.015075983296293708,
+            0.03765189518922527,
+            0.01373059903560264,
+            0.5364797474995979,
+            0.10571194636443268
+          ]
+        }
+      ],
+      "pageScores": [
+        0.015075983296293708,
+        0.03765189518922527,
+        0.01373059903560264,
+        0.5364797474995979,
+        0.10571194636443268
+      ]
+    },
+    {
+      "id": "nested-file-inspector/shift-a",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 15080,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 365,
+            "height": 70
+          },
+          "changedPixels": 15080,
+          "stats": [
+            0.590215264187867,
+            0.416351636545029,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.463698863983154,
+            -4.771023273468018,
+            3.112375259399414,
+            -12.815890312194824,
+            6.790709495544434
+          ],
+          "scores": [
+            0.014046625759456515,
+            0.030125567320731645,
+            0.6633969175700166,
+            2.9413441825234315e-05,
+            0.7612046057322803
+          ]
+        }
+      ],
+      "pageScores": [
+        0.014046625759456515,
+        0.030125567320731645,
+        0.6633969175700166,
+        2.9413441825234315e-05,
+        0.7612046057322803
+      ]
+    },
+    {
+      "id": "nested-file-inspector/shift-b",
+      "family": "nested-file-inspector",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 22949,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 360,
+            "y": 361,
+            "width": 425,
+            "height": 70
+          },
+          "changedPixels": 22949,
+          "stats": [
+            0.7713949579831932,
+            0.5567249958807052,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.032145023345947,
+            -5.534623146057129,
+            5.837273597717285,
+            -12.350080490112305,
+            8.909037590026855
+          ],
+          "scores": [
+            0.02790211707638048,
+            0.01810444764505301,
+            0.9053349739437718,
+            4.495075916690868e-05,
+            0.8572967779848614
+          ]
+        }
+      ],
+      "pageScores": [
+        0.02790211707638048,
+        0.01810444764505301,
+        0.9053349739437718,
+        4.495075916690868e-05,
+        0.8572967779848614
+      ]
+    },
+    {
+      "id": "expanded-questions/repeat-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "expanded-questions/repeat-b",
+      "family": "expanded-questions",
+      "duplicateOf": "expanded-questions/repeat-a",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "expanded-questions/content-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 379,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 379,
+          "stats": [
+            0.5614814814814815,
+            0.16495570079883803,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.958086967468262,
+            -6.707730293273926,
+            -0.5492889285087585,
+            -11.778270721435547,
+            2.496006965637207
+          ],
+          "scores": [
+            0.004186250801900792,
+            0.008206782757789908,
+            0.1909235969476383,
+            7.565503095456758e-05,
+            0.468662615146963
+          ]
+        }
+      ],
+      "pageScores": [
+        0.004186250801900792,
+        0.008206782757789908,
+        0.1909235969476383,
+        7.565503095456758e-05,
+        0.468662615146963
+      ]
+    },
+    {
+      "id": "expanded-questions/content-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 457,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 457,
+          "stats": [
+            0.677037037037037,
+            0.2297981118373275,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.400100708007812,
+            -6.6536865234375,
+            0.02427670732140541,
+            -13.249024391174316,
+            4.139492988586426
+          ],
+          "scores": [
+            0.005493250568951465,
+            0.008512741710740724,
+            0.2475816884597407,
+            1.9827741112934725e-05,
+            0.5905292011932922
+          ]
+        }
+      ],
+      "pageScores": [
+        0.005493250568951465,
+        0.008512741710740724,
+        0.2475816884597407,
+        1.9827741112934725e-05,
+        0.5905292011932922
+      ]
+    },
+    {
+      "id": "expanded-questions/intent-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 11751,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 340,
+            "height": 70
+          },
+          "changedPixels": 11751,
+          "stats": [
+            0.49373949579831933,
+            0.34030861756467295,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.065919876098633,
+            -5.898884296417236,
+            4.727411270141602,
+            -12.200305938720703,
+            8.854620933532715
+          ],
+          "scores": [
+            0.006462799943176563,
+            0.014173367124568138,
+            0.8340528012638062,
+            5.151816847637407e-05,
+            0.8552935693375936
+          ]
+        }
+      ],
+      "pageScores": [
+        0.006462799943176563,
+        0.014173367124568138,
+        0.8340528012638062,
+        5.151816847637407e-05,
+        0.8552935693375936
+      ]
+    },
+    {
+      "id": "expanded-questions/intent-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 19034,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 395,
+            "height": 70
+          },
+          "changedPixels": 19034,
+          "stats": [
+            0.6883905967450271,
+            0.48909023862709644,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.949342727661133,
+            -5.954002380371094,
+            4.913604736328125,
+            -9.995506286621094,
+            6.873657703399658
+          ],
+          "scores": [
+            0.017994204011301643,
+            0.013656874923435147,
+            0.8484575630139921,
+            0.00038341862420146754,
+            0.7656859864392894
+          ]
+        }
+      ],
+      "pageScores": [
+        0.017994204011301643,
+        0.013656874923435147,
+        0.8484575630139921,
+        0.00038341862420146754,
+        0.7656859864392894
+      ]
+    },
+    {
+      "id": "expanded-questions/clip-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 672,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 246,
+            "y": 948,
+            "width": 89,
+            "height": 16
+          },
+          "changedPixels": 672,
+          "stats": [
+            0.47191011235955055,
+            0.28238874201365943,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.971379280090332,
+            -2.9146111011505127,
+            -6.343140125274658,
+            -7.641098499298096,
+            -5.319682598114014
+          ],
+          "scores": [
+            0.004159224427480701,
+            0.09940331163752812,
+            0.008142885658929006,
+            0.003261657172413875,
+            0.07844486712797247
+          ]
+        }
+      ],
+      "pageScores": [
+        0.004159224427480701,
+        0.09940331163752812,
+        0.008142885658929006,
+        0.003261657172413875,
+        0.07844486712797247
+      ]
+    },
+    {
+      "id": "expanded-questions/clip-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 1087,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 196,
+            "y": 948,
+            "width": 139,
+            "height": 19
+          },
+          "changedPixels": 1087,
+          "stats": [
+            0.4115865202574782,
+            0.24499780980169425,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.61483383178711,
+            -2.212238073348999,
+            -5.767233848571777,
+            -5.2432861328125,
+            -4.7581892013549805
+          ],
+          "scores": [
+            0.008046107784260691,
+            0.15133677107280258,
+            0.011333327563200392,
+            0.028223107893527867,
+            0.09148059155128702
+          ]
+        }
+      ],
+      "pageScores": [
+        0.008046107784260691,
+        0.15133677107280258,
+        0.011333327563200392,
+        0.028223107893527867,
+        0.09148059155128702
+      ]
+    },
+    {
+      "id": "expanded-questions/clip-c",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 1376,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 156,
+            "y": 948,
+            "width": 179,
+            "height": 19
+          },
+          "changedPixels": 1376,
+          "stats": [
+            0.40458688620993827,
+            0.24031455569584495,
+            0.8235294117647058,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.1467671394348145,
+            -2.02598237991333,
+            -5.573038578033447,
+            -2.254544496536255,
+            -5.45035457611084
+          ],
+          "scores": [
+            0.016364369601172,
+            0.168409292352375,
+            0.012666540327793345,
+            0.30626024641244515,
+            0.07566502041525186
+          ]
+        }
+      ],
+      "pageScores": [
+        0.016364369601172,
+        0.168409292352375,
+        0.012666540327793345,
+        0.30626024641244515,
+        0.07566502041525186
+      ]
+    },
+    {
+      "id": "expanded-questions/cover-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 4800,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 94,
+            "y": 933,
+            "width": 100,
+            "height": 48
+          },
+          "changedPixels": 4800,
+          "stats": [
+            1,
+            0.6665841503267974,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.004537582397461,
+            2.061802387237549,
+            -5.135374546051025,
+            -13.463329315185547,
+            -2.5442309379577637
+          ],
+          "scores": [
+            0.02827086437938845,
+            0.7676329717801634,
+            0.016264834527359058,
+            1.631288982355969e-05,
+            0.1633707861388583
+          ]
+        }
+      ],
+      "pageScores": [
+        0.02827086437938845,
+        0.7676329717801634,
+        0.016264834527359058,
+        1.631288982355969e-05,
+        0.1633707861388583
+      ]
+    },
+    {
+      "id": "expanded-questions/cover-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 7680,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 94,
+            "y": 933,
+            "width": 160,
+            "height": 48
+          },
+          "changedPixels": 7680,
+          "stats": [
+            1,
+            0.6675566789215686,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.135043621063232,
+            4.68641471862793,
+            -6.78281307220459,
+            -14.958003044128418,
+            -2.5347092151641846
+          ],
+          "scores": [
+            0.02656844712364616,
+            0.9520103596651811,
+            0.006322540808472652,
+            4.183006123713833e-06,
+            0.1637604990917924
+          ]
+        }
+      ],
+      "pageScores": [
+        0.02656844712364616,
+        0.9520103596651811,
+        0.006322540808472652,
+        4.183006123713833e-06,
+        0.1637604990917924
+      ]
+    },
+    {
+      "id": "expanded-questions/cover-c",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 10080,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 94,
+            "y": 933,
+            "width": 210,
+            "height": 48
+          },
+          "changedPixels": 10080,
+          "stats": [
+            1,
+            0.6684539371304077,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -3.7269158363342285,
+            7.196475028991699,
+            -8.227574348449707,
+            -12.840747833251953,
+            -2.6469011306762695
+          ],
+          "scores": [
+            0.08145176995596268,
+            0.9910040974909106,
+            0.0027463030858275836,
+            2.875521214182574e-05,
+            0.15921592812141472
+          ]
+        }
+      ],
+      "pageScores": [
+        0.08145176995596268,
+        0.9910040974909106,
+        0.0027463030858275836,
+        2.875521214182574e-05,
+        0.15921592812141472
+      ]
+    },
+    {
+      "id": "expanded-questions/outside-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37746,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7368795518207283,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 725,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18846,
+          "stats": [
+            0.9971428571428571,
+            0.7322014731818653,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.463216781616211,
+            -5.33730411529541,
+            -7.285427093505859,
+            1.9666526317596436,
+            -5.20097541809082
+          ],
+          "scores": [
+            0.008660363579539573,
+            0.020662428580967816,
+            0.004732148959568684,
+            0.9537280736145389,
+            0.08105085754264
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -5.7552995681762695,
+            -2.8151674270629883,
+            -1.448839783668518,
+            -7.963876247406006,
+            0.6263083815574646
+          ],
+          "scores": [
+            0.03182099137521518,
+            0.10565121769260323,
+            0.1228788724072367,
+            0.002433107288957432,
+            0.3351784301573122
+          ]
+        }
+      ],
+      "pageScores": [
+        0.03182099137521518,
+        0.10565121769260323,
+        0.1228788724072367,
+        0.9537280736145389,
+        0.3351784301573122
+      ]
+    },
+    {
+      "id": "expanded-questions/outside-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37747,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7368795518207283,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 765,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18847,
+          "stats": [
+            0.9971957671957672,
+            0.7335453885257807,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.463216781616211,
+            -5.33730411529541,
+            -7.285427093505859,
+            1.9666526317596436,
+            -5.20097541809082
+          ],
+          "scores": [
+            0.008660363579539573,
+            0.020662428580967816,
+            0.004732148959568684,
+            0.9537280736145389,
+            0.08105085754264
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -7.704496383666992,
+            -3.3936333656311035,
+            0.11471638083457947,
+            -8.22785472869873,
+            1.7274045944213867
+          ],
+          "scores": [
+            0.012504894939127669,
+            0.07371047508466602,
+            0.2574760610512514,
+            0.0019142581825912972,
+            0.41206138739145526
+          ]
+        }
+      ],
+      "pageScores": [
+        0.012504894939127669,
+        0.07371047508466602,
+        0.2574760610512514,
+        0.9537280736145389,
+        0.41206138739145526
+      ]
+    },
+    {
+      "id": "expanded-questions/absent-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7368795518207283,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.463216781616211,
+            -5.33730411529541,
+            -7.285427093505859,
+            1.9666526317596436,
+            -5.20097541809082
+          ],
+          "scores": [
+            0.008660363579539573,
+            0.020662428580967816,
+            0.004732148959568684,
+            0.9537280736145389,
+            0.08105085754264
+          ]
+        }
+      ],
+      "pageScores": [
+        0.008660363579539573,
+        0.020662428580967816,
+        0.004732148959568684,
+        0.9537280736145389,
+        0.08105085754264
+      ]
+    },
+    {
+      "id": "expanded-questions/absent-b",
+      "family": "expanded-questions",
+      "duplicateOf": "expanded-questions/absent-a",
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7368795518207283,
+            0.8431372549019608,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.463216781616211,
+            -5.33730411529541,
+            -7.285427093505859,
+            1.9666526317596436,
+            -5.20097541809082
+          ],
+          "scores": [
+            0.008660363579539573,
+            0.020662428580967816,
+            0.004732148959568684,
+            0.9537280736145389,
+            0.08105085754264
+          ]
+        }
+      ],
+      "pageScores": [
+        0.008660363579539573,
+        0.020662428580967816,
+        0.004732148959568684,
+        0.9537280736145389,
+        0.08105085754264
+      ]
+    },
+    {
+      "id": "expanded-questions/shift-a",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 15313,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 365,
+            "height": 70
+          },
+          "changedPixels": 15313,
+          "stats": [
+            0.5993346379647749,
+            0.4214103833314148,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.682762145996094,
+            -4.901309490203857,
+            3.6532399654388428,
+            -11.58110523223877,
+            7.84724760055542
+          ],
+          "scores": [
+            0.020450066359235033,
+            0.0276315320980538,
+            0.7294792400220607,
+            9.053107292234639e-05,
+            0.813872302364509
+          ]
+        }
+      ],
+      "pageScores": [
+        0.020450066359235033,
+        0.0276315320980538,
+        0.7294792400220607,
+        9.053107292234639e-05,
+        0.813872302364509
+      ]
+    },
+    {
+      "id": "expanded-questions/shift-b",
+      "family": "expanded-questions",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 23025,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 82,
+            "y": 921,
+            "width": 425,
+            "height": 70
+          },
+          "changedPixels": 23025,
+          "stats": [
+            0.7739495798319328,
+            0.5562832756632065,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -4.315124988555908,
+            -4.506050109863281,
+            4.585195064544678,
+            -10.420904159545898,
+            9.687773704528809
+          ],
+          "scores": [
+            0.06235078266202177,
+            0.035887566049800174,
+            0.8223266895848749,
+            0.0002603209293913375,
+            0.8834984363609152
+          ]
+        }
+      ],
+      "pageScores": [
+        0.06235078266202177,
+        0.035887566049800174,
+        0.8223266895848749,
+        0.0002603209293913375,
+        0.8834984363609152
+      ]
+    },
+    {
+      "id": "appointment-swimlane/repeat-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "appointment-swimlane/repeat-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": "appointment-swimlane/repeat-a",
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 0,
+      "changedPixels": 0,
+      "candidates": [],
+      "predictions": [],
+      "pageScores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "appointment-swimlane/content-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 379,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 379,
+          "stats": [
+            0.5614814814814815,
+            0.16495570079883803,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.331302642822266,
+            -6.482822418212891,
+            -0.5198876261711121,
+            -11.186599731445312,
+            3.0299413204193115
+          ],
+          "scores": [
+            0.005680252382170131,
+            0.009556391860642449,
+            0.1935700595253408,
+            0.00012965292470735066,
+            0.5085537861459
+          ]
+        }
+      ],
+      "pageScores": [
+        0.005680252382170131,
+        0.009556391860642449,
+        0.1935700595253408,
+        0.00012965292470735066,
+        0.5085537861459
+      ]
+    },
+    {
+      "id": "appointment-swimlane/content-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 457,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 164,
+            "y": 91,
+            "width": 45,
+            "height": 15
+          },
+          "changedPixels": 457,
+          "stats": [
+            0.677037037037037,
+            0.2297981118373275,
+            0.6392156862745098,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -8.813586235046387,
+            -6.555167198181152,
+            -0.01904209516942501,
+            -12.728967666625977,
+            4.4196696281433105
+          ],
+          "scores": [
+            0.007305905214945604,
+            0.009099868223530615,
+            0.24293381125437438,
+            3.183589988036527e-05,
+            0.6106324639026368
+          ]
+        }
+      ],
+      "pageScores": [
+        0.007305905214945604,
+        0.009099868223530615,
+        0.24293381125437438,
+        3.183589988036527e-05,
+        0.6106324639026368
+      ]
+    },
+    {
+      "id": "appointment-swimlane/intent-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 12044,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 340,
+            "height": 70
+          },
+          "changedPixels": 12044,
+          "stats": [
+            0.5060504201680672,
+            0.3571155050255396,
+            0.8509803921568627,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.051535129547119,
+            -3.7749180793762207,
+            6.376682281494141,
+            -11.836782455444336,
+            11.569047927856445
+          ],
+          "scores": [
+            0.027645924325887083,
+            0.05778754639318188,
+            0.928947252499083,
+            7.173017279127745e-05,
+            0.9301365919195185
+          ]
+        }
+      ],
+      "pageScores": [
+        0.027645924325887083,
+        0.05778754639318188,
+        0.928947252499083,
+        7.173017279127745e-05,
+        0.9301365919195185
+      ]
+    },
+    {
+      "id": "appointment-swimlane/intent-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": true,
+      "candidateCount": 1,
+      "changedPixels": 19011,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 395,
+            "height": 70
+          },
+          "changedPixels": 19011,
+          "stats": [
+            0.6875587703435805,
+            0.4941589192639081,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -2.832576036453247,
+            1.7588775157928467,
+            4.104374408721924,
+            -10.332059860229492,
+            11.689066886901855
+          ],
+          "scores": [
+            0.12076832708947827,
+            0.7287119587164657,
+            0.7779021708252316,
+            0.00028224859391658337,
+            0.9324340623684472
+          ]
+        }
+      ],
+      "pageScores": [
+        0.12076832708947827,
+        0.7287119587164657,
+        0.7779021708252316,
+        0.00028224859391658337,
+        0.9324340623684472
+      ]
+    },
+    {
+      "id": "appointment-swimlane/clip-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 652,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 588,
+            "y": 436,
+            "width": 90,
+            "height": 16
+          },
+          "changedPixels": 652,
+          "stats": [
+            0.4527777777777778,
+            0.2844389978213508,
+            0.8509803921568627,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -11.473480224609375,
+            -2.5874481201171875,
+            -9.372249603271484,
+            -10.86785888671875,
+            -7.531863212585449
+          ],
+          "scores": [
+            0.0019987130800058176,
+            0.12127392236874047,
+            0.0014163394737194757,
+            0.0001733025429226594,
+            0.04206896189234435
+          ]
+        }
+      ],
+      "pageScores": [
+        0.0019987130800058176,
+        0.12127392236874047,
+        0.0014163394737194757,
+        0.0001733025429226594,
+        0.04206896189234435
+      ]
+    },
+    {
+      "id": "appointment-swimlane/clip-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 930,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 539,
+            "y": 436,
+            "width": 139,
+            "height": 16
+          },
+          "changedPixels": 930,
+          "stats": [
+            0.4181654676258993,
+            0.25906510086048806,
+            0.8509803921568627,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -9.733441352844238,
+            -0.527104914188385,
+            -3.740004539489746,
+            -9.816595077514648,
+            -3.662553310394287
+          ],
+          "scores": [
+            0.004670380247181368,
+            0.36049479499024684,
+            0.035794056521935236,
+            0.0004512234505166884,
+            0.12261274736263986
+          ]
+        }
+      ],
+      "pageScores": [
+        0.004670380247181368,
+        0.36049479499024684,
+        0.035794056521935236,
+        0.0004512234505166884,
+        0.12261274736263986
+      ]
+    },
+    {
+      "id": "appointment-swimlane/clip-c",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 1283,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 498,
+            "y": 436,
+            "width": 180,
+            "height": 16
+          },
+          "changedPixels": 1283,
+          "stats": [
+            0.44548611111111114,
+            0.27692674291938996,
+            0.8509803921568627,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -10.446173667907715,
+            0.48615893721580505,
+            -1.2691481113433838,
+            -8.865249633789062,
+            0.8557531237602234
+          ],
+          "scores": [
+            0.0032998262725143683,
+            0.5296743191025145,
+            0.13455305833585923,
+            0.0010723038836899638,
+            0.3506428555975076
+          ]
+        }
+      ],
+      "pageScores": [
+        0.0032998262725143683,
+        0.5296743191025145,
+        0.13455305833585923,
+        0.0010723038836899638,
+        0.3506428555975076
+      ]
+    },
+    {
+      "id": "appointment-swimlane/cover-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 4800,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 436,
+            "y": 421,
+            "width": 100,
+            "height": 48
+          },
+          "changedPixels": 4800,
+          "stats": [
+            1,
+            0.6793080065359478,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.88128137588501,
+            0.5006422400474548,
+            -3.0121054649353027,
+            -12.637125968933105,
+            -1.472588300704956
+          ],
+          "scores": [
+            0.01148055071184565,
+            0.5321378712555047,
+            0.0535757056454766,
+            3.4612536752051524e-05,
+            0.2120246099928662
+          ]
+        }
+      ],
+      "pageScores": [
+        0.01148055071184565,
+        0.5321378712555047,
+        0.0535757056454766,
+        3.4612536752051524e-05,
+        0.2120246099928662
+      ]
+    },
+    {
+      "id": "appointment-swimlane/cover-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 7680,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 436,
+            "y": 421,
+            "width": 160,
+            "height": 48
+          },
+          "changedPixels": 7680,
+          "stats": [
+            1,
+            0.6843714256535949,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.091105937957764,
+            3.399055004119873,
+            -2.686034917831421,
+            -13.486568450927734,
+            0.14356335997581482
+          ],
+          "scores": [
+            0.016808592707860205,
+            0.8917102235286708,
+            0.06400865055565343,
+            1.5971343948551945e-05,
+            0.30379852911547184
+          ]
+        }
+      ],
+      "pageScores": [
+        0.016808592707860205,
+        0.8917102235286708,
+        0.06400865055565343,
+        1.5971343948551945e-05,
+        0.30379852911547184
+      ]
+    },
+    {
+      "id": "appointment-swimlane/cover-c",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 10080,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 436,
+            "y": 421,
+            "width": 210,
+            "height": 48
+          },
+          "changedPixels": 10080,
+          "stats": [
+            1,
+            0.6870813881107999,
+            0.9882352941176471,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.403963565826416,
+            2.0878396034240723,
+            -3.649627923965454,
+            -12.984654426574707,
+            0.21198445558547974
+          ],
+          "scores": [
+            0.02336923389793215,
+            0.7707899148502494,
+            0.03764670838371597,
+            2.5223902237586717e-05,
+            0.30814511825531243
+          ]
+        }
+      ],
+      "pageScores": [
+        0.02336923389793215,
+        0.7707899148502494,
+        0.03764670838371597,
+        2.5223902237586717e-05,
+        0.30814511825531243
+      ]
+    },
+    {
+      "id": "appointment-swimlane/outside-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37727,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7453478576615832,
+            0.8274509803921568,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 854,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18827,
+          "stats": [
+            0.9961375661375661,
+            0.748709824670609,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.719608306884766,
+            -6.2131242752075195,
+            -3.940091609954834,
+            1.531697154045105,
+            -2.8231213092803955
+          ],
+          "scores": [
+            0.01241391330595454,
+            0.011467096077224523,
+            0.03199976373745926,
+            0.9327553440138258,
+            0.1522848581073633
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -5.3012309074401855,
+            -2.0254836082458496,
+            -1.2929002046585083,
+            -6.148340225219727,
+            0.2962143123149872
+          ],
+          "scores": [
+            0.03942580403707835,
+            0.1684570061576519,
+            0.13295785377632482,
+            0.012579103507851064,
+            0.3135430011577213
+          ]
+        }
+      ],
+      "pageScores": [
+        0.03942580403707835,
+        0.1684570061576519,
+        0.13295785377632482,
+        0.9327553440138258,
+        0.3135430011577213
+      ]
+    },
+    {
+      "id": "appointment-swimlane/outside-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 2,
+      "changedPixels": 37767,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7453478576615832,
+            0.8274509803921568,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        },
+        {
+          "id": "region-2",
+          "box": {
+            "x": 894,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18867,
+          "stats": [
+            0.9982539682539683,
+            0.7515485008818342,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.805940628051758,
+            -6.2906270027160645,
+            -3.9997446537017822,
+            1.4516160488128662,
+            -2.785310983657837
+          ],
+          "scores": [
+            0.011906545268197517,
+            0.010882316518635457,
+            0.03094584409093074,
+            0.9280349998447616,
+            0.1537508429304866
+          ]
+        },
+        {
+          "candidateId": "region-2",
+          "logits": [
+            -4.526477336883545,
+            -2.852726697921753,
+            -2.395677328109741,
+            -5.902568817138672,
+            -0.2790292501449585
+          ],
+          "scores": [
+            0.05657143882053998,
+            0.1032517150530937,
+            0.07486301865226773,
+            0.01568442405113441,
+            0.2777404074821168
+          ]
+        }
+      ],
+      "pageScores": [
+        0.05657143882053998,
+        0.1032517150530937,
+        0.07486301865226773,
+        0.9280349998447616,
+        0.2777404074821168
+      ]
+    },
+    {
+      "id": "appointment-swimlane/absent-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7453478576615832,
+            0.8274509803921568,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.805940628051758,
+            -6.2906270027160645,
+            -3.9997446537017822,
+            1.4516160488128662,
+            -2.785310983657837
+          ],
+          "scores": [
+            0.011906545268197517,
+            0.010882316518635457,
+            0.03094584409093074,
+            0.9280349998447616,
+            0.1537508429304866
+          ]
+        }
+      ],
+      "pageScores": [
+        0.011906545268197517,
+        0.010882316518635457,
+        0.03094584409093074,
+        0.9280349998447616,
+        0.1537508429304866
+      ]
+    },
+    {
+      "id": "appointment-swimlane/absent-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": "appointment-swimlane/absent-a",
+      "observations": [
+        null,
+        null,
+        null,
+        1,
+        0
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 18900,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 270,
+            "height": 70
+          },
+          "changedPixels": 18900,
+          "stats": [
+            1,
+            0.7453478576615832,
+            0.8274509803921568,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -7.805940628051758,
+            -6.2906270027160645,
+            -3.9997446537017822,
+            1.4516160488128662,
+            -2.785310983657837
+          ],
+          "scores": [
+            0.011906545268197517,
+            0.010882316518635457,
+            0.03094584409093074,
+            0.9280349998447616,
+            0.1537508429304866
+          ]
+        }
+      ],
+      "pageScores": [
+        0.011906545268197517,
+        0.010882316518635457,
+        0.03094584409093074,
+        0.9280349998447616,
+        0.1537508429304866
+      ]
+    },
+    {
+      "id": "appointment-swimlane/shift-a",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 15232,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 365,
+            "height": 70
+          },
+          "changedPixels": 15232,
+          "stats": [
+            0.5961643835616438,
+            0.42570369517670087,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -6.962332725524902,
+            -3.0039589405059814,
+            6.749646186828613,
+            -12.988774299621582,
+            13.353318214416504
+          ],
+          "scores": [
+            0.017882232002748417,
+            0.09407226884495072,
+            0.9419593511152169,
+            2.5129460781659576e-05,
+            0.9578143636656496
+          ]
+        }
+      ],
+      "pageScores": [
+        0.017882232002748417,
+        0.09407226884495072,
+        0.9419593511152169,
+        2.5129460781659576e-05,
+        0.9578143636656496
+      ]
+    },
+    {
+      "id": "appointment-swimlane/shift-b",
+      "family": "appointment-swimlane",
+      "duplicateOf": null,
+      "observations": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "intentional": false,
+      "candidateCount": 1,
+      "changedPixels": 23082,
+      "candidates": [
+        {
+          "id": "region-1",
+          "box": {
+            "x": 424,
+            "y": 409,
+            "width": 425,
+            "height": 70
+          },
+          "changedPixels": 23082,
+          "stats": [
+            0.7758655462184874,
+            0.5667705388037568,
+            0.8784313725490196,
+            1,
+            1,
+            0
+          ],
+          "masks": []
+        }
+      ],
+      "predictions": [
+        {
+          "candidateId": "region-1",
+          "logits": [
+            -2.929389476776123,
+            0.07022210955619812,
+            4.0757646560668945,
+            -12.403538703918457,
+            12.946882247924805
+          ],
+          "scores": [
+            0.11582791548071528,
+            0.4587822855531277,
+            0.7750238017253809,
+            4.281526740331369e-05,
+            0.9526185719937766
+          ]
+        }
+      ],
+      "pageScores": [
+        0.11582791548071528,
+        0.4587822855531277,
+        0.7750238017253809,
+        4.281526740331369e-05,
+        0.9526185719937766
+      ]
+    }
+  ],
+  "limitations": [
+    "Only three authored structures; source-family uncertainty is large.",
+    "Shared low-level styling within this holdout is recorded; these are not independent external sites.",
+    "All observations describe newly appearing or worsening signs; unchanged pre-existing clipping is not a positive.",
+    "Page maximum aggregation differs from candidate-level calibration and threshold fitting.",
+    "Repeated pixel-identical captures are retained as stability evidence but excluded from metric denominators.",
+    "This set does not establish production defect detection or external acceptance."
+  ]
+}

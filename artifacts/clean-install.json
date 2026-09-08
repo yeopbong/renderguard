@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0",
+  "checkoutSha": "936d48da8b4eec79971ee26882eb5a75c5ee49a6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "sourceAcquisition": "Local Git clone using --no-local --no-hardlinks, detached at the recorded committed source; no working-tree files copied.",
+  "isolation": {
+    "freshVirtualEnvironment": true,
+    "freshPackageStore": true,
+    "freshBrowserDirectory": true,
+    "freshCacheDirectory": true,
+    "developmentProcessesUsed": false,
+    "developmentNodeModulesUsed": false,
+    "installedLanguageBinariesReused": true,
+    "actualPackageStoreVerified": true,
+    "pythonModuleOriginsVerified": {
+      "fastapi": true,
+      "onnxruntime": true,
+      "numpy": true,
+      "torch": true
+    },
+    "nodeModuleAndBrowserOriginsVerified": {
+      "playwright": true,
+      "react": true,
+      "onnxruntime-web": true,
+      "fast-png": true,
+      "browserInsideFreshDirectory": true
+    }
+  },
+  "steps": [
+    {
+      "name": "tool_versions",
+      "command": "sh -c node --version && python3 --version && pnpm --version && pnpm store path",
+      "exitCode": 0,
+      "seconds": 0.518
+    },
+    {
+      "name": "setup",
+      "command": "sh scripts/setup.sh",
+      "exitCode": 0,
+      "seconds": 283.307
+    },
+    {
+      "name": "core_tests",
+      "command": "pnpm test",
+      "exitCode": 0,
+      "seconds": 15.761
+    },
+    {
+      "name": "api_integration",
+      "command": ".venv/bin/python -m pytest tests/test_e2e.py -q",
+      "exitCode": 0,
+      "seconds": 6.964
+    },
+    {
+      "name": "local_scenarios",
+      "command": ".venv/bin/python examples/reproduce.py",
+      "exitCode": 0,
+      "seconds": 5.207
+    }
+  ],
+  "priorAttempt": {
+    "status": "aborted_before_node_install",
+    "reason": "Validation driver used a legacy package-store environment variable; corrected and restarted from another fresh clone."
+  },
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "modelManifestSha256": "386dab87b12cc8fb04d94520ae45bc98e98fcb94356b9b8d8821c289b7bd7eb8",
+  "versions": {
+    "node": "v24.19.0",
+    "python": "Python 3.12.14",
+    "pnpm": "11.19.0"
+  },
+  "runtimeFileHashes": {
+    "capture/cli.ts": "28d7f70a959c774fffb480cc7a531cbdfb5a967f0109816e203445d8d4fdb9d4",
+    "capture/contracts.ts": "395caf7f81812c50b64b47bd817501e98b76e93eb95cfb94098a560190b0dd7e",
+    "capture/png.ts": "cbc91a7ebc358fd5995e8776a48081e6a1cde06e6461333c5ea3f502ca651d36",
+    "capture/run.ts": "7bfaad9642fb41169e4c996f3b1de82f67cb54ec602cfff942b1ecd767400cbf",
+    "capture/security.ts": "dfc8cffde91452930b0856ee411ecf91090fcea6830619a2406a8f045f6e55de",
+    "capture/tensors.ts": "90d9cef0a286c392db25c53c6c94f23c482a7b6bc6910287aa95812e8d53f47a",
+    "core/index.ts": "e5786bdd7fde4255ee82cabe886ac807236ab3538d8be416b961ce72d28b4811",
+    "core/png.ts": "124d79dd5eadecc98b408e7dcb311a7581e7a48ea4eb9db33bbcbab6267d3271",
+    "ml/__init__.py": "294b5242f6e47063fc60f62a7eae14789ebac965d957662746dd94423f6c62d8",
+    "ml/benchmark.mjs": "ddf6223434923b30f1be3465af998c02bfd66448191827b1471ef80112f94b15",
+    "ml/benchmark.py": "959d67e3acb9f2db4a5bb3e3ed52e6acba4f5facf730955511a6a574694bd3bc",
+    "ml/evaluate.py": "5dd9fb8d93924c20c39941a10bf3f7cdd1cf2407edc8f0a5215f74e33fc1da2c",
+    "ml/feedback.py": "9feb896061a5eff16c49140c1e39a6bc5479f43535ea598e19b6a9c05cd122ca",
+    "ml/figures.py": "4b489dcc69edbcceb3ee491b42d55eb4bc3624238418fb4ef3cf5c4054c6a50f",
+    "ml/generate.mjs": "7bf05a4ab73f1ff8b8c07bf19a215dcb6629cf081f5bf600b590d575512cc9ff",
+    "ml/metrics.py": "08788ea515aec1c3111128917addcec59f4d5cd14fc91b3e29dbd88236e092c2",
+    "ml/model.py": "54f7db55d088b8ca41c4ac27fe1aec147fc68577f4d9c914eb62c50f78e76da3",
+    "ml/prepare.py": "c0a89f70073b5cd44849a59690b068688c5b3068a5625bcaa705fe2b45285d98",
+    "ml/publish_examples.py": "0d08f93d723c2ca08559c2c49196b67df60d04dc306928e74bf969ec6cead037",
+    "ml/render.mjs": "d3a462a9984125b1c4c772756e46813de6430037abccab9092a7a60b0ecbbc39",
+    "ml/replay.py": "6cf4c2f4df36a37baeae292c61cd1a310f87670aa82f4482a133a5b622668521",
+    "ml/report.py": "094b73e8c2e081f1e7882a599e7c422b3e0ecb333a5f043fb00f24a9ae5cc6fe",
+    "ml/scenes.mjs": "ad473d4ff5c712768b4180d53caa106a9797809b968bc6a41d930c31180ed307",
+    "ml/stress-generate.mjs": "3c3a64b992778b109047705498161d7bad5cf238fe9d4b867bbdc78635d94368",
+    "ml/stress.py": "4dc165b24f942f6c43ee254ba851f761b20ebaa97b99cf1952883ecd1ae79287",
+    "ml/targets.mjs": "005ad1c14ceb82ced057ded1367ca8166bf71481549dbbc117849313dfb1c219",
+    "ml/train.py": "642685ba7bd5e0fd8e2eea5c70d79ee81d6738834d7e22059c0d162e5ad5e82d",
+    "ml/verify.mjs": "2a5de3388b2d8879bd794cd37efb5fccf7038d08f0293c35b895d86928773559",
+    "package.json": "d0ae8de85a30d27b0312384503d29f64d9f3db7d13ac01bfd253004fd8104b90",
+    "pnpm-lock.yaml": "f25d1678a46231e2dbe4bf4824360ac670ab7dd0b61b1f0ba0a048a7b19daaed",
+    "pyproject.toml": "adcc7f08be3aaf6a253700ec7997777114ea63caceccb3a616a5d05607ee9295",
+    "requirements.lock": "37d8c3ebb16c5fa2f1467c526afb4cbb332c2d0f695bd81f7f7c55c43b303c4b",
+    "scripts/prepare-web.mjs": "fa456675315936edeaaf0b54cc2354b16078fa581e7a1ad61bfbd766f0ae2bfe",
+    "scripts/setup.sh": "64c2a370d49aabe761312f3beef3b1959b7be142b79d75fbdfc6f942cad87cd6",
+    "scripts/start.sh": "5606084b9334fe005c4d1211c9d987d44f9074c65e8a65472e308b16455b5d21",
+    "scripts/verify_model.py": "31110f794e34b2ad9caebb5b512aaeabb277f117d0c23797869ddd2ae279d5a2",
+    "server/__init__.py": "8fcc1dbcd40b2177ad8af331e4d221ef089a3cf9a15b299bd4a20a085be928e4",
+    "server/analysis.py": "05ba9ba9c71567cfd41ba0ed720ec225ef48116056d6d0f78b3d569b6658ea2e",
+    "server/app.py": "19e6b7493f84c8bdf38d105c8f3207534c5a222082db3cfcf89726c6276c96a7",
+    "server/cli.py": "c05759eb0129a949e2d9d9d01da1158145f6493a12ee3cb55d0ac8068667bce9",
+    "server/gate.py": "afc23d0f9cf7220e7f3845705a200d6578e3f50ebf59e01e48279c156696e820",
+    "server/reports.py": "731b434db1e2de348c9bd3243b7ea89c21e0b8616ebe79fbbd5e03f50d039783",
+    "server/store.py": "da92dd569f64975f8774a70faffc5f2171571444276fc9c76e2b07a821f63cc1",
+    "tsconfig.json": "f39649d5d3b3a9ea4c52177457774a0b52bcab19a33d9b816706682a277bca1b",
+    "web/index.html": "0f1448b15d63b3ff6c922020b7eef9119b1d571f099f18d414eb15b00fda95c5",
+    "web/public/examples/article-0-repeat-after.png": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+    "web/public/examples/article-0-repeat-before.png": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+    "web/public/examples/catalog-1-content-after.png": "5b24ca18c4e4fabd7e75aefb936819d1a781e753ba19cf5318a5bca455e17ae0",
+    "web/public/examples/catalog-1-content-before.png": "708672868c65d85eb6127cf373af6703f25a10c78f43e74c06df13f93a24f401",
+    "web/public/examples/index.json": "06a1a5704c62e322cf0094832d245a6ddd43236b2da0d6aba13d349c8a5265b8",
+    "web/public/examples/invoice-0-hide-after.png": "fee29e38999b2a83e2176ac2f17d471cb511af90ea2c1190cf62ad870a5ae04e",
+    "web/public/examples/invoice-0-hide-before.png": "3a51d81353d42345dda37eb5dd1eed3ac282d46c4950e7b2aeb57a30cfbef1c4",
+    "web/public/examples/kanban-1-overflow-after.png": "0580c72104a720a9dc28ec6b07217bfd18b729b2b66d59e1090f2df33acd9fc4",
+    "web/public/examples/kanban-1-overflow-before.png": "b5b18013729986dba00257892fba0cca85969088320af7bf4570de84e6368e3b",
+    "web/public/examples/ledger-1-intentional_move-after.png": "13b0e72c1281c8bade8a6a9e6f7bbadcb0d3d404d63422f5aa3af90a87c6de74",
+    "web/public/examples/ledger-1-intentional_move-before.png": "b2e56ff60a331729e33dd88fd671ac850527d90441f65bbd1ac4b7a399954cea",
+    "web/public/examples/profile-0-cover-after.png": "a2c975a7cc2c602e816632d7dd267d4c08a26ecef387acc3bd2c29a5b851ecaa",
+    "web/public/examples/profile-0-cover-before.png": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+    "web/public/examples/settings-0-clip-after.png": "12b53954c54b9e0d5c5cbc98d4aff0a18e573a9ae8162c5e5503dba830bc4c3d",
+    "web/public/examples/settings-0-clip-before.png": "328977271eef30ce2ca054782bdd1fb0a926dbbc03853d096d6ee39ec6df42e8",
+    "web/public/licenses/fast-png.txt": "47ec9747cf2c470a505fcb20f3ec2ff2e60ea4febaf2e1e7041a24fc369fac3c",
+    "web/public/licenses/index.json": "d0572fb482a714f2577e8d57814c85301a0aac1e170f968d67b8a440540a130e",
+    "web/public/licenses/iobuffer.txt": "1c22118fd112e8c394a5ec0598d2e2dfcdc19b3e1055ac3eaccdb2522b777335",
+    "web/public/licenses/onnxruntime-third-party.txt": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc",
+    "web/public/licenses/onnxruntime.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+    "web/public/licenses/pako.txt": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+    "web/public/licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "web/public/licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "web/public/licenses/scheduler.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "web/public/models/calibration.json": "be620779854fc08bcc912d4d57733299bbb79bffd9aab29df0dd086504ca50ba",
+    "web/public/models/manifest.json": "386dab87b12cc8fb04d94520ae45bc98e98fcb94356b9b8d8821c289b7bd7eb8",
+    "web/public/models/model.onnx": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "web/public/models/parity.json": "61d70a943d7ca7a43713c240b972b0ef4279d26edb0ba813d987fb603b453535",
+    "web/src/Viewer.tsx": "476ccef7f687fe52ebb50ffcef7ce539b714aefaa18e98b82664159972a82641",
+    "web/src/difference.worker.ts": "6f0aab91f967b4bc1b8c1aab7dee98a3db5fb40b7ddf8bf8c2a66eec16f2d9a1",
+    "web/src/inference.worker.ts": "84c6e2da520f2a4a0297ee8216ffef28b5e96f4cdd8ca750b6f49f01b96bc247",
+    "web/src/main.tsx": "20c128316097747e63e4435dcc703b1e6bc220087fa6108b06bc48a9ff6f78dc",
+    "web/src/report.ts": "68d88e9440c8856f80bb5f9b5511a3ca1cfc67efac5b2ece7deef342fca6fdd6",
+    "web/src/storage.ts": "f322fdac1c6f8695ceccc2391d4a0e28197af5f393c580c93e6d6903a3a192e7",
+    "web/src/style.css": "379b852c5d4bee4c844b7c32eee0de4c7775760077350d0045d410fe943e2cab",
+    "web/src/types.ts": "810c6ab2a8ad5773b129893291f563aaaa5c045104b6e080ca582c898a316921",
+    "web/vite.config.ts": "59b635d9d1b7f670477af3a9d89cd70f21a5aa06935754c5c492ba4abe4d7e70",
+    "scripts/build-version.mjs": "34f1ba6fa20b5b69febcc44c39047ff56acb08e588345d88f224a246bb39cbf5"
+  },
+  "localScenarios": [
+    {
+      "id": "main",
+      "execution": "complete",
+      "gate": 2,
+      "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f"
+    },
+    {
+      "id": "intentional",
+      "execution": "complete",
+      "gate": 0,
+      "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f"
+    },
+    {
+      "id": "failure",
+      "execution": "complete",
+      "gate": 3,
+      "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f"
+    }
+  ],
+  "status": "complete",
+  "startup": {
+    "entrypoint": "./scripts/start.sh",
+    "options": [
+      "--port",
+      "--workspace"
+    ],
+    "freshLoopbackService": true,
+    "mode": "local",
+    "modelAvailable": true,
+    "sourceVersionMatchesBuildVersion": true,
+    "captureThroughRunningHttpService": true,
+    "captureExecution": "complete",
+    "captureGate": 2,
+    "candidateCount": 3,
+    "reviewPreservesPredictions": true,
+    "restartReopensProject": true,
+    "seconds": 3.717,
+    "browser": "140.0.7339.16",
+    "startupUiReady": true,
+    "startupPageErrors": 0,
+    "offlineImages": 2,
+    "offlineHttpRequests": 0
+  },
+  "notes": [
+    "Raw command logs are retained privately because package managers include local installation paths.",
+    "The record reuses only installed language/package-manager binaries; dependency caches, browser install, virtual environment, clone, and workspace are fresh.",
+    "Later commits may claim the same runtime validation only after comparing runtimeFileHashes; documentation changes alone do not change this tested code."
+  ],
+  "packageInstallCounts": {
+    "resolved": 99,
+    "reused": 0,
+    "downloaded": 99,
+    "added": 99
+  },
+  "checkedAt": "2026-09-08T14:56:22.411507+00:00",
+  "javascriptTestSummary": {
+    "tests": 26,
+    "pass": 26,
+    "fail": 0,
+    "skipped": 0
+  },
+  "startupScreenshotSha256": "089d3b72cd89744eab7bfdb1533e1c453e237ecaf06ba8fd88b5ead9703ec86f",
+  "sameRuntimeMapping": {
+    "comparedRepositoryHead": "36116e122fcf2a66733abba4c8cbb06b1ce2df50",
+    "allRecordedRuntimeFilesIdentical": false,
+    "differentFiles": [
+      "ml/evaluate.py",
+      "ml/report.py",
+      "web/public/models/manifest.json"
+    ],
+    "scope": "The recorded source, model assets, dependency locks, frontend and startup/build files. New files or future changes require a new comparison."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": "0.1.0-rc.1",
+  "architecture": "shared MobileNetV3-Small / ordered local and context pair fusion / 128-unit head",
+  "sha256": "dcedb2b5413d71f4cae4a89b7ebb0ffc0d5df41c23be2698e535f9ba8f50d4e9",
+  "modelSha256": "dcedb2b5413d71f4cae4a89b7ebb0ffc0d5df41c23be2698e535f9ba8f50d4e9",
+  "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+  "labels": [
+    "clipping",
+    "overlap_or_occlusion",
+    "out_of_container",
+    "element_disappearance",
+    "layout_displacement"
+  ],
+  "inputSize": 96,
+  "geometrySize": 12,
+  "inputs": [
+    "local_before",
+    "local_after",
+    "context_before",
+    "context_after",
+    "geometry"
+  ],
+  "output": "logits",
+  "thresholds": [
+    0.30000000000000004,
+    0.25000000000000006,
+    0.25000000000000006,
+    0.3500000000000001,
+    0.3500000000000001
+  ],
+  "weightsSha256": "d69b3adedd216a6e9b9d8916a9d7e7de63bed7a1287a2b9557b3f6414fbd4363",
+  "calibrationSha256": "77249969286c681a62f26f970d7adb04573dc2e9fc8ac931eb607887bc328601",
+  "calibration": "calibration.json",
+  "seed": 43,
+  "initialization": "timm mobilenetv3_small_100.lamb_in1k at 1824797e7887cbec1990e4adbd6675960a36c589",
+  "trainingSourceSha": "863a839dadf4316b0ad1da1c9bb53c40ee366c9a",
+  "dataSha256": "531898428c7999f4ac8720314cc30bb439792deb382aa653332504910a7cdf3a",
+  "groupsSha256": "649f341ab0c1e76507b8f02d3460df5385f471b5ec0680176f634d6a0cd5fde6",
+  "sourceHashes": {
+    "ml/__init__.py": "294b5242f6e47063fc60f62a7eae14789ebac965d957662746dd94423f6c62d8",
+    "ml/feedback.py": "904772f6de260edde723e4ed3d765d12dee285e314d09c14de08af9a03544047",
+    "ml/generate.mjs": "da54df2b1282b3f0e158bd3ac4280173080d25d1ede6cc3803e40780839472b8",
+    "ml/metrics.py": "08788ea515aec1c3111128917addcec59f4d5cd14fc91b3e29dbd88236e092c2",
+    "ml/model.py": "54f7db55d088b8ca41c4ac27fe1aec147fc68577f4d9c914eb62c50f78e76da3",
+    "ml/prepare.py": "c0a89f70073b5cd44849a59690b068688c5b3068a5625bcaa705fe2b45285d98",
+    "ml/publish_examples.py": "0d08f93d723c2ca08559c2c49196b67df60d04dc306928e74bf969ec6cead037",
+    "ml/replay.py": "6cf4c2f4df36a37baeae292c61cd1a310f87670aa82f4482a133a5b622668521",
+    "ml/scenes.mjs": "ad473d4ff5c712768b4180d53caa106a9797809b968bc6a41d930c31180ed307",
+    "ml/targets.mjs": "005ad1c14ceb82ced057ded1367ca8166bf71481549dbbc117849313dfb1c219",
+    "ml/train.py": "642685ba7bd5e0fd8e2eea5c70d79ee81d6738834d7e22059c0d162e5ad5e82d",
+    "ml/verify.mjs": "2a5de3388b2d8879bd794cd37efb5fccf7038d08f0293c35b895d86928773559"
+  },
+  "upstreamWeightsSha256": "46d2c063b18125884c48937afa4c49e18128869e52e8db96df48bf0a4d7ff697",
+  "license": "Apache-2.0 for the pretrained and derived model; see docs/model.md",
+  "scope": "Research review assistant for tested synthetic scenes; scores are observations, not defect probabilities.",
+  "configurationSha256": "0dc3601d29aa9ea987c0130318d6606e25b8c641a785b8ed52caca2be1002d83",
+  "limitations": "Strong results on authored synthetic families do not transfer reliably to the independent handwritten challenge; research assistance only."
+}

@@ -1,0 +1,293 @@
+{
+  "scope": "Internal executor visual inspection of the corrected full-height training examples. Not external human annotation and not an independent acceptance test.",
+  "labelChangesFromAudit": false,
+  "items": [
+    {
+      "sampleId": "invoice-0-hide",
+      "viewed": "before and after",
+      "reason": "The first dark payment total disappears while the second total and surrounding invoice remain visible. Both complete page images were inspected.",
+      "beforeSha256": "3a51d81353d42345dda37eb5dd1eed3ac282d46c4950e7b2aeb57a30cfbef1c4",
+      "afterSha256": "fee29e38999b2a83e2176ac2f17d471cb511af90ea2c1190cf62ad870a5ae04e",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 32,
+            "y": 615.921875,
+            "width": 836,
+            "height": 109
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 32,
+            "y": 742.921875,
+            "width": 836,
+            "height": 109
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "settings-0-clip",
+      "viewed": "before and after",
+      "reason": "The first field helper sentence is no longer visible below its boundary. The peer field and following content move upward; this secondary displacement remains a separate observation.",
+      "beforeSha256": "328977271eef30ce2ca054782bdd1fb0a926dbbc03853d096d6ee39ec6df42e8",
+      "afterSha256": "12b53954c54b9e0d5c5cbc98d4aff0a18e573a9ae8162c5e5503dba830bc4c3d",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 34,
+            "y": 376.15625,
+            "width": 832,
+            "height": 119
+          },
+          "labels": [
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 34,
+            "y": 486.96875,
+            "width": 832,
+            "height": 145.1875
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "profile-0-compound",
+      "viewed": "after and corresponding previously viewed profile content",
+      "reason": "A solid yellow rectangle covers the first biography, and the bottom line is clipped. The second biography moves upward. This is a verified multi-observation example.",
+      "beforeSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+      "afterSha256": "8ddd83fb305e5e3b782eeafcb34ae55d318e305e4cef2b9ef2f1b2b26704e04b",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 335.328125,
+            "y": 373.15625,
+            "width": 530.671875,
+            "height": 102.671875
+          },
+          "labels": [
+            true,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 335.328125,
+            "y": 471.234375,
+            "width": 530.671875,
+            "height": 125.265625
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "kanban-1-overflow",
+      "viewed": "after",
+      "reason": "The lower task card crosses the visible lane right border and is displaced. Its location is below the neighboring archive card, so border crossing is not automatically labeled as covering that card.",
+      "beforeSha256": "b5b18013729986dba00257892fba0cca85969088320af7bf4570de84e6368e3b",
+      "afterSha256": "0580c72104a720a9dc28ec6b07217bfd18b729b2b66d59e1090f2df33acd9fc4",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 325.328125,
+            "y": 243.6875,
+            "width": 249.328125,
+            "height": 148
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 325.328125,
+            "y": 409.6875,
+            "width": 358.52813720703125,
+            "height": 148
+          },
+          "labels": [
+            false,
+            false,
+            true,
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "ledger-1-intentional_move",
+      "viewed": "before and after",
+      "reason": "The lower subtotal shifts down and right and crosses the visible border slightly. The intentional provenance does not remove displacement or boundary-crossing observations.",
+      "beforeSha256": "b2e56ff60a331729e33dd88fd671ac850527d90441f65bbd1ac4b7a399954cea",
+      "afterSha256": "13b0e72c1281c8bade8a6a9e6f7bbadcb0d3d404d63422f5aa3af90a87c6de74",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 34,
+            "y": 477.15625,
+            "width": 832,
+            "height": 78
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 34,
+            "y": 573.15625,
+            "width": 854.7999992370605,
+            "height": 89.47998046875
+          },
+          "labels": [
+            false,
+            false,
+            true,
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "profile-0-transparent_overlap",
+      "viewed": "after plus exact-raster comparison",
+      "reason": "The biography is unobstructed. An inserted transparent pointer-inert rectangle does not provide visible occlusion; before and after image hashes match.",
+      "beforeSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+      "afterSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 335.328125,
+            "y": 373.15625,
+            "width": 530.671875,
+            "height": 102.671875
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 335.328125,
+            "y": 493.828125,
+            "width": 530.671875,
+            "height": 102.671875
+          },
+          "labels": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ]
+    },
+    {
+      "sampleId": "article-0-repeat",
+      "viewed": "complete after image plus exact-raster comparison",
+      "reason": "Both long text targets and the final footer are present in the complete 1507-pixel page. Before/after hashes match and the formal candidate generator should produce no candidates.",
+      "beforeSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+      "afterSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+      "renderedObservations": [
+        {
+          "element": "target",
+          "box": {
+            "x": 154,
+            "y": 729.921875,
+            "width": 592,
+            "height": 136.75
+          },
+          "labels": [
+            false,
+            false,
+            null,
+            false,
+            false
+          ]
+        },
+        {
+          "element": "peer",
+          "box": {
+            "x": 154,
+            "y": 884.671875,
+            "width": 592,
+            "height": 136.75
+          },
+          "labels": [
+            false,
+            null,
+            null,
+            false,
+            false
+          ]
+        }
+      ]
+    }
+  ]
+}

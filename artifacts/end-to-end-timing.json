@@ -1,0 +1,219 @@
+{
+  "modelColdLoadMilliseconds": 29.700000071898103,
+  "scope": "Actual PNG files -> fresh Node process with official decode/candidates/tensors -> CPU ONNX; includes process and disk transfer. URL screenshot acquisition and UI rendering are separate. No inference for zero-candidate pairs.",
+  "results": [
+    {
+      "id": "profile-0-cover",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 243.4757079463452,
+          "inferenceMilliseconds": 7.856833981350064,
+          "endToEndMilliseconds": 251.33254192769527,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 239.2162079922855,
+          "inferenceMilliseconds": 7.577624870464206,
+          "endToEndMilliseconds": 246.7938328627497,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 272.2589580807835,
+          "inferenceMilliseconds": 8.416249882429838,
+          "endToEndMilliseconds": 280.6752079632133,
+          "candidates": 1
+        }
+      ]
+    },
+    {
+      "id": "ledger-1-intentional_move",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 234.62266591377556,
+          "inferenceMilliseconds": 7.581042125821114,
+          "endToEndMilliseconds": 242.20370803959668,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 239.3359998241067,
+          "inferenceMilliseconds": 7.242833962664008,
+          "endToEndMilliseconds": 246.5788337867707,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 243.79249988123775,
+          "inferenceMilliseconds": 7.200209191069007,
+          "endToEndMilliseconds": 250.99270907230675,
+          "candidates": 1
+        }
+      ]
+    },
+    {
+      "id": "settings-0-clip",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 246.42820795997977,
+          "inferenceMilliseconds": 7.256875047460198,
+          "endToEndMilliseconds": 253.68508300743997,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 242.5331249833107,
+          "inferenceMilliseconds": 7.6587500516325235,
+          "endToEndMilliseconds": 250.19187503494322,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 245.53383281454444,
+          "inferenceMilliseconds": 8.023875067010522,
+          "endToEndMilliseconds": 253.55770788155496,
+          "candidates": 1
+        }
+      ]
+    },
+    {
+      "id": "kanban-1-overflow",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 241.2667500320822,
+          "inferenceMilliseconds": 7.585708051919937,
+          "endToEndMilliseconds": 248.85245808400214,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 243.10679198242724,
+          "inferenceMilliseconds": 8.01979098469019,
+          "endToEndMilliseconds": 251.12658296711743,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 241.5761249139905,
+          "inferenceMilliseconds": 8.500749943777919,
+          "endToEndMilliseconds": 250.07687485776842,
+          "candidates": 1
+        }
+      ]
+    },
+    {
+      "id": "invoice-0-hide",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 237.40116693079472,
+          "inferenceMilliseconds": 7.2781250346452,
+          "endToEndMilliseconds": 244.67929196543992,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 240.866833133623,
+          "inferenceMilliseconds": 7.185624912381172,
+          "endToEndMilliseconds": 248.05245804600418,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 241.45037517882884,
+          "inferenceMilliseconds": 7.342624943703413,
+          "endToEndMilliseconds": 248.79300012253225,
+          "candidates": 1
+        }
+      ]
+    },
+    {
+      "id": "article-0-repeat",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 266.83674985542893,
+          "inferenceMilliseconds": 0.18729106523096561,
+          "endToEndMilliseconds": 267.0240409206599,
+          "candidates": 0
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 265.30308392830193,
+          "inferenceMilliseconds": 0.18795812502503395,
+          "endToEndMilliseconds": 265.49104205332696,
+          "candidates": 0
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 266.93075010553,
+          "inferenceMilliseconds": 0.17912499606609344,
+          "endToEndMilliseconds": 267.1098751015961,
+          "candidates": 0
+        }
+      ]
+    },
+    {
+      "id": "catalog-1-content",
+      "trials": [
+        {
+          "freshNodeTensorProcessMilliseconds": 246.54812505468726,
+          "inferenceMilliseconds": 8.100542007014155,
+          "endToEndMilliseconds": 254.64866706170142,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 242.91704082861543,
+          "inferenceMilliseconds": 7.49333412386477,
+          "endToEndMilliseconds": 250.4103749524802,
+          "candidates": 1
+        },
+        {
+          "freshNodeTensorProcessMilliseconds": 237.40991693921387,
+          "inferenceMilliseconds": 7.32991611585021,
+          "endToEndMilliseconds": 244.73983305506408,
+          "candidates": 1
+        }
+      ]
+    }
+  ],
+  "identity": {
+    "referenceReleaseModelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+    "dataSha256": "ff8d902e87f28cdc6daa26d6aface7e78f79cf7a719ece15330c2c1598877942",
+    "candidateTensorSha256": "fe80e521d7f7924811fac07f6c5e59485bccaa2e48598ef4382e065708030ca3",
+    "candidateCount": 1559,
+    "trainingCandidates": 807,
+    "preprocessVersion": "rgba-diff-rle-letterbox-v1",
+    "primaryTrainingSourceSha": "fb3136c62f0d902835ac12b5292e043dcaf7fc83",
+    "upstreamWeightsSha256": "46d2c063b18125884c48937afa4c49e18128869e52e8db96df48bf0a4d7ff697",
+    "usesReleasedTaskEncoder": true,
+    "exampleInputs": [
+      {
+        "id": "profile-0-cover",
+        "beforeSha256": "82137f687261cc0532c44def3ce2da34ecaf98bbed67a49c21aaba34400723ce",
+        "afterSha256": "a2c975a7cc2c602e816632d7dd267d4c08a26ecef387acc3bd2c29a5b851ecaa"
+      },
+      {
+        "id": "ledger-1-intentional_move",
+        "beforeSha256": "b2e56ff60a331729e33dd88fd671ac850527d90441f65bbd1ac4b7a399954cea",
+        "afterSha256": "13b0e72c1281c8bade8a6a9e6f7bbadcb0d3d404d63422f5aa3af90a87c6de74"
+      },
+      {
+        "id": "settings-0-clip",
+        "beforeSha256": "328977271eef30ce2ca054782bdd1fb0a926dbbc03853d096d6ee39ec6df42e8",
+        "afterSha256": "12b53954c54b9e0d5c5cbc98d4aff0a18e573a9ae8162c5e5503dba830bc4c3d"
+      },
+      {
+        "id": "kanban-1-overflow",
+        "beforeSha256": "b5b18013729986dba00257892fba0cca85969088320af7bf4570de84e6368e3b",
+        "afterSha256": "0580c72104a720a9dc28ec6b07217bfd18b729b2b66d59e1090f2df33acd9fc4"
+      },
+      {
+        "id": "invoice-0-hide",
+        "beforeSha256": "3a51d81353d42345dda37eb5dd1eed3ac282d46c4950e7b2aeb57a30cfbef1c4",
+        "afterSha256": "fee29e38999b2a83e2176ac2f17d471cb511af90ea2c1190cf62ad870a5ae04e"
+      },
+      {
+        "id": "article-0-repeat",
+        "beforeSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3",
+        "afterSha256": "93751e27ccc3e8aa6a07738afbc85e834c87951fbb83eb023c57bbfe655e5fd3"
+      },
+      {
+        "id": "catalog-1-content",
+        "beforeSha256": "708672868c65d85eb6127cf373af6703f25a10c78f43e74c06df13f93a24f401",
+        "afterSha256": "5b24ca18c4e4fabd7e75aefb936819d1a781e753ba19cf5318a5bca455e17ae0"
+      }
+    ],
+    "verification": "Completed final-image benchmark; example file hashes and recorded sample ordering verified. Preprocessing timing contains no neural inference.",
+    "completedRecordModifiedUtc": "2026-09-08T14:50:12.379575+00:00",
+    "metricsPayloadCanonicalSha256": "4eea420598b2742b46d2476d27cbde0dbcc04f0301115b563285118308278236",
+    "identityAttachedAfterRun": true
+  }
+}

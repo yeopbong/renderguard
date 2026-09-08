@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "frozenAt": "2026-09-08T14:29:58.532257+00:00",
+  "manifestSha256": "a65fbf67de34660c4815639cda67ab8d3eed57dc6c4f605830657f7ab417e532",
+  "sourceHashes": {
+    "tests/final-holdout/families.ts": "7406a164ead6bc334af968575e76b6787db6c9b81af297b34c3cd8a9fa2a731e",
+    "scripts/final-holdout.ts": "89935125da9c94793a533c0e4aa31a2509ab70670f8f4b5c0e053b22b353f8db",
+    "tests/final-holdout/evaluate.py": "bbf3ef25c801baa2f5abaa249ba95b6becf0308cfc812f15f17da074ad929903"
+  },
+  "families": [
+    "nested-file-inspector",
+    "expanded-questions",
+    "appointment-swimlane"
+  ],
+  "renderedPairs": 54,
+  "uniqueImagePairs": 48,
+  "modelEvaluated": false,
+  "modelSelectionUse": "never",
+  "supersedesExposedChallengeForFinalModelCheck": true,
+  "externalAcceptance": false
+}

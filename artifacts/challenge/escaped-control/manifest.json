@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/escaped-control/before.html",
+    "screenshot": "before.png",
+    "sha256": "266860335ff2b5d32b601d6649a666841026cd8f286103972507c4dd9b082743",
+    "repeatedSha256": "266860335ff2b5d32b601d6649a666841026cd8f286103972507c4dd9b082743",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "inside-container",
+        "selector": ".control",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".control",
+            "matches": 1,
+            "box": {
+              "x": 128,
+              "y": 128,
+              "width": 130,
+              "height": 46
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 320,
+              "height": 220
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "main"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/escaped-control/after.html",
+    "screenshot": "after.png",
+    "sha256": "699381f9e976d0d4b8c35159af2c7067acab1d31a98409658f0ce607e7d8cb39",
+    "repeatedSha256": "699381f9e976d0d4b8c35159af2c7067acab1d31a98409658f0ce607e7d8cb39",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "inside-container",
+        "selector": ".control",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".control",
+            "matches": 1,
+            "box": {
+              "x": 283,
+              "y": 128,
+              "width": 130,
+              "height": 46
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 320,
+              "height": 220
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "main"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "inside-container",
+      "selector": ".control",
+      "container": ".frame",
+      "measurements": [
+        {
+          "selector": ".control",
+          "matches": 1,
+          "box": {
+            "x": 283,
+            "y": 128,
+            "width": 130,
+            "height": 46
+          },
+          "displayed": true,
+          "inPage": true,
+          "role": "button",
+          "parentTag": "section"
+        },
+        {
+          "selector": ".frame",
+          "matches": 1,
+          "box": {
+            "x": 24,
+            "y": 24,
+            "width": 320,
+            "height": 220
+          },
+          "displayed": true,
+          "inPage": true,
+          "role": "section",
+          "parentTag": "main"
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "violated",
+      "reason": "The element border box exceeds the declared container border box.",
+      "id": "contract-1",
+      "before": {
+        "type": "inside-container",
+        "selector": ".control",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".control",
+            "matches": 1,
+            "box": {
+              "x": 128,
+              "y": 128,
+              "width": 130,
+              "height": 46
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 320,
+              "height": 220
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "main"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element border box is inside the container border box within tolerance."
+      },
+      "after": {
+        "type": "inside-container",
+        "selector": ".control",
+        "container": ".frame",
+        "measurements": [
+          {
+            "selector": ".control",
+            "matches": 1,
+            "box": {
+              "x": 283,
+              "y": 128,
+              "width": 130,
+              "height": 46
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "button",
+            "parentTag": "section"
+          },
+          {
+            "selector": ".frame",
+            "matches": 1,
+            "box": {
+              "x": 24,
+              "y": 24,
+              "width": 320,
+              "height": 220
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "section",
+            "parentTag": "main"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "violated",
+        "reason": "The element border box exceeds the declared container border box."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

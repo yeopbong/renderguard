@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "assetName": "renderguard-final-holdout-v1.tar.gz",
+  "sha256": "ad143d3a7535967d5adf74eec33b2c539b8cdb9ec335cfe644334419e4644ccb",
+  "bytes": 17879171,
+  "contents": [
+    "54 original before/after PNG pairs",
+    "54 capture manifests",
+    "Official candidate metadata and raw float32 tensors",
+    "Three visual audit contact sheets",
+    "Frozen source HTML, generator, evaluator, configuration and labels",
+    "One-time final model evaluation including all failures"
+  ],
+  "modelSha256": "63c196fbe44b338082465cbff353f00a4e085e0fd0cdaa5a324782224d62cc3f",
+  "manifestSha256": "a65fbf67de34660c4815639cda67ab8d3eed57dc6c4f605830657f7ab417e532",
+  "resultSha256": "9f0b52f90309f38bd7657f48344e6fa524962f747e7dc31cc8549cb375ac1c64",
+  "reproductionCommand": "node --import tsx scripts/reproduce-final-holdout.ts workspace/holdout-recapture"
+}

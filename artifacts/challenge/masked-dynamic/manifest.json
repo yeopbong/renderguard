@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/masked-dynamic/before.html",
+    "screenshot": "before.png",
+    "sha256": "032f9513b92feff0128aa25ccf6a227b55f92715a262fb889ccd81a6cbe20236",
+    "repeatedSha256": "a15cdd933e87e5e79e53486cad1d4eaf247d744b975c80342a72f71275379257",
+    "stable": false,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [
+      {
+        "x": 45,
+        "y": 120,
+        "width": 160,
+        "height": 55,
+        "source": "Hand-declared dynamic status panel"
+      }
+    ],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": []
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/masked-dynamic/after.html",
+    "screenshot": "after.png",
+    "sha256": "5aa2b18edebb50582a91a28cf6f12a5b6740427ae84e17f9e6cf4b743dd2e724",
+    "repeatedSha256": "bbadf13a233b31ee36c3e6d7ea186785ee0fff5ee1159a6574772f5931d51030",
+    "stable": false,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [
+      {
+        "x": 45,
+        "y": 120,
+        "width": 160,
+        "height": 55,
+        "source": "Hand-declared dynamic status panel"
+      }
+    ],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": []
+  },
+  "contracts": [],
+  "masks": [
+    {
+      "x": 45,
+      "y": 120,
+      "width": 160,
+      "height": 55,
+      "source": "Hand-declared dynamic status panel"
+    }
+  ],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

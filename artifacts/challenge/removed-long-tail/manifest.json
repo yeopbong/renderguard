@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/removed-long-tail/before.html",
+    "screenshot": "before.png",
+    "sha256": "be1c09b7459857ffb80c6e154019eff01bd81069eb93d12dd9e1fea0490e0152",
+    "repeatedSha256": "be1c09b7459857ffb80c6e154019eff01bd81069eb93d12dd9e1fea0490e0152",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 2202
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 2202
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": ".footer",
+        "measurements": [
+          {
+            "selector": ".footer",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 2007,
+              "width": 378,
+              "height": 150
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "footer",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a rendered layout box within the page; actual occlusion and interaction are outside this contract."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/removed-long-tail/after.html",
+    "screenshot": "after.png",
+    "sha256": "8ba3824fea00f3462b69ca7a3b5417014244db9ee79790d10a9110914dc1886b",
+    "repeatedSha256": "8ba3824fea00f3462b69ca7a3b5417014244db9ee79790d10a9110914dc1886b",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 2052
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 2052
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": ".footer",
+        "measurements": [
+          {
+            "selector": ".footer",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "required-visible",
+      "selector": ".footer",
+      "measurements": [
+        {
+          "selector": ".footer",
+          "matches": 0,
+          "reason": "Element was not found."
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "inconclusive",
+      "reason": "Each selector must resolve to one measurable element.",
+      "id": "contract-1",
+      "before": {
+        "type": "required-visible",
+        "selector": ".footer",
+        "measurements": [
+          {
+            "selector": ".footer",
+            "matches": 1,
+            "box": {
+              "x": 45,
+              "y": 2007,
+              "width": 378,
+              "height": 150
+            },
+            "displayed": true,
+            "inPage": true,
+            "role": "footer",
+            "parentTag": "article"
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "satisfied",
+        "reason": "The element has a rendered layout box within the page; actual occlusion and interaction are outside this contract."
+      },
+      "after": {
+        "type": "required-visible",
+        "selector": ".footer",
+        "measurements": [
+          {
+            "selector": ".footer",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}

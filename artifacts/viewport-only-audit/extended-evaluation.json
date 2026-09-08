@@ -1,0 +1,285 @@
+{
+  "localization": {
+    "train": {
+      "positiveObservationRegions": 599,
+      "recallAtPoint1Coverage": 0.9565943238731218,
+      "recallAtPoint5Coverage": 0.6811352253756261,
+      "missingAtPoint1": 26,
+      "missingAtPoint5": 191,
+      "meanMaxCoverage": 0.7002038949153537,
+      "meanMaxTightness": 0.7934137106680432,
+      "pagePairs": 1008,
+      "meanCandidatesPerPage": 0.6984126984126984,
+      "p95CandidatesPerPage": 2.0,
+      "maximumCandidatesPerPage": 6,
+      "zeroCandidatePages": 414
+    },
+    "dev": {
+      "positiveObservationRegions": 177,
+      "recallAtPoint1Coverage": 0.9887005649717514,
+      "recallAtPoint5Coverage": 0.7796610169491526,
+      "missingAtPoint1": 2,
+      "missingAtPoint5": 39,
+      "meanMaxCoverage": 0.7435951353901802,
+      "meanMaxTightness": 0.7358038198947244,
+      "pagePairs": 288,
+      "meanCandidatesPerPage": 0.6909722222222222,
+      "p95CandidatesPerPage": 2.0,
+      "maximumCandidatesPerPage": 3,
+      "zeroCandidatePages": 116
+    },
+    "calibration": {
+      "positiveObservationRegions": 140,
+      "recallAtPoint1Coverage": 0.9785714285714285,
+      "recallAtPoint5Coverage": 0.7,
+      "missingAtPoint1": 3,
+      "missingAtPoint5": 42,
+      "meanMaxCoverage": 0.7330227406931596,
+      "meanMaxTightness": 0.7218226191278356,
+      "pagePairs": 216,
+      "meanCandidatesPerPage": 0.7777777777777778,
+      "p95CandidatesPerPage": 2.0,
+      "maximumCandidatesPerPage": 3,
+      "zeroCandidatePages": 78
+    },
+    "test": {
+      "positiveObservationRegions": 147,
+      "recallAtPoint1Coverage": 1.0,
+      "recallAtPoint5Coverage": 0.7959183673469388,
+      "missingAtPoint1": 0,
+      "missingAtPoint5": 30,
+      "meanMaxCoverage": 0.8067172249116442,
+      "meanMaxTightness": 0.7660324416886302,
+      "pagePairs": 216,
+      "meanCandidatesPerPage": 0.7638888888888888,
+      "p95CandidatesPerPage": 2.0,
+      "maximumCandidatesPerPage": 2,
+      "zeroCandidatePages": 66
+    }
+  },
+  "localizationDefinition": "Max candidate intersection divided by before/after element-union extent; tightness is max intersection/candidate area. These are coarse observation boxes, not pixel-exact defect segmentation.",
+  "endToEndObservationRecall": [
+    {
+      "label": "clipping",
+      "allPositiveObservationRegions": 36,
+      "captured": 29,
+      "missed": 7,
+      "recall": 0.8055555555555556
+    },
+    {
+      "label": "overlap_or_occlusion",
+      "allPositiveObservationRegions": 36,
+      "captured": 36,
+      "missed": 0,
+      "recall": 1.0
+    },
+    {
+      "label": "out_of_container",
+      "allPositiveObservationRegions": 54,
+      "captured": 54,
+      "missed": 0,
+      "recall": 1.0
+    },
+    {
+      "label": "element_disappearance",
+      "allPositiveObservationRegions": 18,
+      "captured": 16,
+      "missed": 2,
+      "recall": 0.8888888888888888
+    },
+    {
+      "label": "layout_displacement",
+      "allPositiveObservationRegions": 75,
+      "captured": 74,
+      "missed": 1,
+      "recall": 0.9866666666666667
+    }
+  ],
+  "familyBootstrap": {
+    "resamplingUnit": "source family",
+    "families": [
+      "code",
+      "map",
+      "wizard"
+    ],
+    "replicates": 500,
+    "macroPrAuc95Percentile": [
+      0.9281938752934764,
+      0.9889776982276981
+    ],
+    "warning": "Only three held-out families; intervals are unstable and conditional on this authored corpus."
+  },
+  "pageReviewBudgets": {
+    "local_context": [
+      {
+        "pageFraction": 0.1,
+        "reviewedPagePairs": 22,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 22,
+        "missedObservationPages": 107,
+        "captureRate": 0.17054263565891473
+      },
+      {
+        "pageFraction": 0.25,
+        "reviewedPagePairs": 54,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 54,
+        "missedObservationPages": 75,
+        "captureRate": 0.4186046511627907
+      },
+      {
+        "pageFraction": 0.5,
+        "reviewedPagePairs": 108,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 106,
+        "missedObservationPages": 23,
+        "captureRate": 0.8217054263565892
+      }
+    ],
+    "difference_statistics": [
+      {
+        "pageFraction": 0.1,
+        "reviewedPagePairs": 22,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 22,
+        "missedObservationPages": 107,
+        "captureRate": 0.17054263565891473
+      },
+      {
+        "pageFraction": 0.25,
+        "reviewedPagePairs": 54,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 53,
+        "missedObservationPages": 76,
+        "captureRate": 0.4108527131782946
+      },
+      {
+        "pageFraction": 0.5,
+        "reviewedPagePairs": 108,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 101,
+        "missedObservationPages": 28,
+        "captureRate": 0.7829457364341085
+      }
+    ],
+    "pixel_difference": [
+      {
+        "pageFraction": 0.1,
+        "reviewedPagePairs": 22,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 22,
+        "missedObservationPages": 107,
+        "captureRate": 0.17054263565891473
+      },
+      {
+        "pageFraction": 0.25,
+        "reviewedPagePairs": 54,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 48,
+        "missedObservationPages": 81,
+        "captureRate": 0.37209302325581395
+      },
+      {
+        "pageFraction": 0.5,
+        "reviewedPagePairs": 108,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 89,
+        "missedObservationPages": 40,
+        "captureRate": 0.689922480620155
+      }
+    ],
+    "frozen": [
+      {
+        "pageFraction": 0.1,
+        "reviewedPagePairs": 22,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 22,
+        "missedObservationPages": 107,
+        "captureRate": 0.17054263565891473
+      },
+      {
+        "pageFraction": 0.25,
+        "reviewedPagePairs": 54,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 54,
+        "missedObservationPages": 75,
+        "captureRate": 0.4186046511627907
+      },
+      {
+        "pageFraction": 0.5,
+        "reviewedPagePairs": 108,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 104,
+        "missedObservationPages": 25,
+        "captureRate": 0.8062015503875969
+      }
+    ],
+    "local_only": [
+      {
+        "pageFraction": 0.1,
+        "reviewedPagePairs": 22,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 22,
+        "missedObservationPages": 107,
+        "captureRate": 0.17054263565891473
+      },
+      {
+        "pageFraction": 0.25,
+        "reviewedPagePairs": 54,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 54,
+        "missedObservationPages": 75,
+        "captureRate": 0.4186046511627907
+      },
+      {
+        "pageFraction": 0.5,
+        "reviewedPagePairs": 108,
+        "totalPagePairs": 216,
+        "positiveObservationPages": 129,
+        "capturedObservationPages": 103,
+        "missedObservationPages": 26,
+        "captureRate": 0.7984496124031008
+      }
+    ]
+  },
+  "budgetDefinition": "Rank all test page pairs by maximum candidate observation score; pixel method uses changed-pixel density. Count observation-bearing pages, not defects. Candidate-free pages remain in denominators.",
+  "timing": {
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpuThreads": 4,
+    "onnxProviders": [
+      "CPUExecutionProvider"
+    ],
+    "modelLoadMilliseconds": 27.730915928259492,
+    "coldInferenceMilliseconds": 6.852040998637676,
+    "warmInferenceMedianMilliseconds": 6.425561965443194,
+    "warmInferenceP95Milliseconds": 6.676342396531253,
+    "warmTrials": 40,
+    "batch": 1,
+    "inputs": "four 96x96 RGB crops and 12 geometry values",
+    "processMaxRSSBytes": 595001344,
+    "modelBytes": 6184503
+  },
+  "numericalParity": {
+    "pairs": 24,
+    "maxLogitError": 5.435943603515625e-05,
+    "maxScoreError": 3.993511199951172e-06,
+    "thresholdDisagreements": 0,
+    "candidateRankingAgrees": true,
+    "tolerance": 0.0001
+  }
+}

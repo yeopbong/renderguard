@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0",
+  "execution": "complete",
+  "environment": "verified",
+  "before": {
+    "side": "before",
+    "url": "http://127.0.0.1:65151/unmeasurable-contract/before.html",
+    "screenshot": "before.png",
+    "sha256": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+    "repeatedSha256": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": "#required-absent-control",
+        "measurements": [
+          {
+            "selector": "#required-absent-control",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    ]
+  },
+  "after": {
+    "side": "after",
+    "url": "http://127.0.0.1:65151/unmeasurable-contract/after.html",
+    "screenshot": "after.png",
+    "sha256": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+    "repeatedSha256": "e1c7a23d1d44c2b026342976e64e470fc41ee3ac8fe162ffb7a2ce5a1e6f0be4",
+    "stable": true,
+    "stableUnderMasks": true,
+    "viewport": {
+      "width": 480,
+      "height": 640
+    },
+    "deviceScaleFactor": 1,
+    "actualDevicePixelRatio": 1,
+    "screenshotScale": "css",
+    "cssToImageScale": 1,
+    "browser": "140.0.7339.16",
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "colorScheme": "light",
+    "fontsReady": true,
+    "pageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "imageSize": {
+      "width": 480,
+      "height": 640
+    },
+    "masks": [],
+    "state": {
+      "readySelector": "[data-ready]",
+      "fixedTime": 1700000000000,
+      "randomSeed": 71,
+      "animationPolicy": "CSS animation and transition disabled; JavaScript timers are not universally frozen."
+    },
+    "blockedRequests": [],
+    "contracts": [
+      {
+        "type": "required-visible",
+        "selector": "#required-absent-control",
+        "measurements": [
+          {
+            "selector": "#required-absent-control",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "type": "required-visible",
+      "selector": "#required-absent-control",
+      "measurements": [
+        {
+          "selector": "#required-absent-control",
+          "matches": 0,
+          "reason": "Element was not found."
+        }
+      ],
+      "coordinateSpace": "document-css-pixels",
+      "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+      "status": "inconclusive",
+      "reason": "Each selector must resolve to one measurable element.",
+      "id": "contract-1",
+      "before": {
+        "type": "required-visible",
+        "selector": "#required-absent-control",
+        "measurements": [
+          {
+            "selector": "#required-absent-control",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      },
+      "after": {
+        "type": "required-visible",
+        "selector": "#required-absent-control",
+        "measurements": [
+          {
+            "selector": "#required-absent-control",
+            "matches": 0,
+            "reason": "Element was not found."
+          }
+        ],
+        "coordinateSpace": "document-css-pixels",
+        "scope": "Axis-aligned rendered boxes and computed visibility; does not prove clickability or pixel occlusion.",
+        "status": "inconclusive",
+        "reason": "Each selector must resolve to one measurable element."
+      }
+    }
+  ],
+  "masks": [],
+  "warnings": [],
+  "manifestPath": "manifest.json"
+}
